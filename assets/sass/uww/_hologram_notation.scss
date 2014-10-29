@@ -1,0 +1,773 @@
+// --------------------------------------------------------------------------- BASE CSS
+
+
+
+/*doc
+---
+title: File List
+name: filelist
+category: Base CSS
+---
+
+A file list example
+
+```html_example
+
+<ul class="file-list listReset">
+	<li><a href="example.pdf">PDF Listing Title</a></li>
+	<li><a href="example.doc">Word document download example</a></li>
+	<li><a href="example.jpg">Jpg document download example</a></li>
+	<li><a href="example.zip">Zip document download example</a></li>
+</ul>
+
+```
+
+*/
+
+
+
+/*doc
+---
+title: Blockquote
+name: blockquote
+category: Base CSS
+---
+
+A block quote example
+
+```html_example
+
+<blockquote>Here is a block quote. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. </blockquote>
+
+```
+
+*/
+
+
+/*doc
+---
+title: Colours
+name: colours
+category: Base CSS
+---
+
+There's a few SCSS variables to sort out the primary swatches of the website. Listed as follows
+
+```html_example
+
+<div class="line txtC">
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #d7d6c4;"></div>
+      <code>$col-grey</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #9f9d83;"></div>
+      <code>$col-yellowgrey</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #f7941e;"></div>
+      <code>$col-lightorange</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #f15a22;"></div>
+      <code>$col-orange-bg</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #f58220;"></div>
+      <code>$col-orange</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #ed1c24;"></div>
+      <code>$col-red</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #04003f;"></div>
+      <code>$col-navy</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #231930;"></div>
+      <code>$col-purple</code>
+    </div>
+</div>
+
+```
+
+*/
+
+
+/*doc
+---
+title: Buttons
+name: buttons
+category: Base CSS
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+
+<a class="btn" href="#">An a element</a>
+<a class="btn orange" href="#">In orange</a>
+
+<button class="btn">A button element</button>
+<button class="btn orange">In orange</button>
+```
+
+*/
+
+
+
+
+/*doc
+---
+title: Table
+name: table
+category: Base CSS
+---
+
+Table styling for a default content table. Don't forget the caption. Add a .hidden class to the caption to have it hidden.
+
+```html_example
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<td>Column Heading</td>
+			<td>Column Heading</td>
+			<td>Column Heading</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+	</tbody>
+	<caption><strong>1a.</strong> A table caption</caption>
+</table>
+
+
+```
+
+*/
+
+
+
+
+
+
+// --------------------------------------------------------------------------- SPRITESHEET
+
+/*doc
+---
+title: Sprites
+name: sprites
+category: sprites
+---
+
+All of the image assets found inside of the sprite sheet.
+To hide text within the <i> element, wrap it inside of a span.
+
+```html_example
+<p>Logos</p>
+<header>
+	<p>
+		Header Logo
+		<i class="icn icn-logo"></i>
+	</p>
+</header>
+<footer style="text-align: left; background-color: #333; color: #fff; padding: 20px;">
+	<p>
+		footer Logo
+		<i class="icn icn-logo"></i>
+	</p>
+</footer>
+
+<p>
+	Logo emblem, no text
+	<i class="icn icn-logo-emblem"></i>
+</p>
+
+```
+*/
+
+
+/*doc
+---
+title: Flags
+name: flags
+category: sprites
+---
+
+All of the flags included in the language drop down
+
+```html_example
+
+<p>English
+<i class="icn icn-flag-eng"></i>
+</p>
+
+```
+*/
+
+
+/*doc
+---
+title: Social Media
+name: socialmedia
+category: sprites
+---
+
+The social media icons used throughout the website.
+
+```html_example
+
+<p> Social media icons</p>
+<div style="background-color: #333; padding: 20px; margin-bottom: 20px;">
+	<i class="icn icn-facebook"></i>
+	<i class="icn icn-google"></i>
+	<i class="icn icn-twitter"></i>
+	<i class="icn icn-youtube"></i>
+</div>
+
+<p>Social media icons in colour</p>
+<i class="icn icn-facebook-color"></i>
+<i class="icn icn-google-color"></i>
+<i class="icn icn-twitter-color"></i>
+<i class="icn icn-youtube-color"></i>
+
+
+```
+*/
+
+/*doc
+---
+title: Other Icons
+name: othericons
+category: sprites
+---
+
+The social media icons used throughout the website.
+
+```html_example
+
+<p>Search icon
+<i class="icn icn-search"></i>
+</p>
+
+<p>Read more arrow
+<i class="icn icn-readmore"></i>
+</p>
+
+<p>Play icon
+<i class="icn icn-play"></i>
+</p>
+
+```
+*/
+
+// --------------------------------------------------------------------------- COMPONENTS
+
+/*doc
+---
+title: Language Selector
+name: languageselector
+category: components
+---
+
+The drop down language selector toggle. Please note, this should be contained in a relative positioned container and by default has white text for the active language.
+
+```html_example
+<div style="position:relative; background-color: #222; padding: 20px;">
+	<ul class="languageSelect listReset left clearfix">
+		<li class="active"><span class="icn icn-flag-eng"></span>EN</li>
+		<li><span class="icn icn-flag-eng"></span>GR</li>
+		<li><span class="icn icn-flag-eng"></span>FR</li>
+		<li><span class="icn icn-flag-eng"></span>IT</li>
+		<li><span class="icn icn-flag-eng"></span>AU</li>
+		<li><span class="icn icn-flag-eng"></span>GR</li>
+		<li><span class="icn icn-flag-eng"></span>FR</li>
+		<li><span class="icn icn-flag-eng"></span>IT</li>
+		<li><span class="icn icn-flag-eng"></span>AU</li>
+		<li><span class="icn icn-flag-eng"></span>GR</li>
+		<li><span class="icn icn-flag-eng"></span>FR</li>
+		<li><span class="icn icn-flag-eng"></span>IT</li>
+		<li><span class="icn icn-flag-eng"></span>AU</li>
+	</ul><!-- .languageSelect -->
+</div>
+
+```
+*/
+
+
+
+/*doc
+---
+title: Search
+name: search
+category: components
+---
+
+The search form is found in the header for desktop and in the sidebar for mobile.
+
+```html_example
+
+<form class="search left" action="#" method="post">
+	<div class="field">
+		<label for="searchInput" class="infield">Search</label>
+		<input id="searchInput" name="Search" type="text" />
+	</div>
+	<button type="submit" class="icn icn-search"><span>Search</span></button>
+</form>
+<div class="clear"></div>
+
+```
+*/
+
+
+
+/*doc
+---
+title: Leaderboard
+name: leaderboard
+category: components
+---
+
+The leaderboard located on the homepage
+
+```html_example
+
+<div style="width:400px;">
+
+	<div class="leaderboard">
+		<div class="title">
+			<i class="icn icn-logo-emblem"></i>
+			<strong>UWW Global Team Ranking</strong>
+			<span class="meta">Last updated 21st May 2014</span>
+		</div>
+		<div class="list">
+			<ul class="listReset clearfix shadowBox">
+				<li class="up">Iran<i class="icn"></i></li>
+				<li class="up">Russia<i class="icn"></i></li>
+				<li class="down">Ukraine<i class="icn"></i></li>
+				<li class="up">USA<i class="icn"></i></li>
+				<li class="down">Turkey<i class="icn"></i></li>
+			</ul>
+		</div>
+		<a href="#" class="clear readmore right">View full leaderboard <i class="icn icn-arrow-right"></i></a>
+	</div><!-- leaderboard -->
+
+</div>
+
+```
+*/
+
+
+
+/*doc
+---
+title: Sidebar menu
+name: sidebar_menu
+category: components
+---
+
+The sidebar menu on static pages. Just add 'hasSubMenu' on nested items.
+
+```html_example
+
+<div style="width: 250px;">
+
+	<nav>
+		<ul class="sidebarMenu listReset shadowBox">
+			<li class="title">Generic Sub Nav</li>
+			<li class="hasSubMenu">
+				<a href="#">Menu Item</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+			<li class="hasSubMenu active">
+				<a href="#">Active Menu Item</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+			<li class="hasSubMenu">
+				<a href="#">A menu item that takes up two lines</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+			<li class="hasSubMenu">
+				<a href="#">Menu Item</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+<div class="clear"></div>
+
+```
+*/
+
+
+
+/*doc
+---
+title: Gallery Slider
+name: gallery_slider
+category: components
+---
+
+This slider will require the plugin 'cycle2' to work and the extension 'cycle2 carousel' file. Don't forget the template pagination image within each slides containing div.
+
+```html_example
+
+<div style="width: 650px;">
+
+
+<div class="gallery cycle-slideshow"
+	data-cycle-slides="> .slide"
+	data-cycle-timeout="0"
+	data-cycle-prev=".gallery-prev"
+	data-cycle-next=".gallery-next"
+	data-cycle-fx="fade"
+	data-cycle-pager=".gallery-pager"
+>
+
+	<figure class="slide" data-cycle-pager-template="<img src='uploads/gallery1.jpg' alt='This is a small landscape image.' />">
+		<img src="uploads/gallery1.jpg" alt="This is a small landscape image." />
+		<figcaption>This is a small width landscape image, where body text can wrap around an image. Images are the same ratio as images used for article previews. This text is  an example of a caption. <strong>Photo credit: Joe Bloggs 1</strong></figcaption>
+	</figure>
+	<figure class="slide" data-cycle-pager-template="<img src='uploads/gallery2.jpg' alt='This is a small landscape image.' />">
+		<img src="uploads/gallery2.jpg" alt="This is a small landscape image." />
+		<figcaption>This is a small width landscape image, where body text can wrap around an image. Images are the same ratio as images used for article previews. This text is  an example of a caption. <strong>Photo credit: Joe Bloggs 2</strong></figcaption>
+	</figure>
+	<figure class="slide" data-cycle-pager-template="<img src='uploads/gallery3.jpg' alt='This is a small landscape image.' />">
+		<img src="uploads/gallery3.jpg" alt="This is a small landscape image." />
+		<figcaption>This is a small width landscape image, where body text can wrap around an image. Images are the same ratio as images used for article previews. This text is  an example of a caption. <strong>Photo credit: Joe Bloggs 3</strong></figcaption>
+	</figure>
+</div>
+<div class="gallery-pager cycle-slideshow"
+	data-cycle-slides="> img"
+	data-cycle-timeout="0"
+	data-cycle-prev=".gallery-prev"
+	data-cycle-next=".gallery-next"
+	data-cycle-caption=".custom-caption"
+	data-cycle-fx="carousel"
+	data-cycle-carousel-fluid="true"
+>
+	<span class="icn gallery-prev"><span>Prev</span></span>
+	<span class="icn gallery-next"><span>Next</span></span>
+</div>
+
+
+</div>
+<div class="clear"></div>
+
+```
+*/
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------------------- ARTICLES
+
+
+/*doc
+---
+title: Event
+name: event
+category: article_types
+---
+
+An event, listed on the homepage. The image example, to be connected to the CMS, uploadable by the user.
+
+```html_example
+
+<div style="width:360px">
+
+	<div class="event">
+		<a href="#" class="title">
+			<i class="icn icn-globe"></i> Los Angeles, USA <span class="date">12 June - 13 July</span>
+		</a>
+		<div class="content">
+			<h3 class="event-title"><a href="#">2014 Men’s Freestyle World Cup</a></h3>
+			<a href="#" class="event-image"><img src="uploads/event-1.jpg" alt="event: 2014 Men’s Freestyle World Cup" /></a>
+			<div class="tags clearfix">
+				<a href="#" class="tag orange">Tickets</a>
+				<a href="#" class="tag pearl">Registration</a>
+			</div>
+		</div><!-- .content -->
+	</div>
+
+</div>
+
+```
+*/
+
+
+
+/*doc
+---
+title: Article type - image
+name: art_image
+category: article_types
+---
+
+An article, listed on the homepage, containing text and a background image
+
+```html_example
+
+<div style="width:260px;">
+
+	<article class="type-img" style="background-image: url(uploads/news-story-3.jpg);">
+		<a href="#">
+			<span class="heading">Japanese Women Win Seven Medals, Two Gold, at Golden Grand Prix Final
+				<strong>
+					Read more <i class="icn icn-readmore"></i>
+				</strong>
+			</span>
+		</a>
+	</article>
+
+</div>
+
+
+
+```
+*/
+
+
+
+
+
+/*doc
+---
+title: Article type - Text horz
+name: art_text_horz
+category: article_types
+---
+
+A text based article, aligned horizontally
+
+```html_example
+
+
+
+<div style="width: 780px;">
+
+<article class="type-horz clearfix">
+	<img src="uploads/news-horz-1.jpg" alt="Gazumov Upends Olympic Rivals for Crown at Volden Grand Prix Final">
+	<div class="whiteBox">
+		<div class="tags clearfix">
+			<span class="tag orange hidden-tb">featured</span>
+			<span class="tag navy hidden-tb">Tag Name</span>
+		</div>
+		<h2 class="heading"><a href="#">Gazumov Upends Olympic Rivals for Crown at Volden Grand Prix Final</a></h2>
+		<p class="meta hidden-tb">Friday 1 August 2014 <span class="divider-dot">•</span> 1AM <span class="divider-dot">•</span> 43 comments</p>
+		<p><span class="hidden-tb">BAKU (July 25) – In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit...</span><a href="#">Read more <i class="icn icn-readmore visible-tb"></i></a></p>
+	</div><!-- .whiteBox -->
+</article>
+
+</div>
+
+```
+*/
+
+
+
+/*doc
+---
+title: Article type - Text vert
+name: art_text_vert
+category: article_types
+---
+
+A text based article, aligned vertically
+
+```html_example
+
+<div style="width:550px;">
+
+	<article class="type-big shadowBox clearfix">
+		<img src="uploads/news-big-2.jpg" alt="Japanese Women Win Seven Medals, Two Gold, at Golden Grand Prix Final">
+		<div class="whiteBox">
+			<div class="tags clearfix">
+				<span class="tag orange hidden-tb">featured</span>
+				<span class="tag navy">Most commented</span>
+			</div>
+			<h2 class="heading"><a href="#">Japanese Women Win Seven Medals, Two Gold, at Golden Grand Prix Final</a></h2>
+			<p class="meta hidden-tb">Friday 1 August 2014 <span class="divider-dot">•</span> 1AM <span class="divider-dot">•</span> 43 comments</p>
+			<p><span class="hidden-tb">As the wrestling portion of the Commonwealth Games closed on Thursday night in Glasgow, more than 2000 fans streamed out of the... </span><a href="#">Read more <i class="icn icn-readmore visible-tb"></i></a></p>
+		</div><!-- .whiteBox -->
+	</article>
+
+</div>
+
+
+
+```
+*/
+
+
+
+
+/*doc
+---
+title: Article type - video
+name: art_video
+category: article_types
+---
+
+An article, listed on the homepage, containing a video.
+
+```html_example
+
+
+<div style="width:360px">
+
+
+	<article class="type-vid" style="background-image: url(uploads/news-story-2.jpg);">
+		<a href="#">
+			<span class="heading"><i class="left icn icn-play"></i>Manville, Lee Win Two for US in Cadet Wrestling World Championships</span>
+		</a>
+	</article>
+
+</div>
+
+
+
+```
+*/
+
+
+
+
+/*doc
+---
+title: Photo of the day
+name: art_photooftheday
+category: article_types
+---
+
+Photo of the day along with caption. This is the variety with navy caption background.
+
+```html_example
+
+<div id="newsWall" style="width:360px;">
+
+	<div class="featuredPhoto shadowBox">
+		<p class="title">Champion of the week</p>
+		<img src="uploads/championoftheweek.jpg" alt="Champion of the week: John Jameson" />
+		<div class="caption">
+			<p><strong>John Jameson</strong></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos in animi impedit consequuntur sunt quaerat est nobis accusamus atque.</p>
+			<a href="#"><i class="icn icn-caption"><span>Open caption</span></i></a>
+		</div>
+	</div>
+
+	<p style="margin: 20px 0 40px;"><strong>It also comes in navy</strong></p>
+
+	<div class="featuredPhoto shadowBox navy">
+		<p class="title">Champion of the week</p>
+		<img src="uploads/championoftheweek.jpg" alt="Champion of the week: John Jameson" />
+		<div class="caption">
+			<p><strong>John Jameson</strong></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos in animi impedit consequuntur sunt quaerat est nobis accusamus atque.</p>
+			<a href="#"><i class="icn icn-caption"><span>Open caption</span></i></a>
+		</div>
+	</div>
+
+</div>
+
+```
+*/
+
+
+
+
+/*doc
+---
+title: Article type - bio
+name: art_bio
+category: article_types
+---
+
+A bio leadin, featured on the homepage
+
+```html_example
+
+<div style="width:360px;">
+
+	<a href="#" class="bio">
+		<span class="title"><strong>Tim Foley</strong></span>
+		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+		<span class="readmore"><strong>View Bio</strong></span>
+
+		<img src="uploads/bio-tim.jpg" alt="mugshot: Tim Foley" />
+	</a>
+
+</div>
+
+```
+*/
+
+
+
+/*doc
+---
+title: Captioned image
+name: caption_image
+category: article_types
+---
+
+A captioned image for any page.
+
+```html_example
+
+<div style="width:650px;">
+
+	<figure>
+		<img src="uploads/sample-image1.jpg" alt="This is a large landscape image." />
+		<figcaption>This is a large landscape image. Images are the same ratio as images used for article previews. This text is an example of a caption. <strong>Photo credit: Joe Bloggs</strong></figcaption>
+	</figure>
+
+</div>
+
+```
+*/
+

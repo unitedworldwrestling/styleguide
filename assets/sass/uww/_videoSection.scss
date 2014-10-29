@@ -1,0 +1,303 @@
+.video-section {
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: 0px;
+	}
+
+	.list {
+		background-color: #27272c;
+		position: absolute;
+		right: 0;
+		top:0;
+		height:100%;
+		float: none;
+		box-shadow: -3px 0 5px rgba(0,0,0,.35);
+
+		a { text-decoration: none; }
+	}
+
+	.overflow-y {
+		overflow-y: scroll;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding-top: 50px;
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+	}
+
+	.titleBar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		background-color: #1c1919;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		z-index: 2;
+
+		h3 {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 28px;
+			color: #fff;
+		}
+
+		.icn-video {
+			display: inline-block;
+			position: relative;
+			top: 3px;
+			margin-right: 10px;
+		}
+
+		.playall {
+			background-color: #fff;
+			border-radius: 2px;
+			display: inline-block;
+			color: #1c1919;
+			font-weight: 700;
+			font-size: 11px;
+			padding: 5px;
+			line-height: 1em;
+			margin: 0 10px;
+			@include transition(background-color);
+			&:hover { background-color: #ee3f37; }
+			&:after { content: none; }
+		}
+
+		.readmore {
+			color: #ee3f37;
+			font-weight: 700;
+
+			&:hover { color: $col-orange; }
+		}
+	}
+}
+
+.video-item {
+	border-bottom: 1px solid #1f1b1b;
+	padding: 20px;
+	padding-left: 195px;
+	width: 100%;
+	display: block;
+	position: relative;
+	color: #fff;
+	font-size: 14px;
+
+	&:hover { background-color: lighten(#27272c,2%); }
+
+	h3 {
+		font-size: 14px;
+		margin: 0;
+		line-height: 1.2em;
+		color: #fff;
+	}
+	.meta {
+		font-size: 11px;
+		color: #9d9d9d;
+		font-weight: 700;
+		line-height: 1.6em;
+	}
+
+	p { margin-bottom: 0; }
+
+	.preview {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 175px;
+		height: 100%;
+		background-position: center center;
+		opacity: .6;
+		@include cover();
+	}
+
+	&.active {
+		background-color: #38383e;
+		.preview { opacity: 1; }
+		&:hover { background-color: lighten(#38383e,2%); }
+		&:before {
+			left: 0;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(238, 63, 55, 0);
+			border-left-color: #ee3f37;
+			border-width: 10px;
+			margin-top: -10px;
+			z-index: 3;
+		}
+	}
+}
+
+.status {
+	border-radius: 2px;
+	line-height: 20px;
+	padding: 0 10px;
+	display: inline-block;
+	margin-right: 5px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 9px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+
+	&.live { background-color: #ee3f37; }
+	&.offline { background-color: #363535; }
+}
+
+
+// < 992
+@media only screen and (max-width: 992px) {
+
+	.video-section {
+		.list,
+		.titleBar,
+		.overflow-y {
+			position: static;
+			height: auto;
+			overflow: visible;
+		}
+		.list { float: left; }
+		.overflow-y { padding-top: 0; }
+	}
+}
+
+
+/*doc
+---
+title: Videos
+name: videos
+category: Page Sections
+---
+
+An article for featuring the location of an event
+
+```html_example
+
+<section class="video-section">
+	<div class="row no-pad clearfix">
+		<div class="col-sm-12 col-md-7">
+			<img src="uploads/bg-video.jpg" alt="placeholder image to act as video" />
+		</div>
+		<div class="col-sm-12 col-md-5 list">
+			<div class="titleBar pad clearfix">
+				<h3 class="title left">
+					<i class="icn icn-video"></i>
+					Event Livestream
+					<a href="#" class="playall">Play all</a>
+				</h3>
+				<a href="#" class="readmore right">More Videos</a>
+			</div>
+
+			<div class="overflow-y">
+
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status live">Live streaming now</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="active video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status live">Live streaming now</span>	<span class="status">Now Playing</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+				<a href="#" class="video-item">
+					<div class="preview" style="background-image: url(uploads/bg-video.jpg);"></div>
+					<span class="status offline">Live stream</span>
+					<h3>Mat 1: Pan American Championship</h3>
+					<p class="meta">Start: Friday 1 August 2014  •  12:35PM GMT</p>
+				</a>
+
+			</div><!-- .overflow-y -->
+		</div><!-- .list -->
+	</div><!-- .row -->
+</section>
+
+```
+*/

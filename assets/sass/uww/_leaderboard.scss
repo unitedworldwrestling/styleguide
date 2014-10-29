@@ -1,0 +1,114 @@
+.leaderboard {
+	background-color: #f4f4f4;
+	position: relative;
+	
+	.title {
+		background-color: $col-navy;
+		padding: 15px;
+		padding-left: 85px;
+		color: #fff;
+		font-size: 16px;
+		line-height: 20px;
+		
+		strong { margin-bottom: 5px; }
+		i { position: absolute; left: -23px; top: -10px; }
+		
+		.meta {
+			color: #8f8bce;
+			font-size: 11px;
+			line-height: 20px;
+			display: block;
+		}
+	}
+	
+	.readmore {
+		font-size: 11px;
+		text-transform: uppercase;
+		color: $col-blue;
+		line-height: 50px;
+		
+		&:hover { color: $col-orange; }
+		
+		.icn {
+			display: inline-block;
+			position: relative;
+			top: 2px;
+			margin-left: 15px;
+		}
+	}
+	
+	.list {
+		background-color: #f4f4f4;
+		padding: 20px;
+	}
+	
+	ul {
+		background-color: #fff;
+		border-radius: 2px;
+		
+		li {
+			width: 100%;
+			border-bottom: 1px solid #f4f4f4;
+			padding: 20px 15px;
+			background-color: #fff;
+			counter-increment: myIndex;
+			font-size: 14px;
+			line-height: 1.2em;
+			position: relative;
+			
+			.icn { position: absolute; right: 15px; top: 17px; }
+			
+			&:before {
+				content: counter(myIndex);
+				display: inline-block;
+				width: 40px;
+				color: #c3c3c3;
+				font-weight: 700;
+				height: auto;
+			}
+			
+			&:nth-child(1):before,
+			&:nth-child(2):before { color: #3b3b3b; }
+			
+			&:last-child { border-bottom: 0; }
+		}
+	}
+}
+
+// Hologram
+
+/*doc
+---
+title: Leaderboard
+name: leaderboard
+category: components
+---
+
+The leaderboard located on the homepage
+
+```html_example
+
+<div style="width:400px;">
+
+	<div class="leaderboard">
+		<div class="title">
+			<i class="icn icn-logo-emblem"></i>
+			<strong>UWW Global Team Ranking</strong>
+			<span class="meta">Last updated 21st May 2014</span>
+		</div>
+		<div class="list">
+			<ul class="listReset clearfix shadowBox">
+				<li class="up">Iran<i class="icn"></i></li>
+				<li class="up">Russia<i class="icn"></i></li>
+				<li class="down">Ukraine<i class="icn"></i></li>
+				<li class="up">USA<i class="icn"></i></li>
+				<li class="down">Turkey<i class="icn"></i></li>
+			</ul>
+		</div>
+		<a href="#" class="clear readmore right">View full leaderboard <i class="icn icn-arrow-right"></i></a>
+	</div><!-- leaderboard -->
+
+</div>
+
+```
+*/

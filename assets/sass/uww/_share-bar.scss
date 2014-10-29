@@ -1,0 +1,79 @@
+.share-bar {
+	font-size: 14px;
+	line-height: 20px;
+	color: #cbcac9;
+	font-weight: 700;
+	margin-bottom: 0px;
+	
+	.share-label {
+		line-height: 20px;
+		margin-right: 10px;
+		display: inline-block;
+	}
+	
+	img {
+		width:50px;
+		height: auto;
+	}
+	
+	.share {
+		line-height: 20px;
+		display: block;
+		padding-top: 5px;
+		
+		.icn { display: inline-block; position: relative; top: 5px; }
+		.icn:hover { opacity: .8; }
+	}
+	
+	.comments {
+		color: #cbcac9;
+		&:hover { color: $col-orange; }
+	}
+}
+
+.addtoany_list {
+	display: block;
+	margin-bottom: 40px;
+}
+
+
+// Hologram
+
+/*doc
+---
+title: Share bar
+name: share_bar
+category: components
+---
+
+
+
+```html_example
+
+<div class="row share-bar">
+	<div class="col-xs-1">
+		<img src="uploads/bio-tim.jpg" alt="mugshot: Tim Foley" class="img-circle">
+	</div>
+	<div class="col-xs-6">
+		By Tim Foley, UWW Expert<br/>
+		<div class="share">
+			<span class="share-label">Share</span>
+			<a href="#"><i class="icn icn-share-facebook"><span>Facebook</span></i></a>
+			<a href="#"><i class="icn icn-share-twitter"><span>Twitter</span></i></a>
+			<a href="#"><i class="icn icn-share-pinterest"><span>Pinterest</span></i></a>
+			<a href="#"><i class="icn icn-share-linkedin"><span>LinkedIn</span></i></a>
+			<a href="#"><i class="icn icn-share-share"><span>share</span></i></a>
+		</div>
+	</div>
+	<div class="col-xs-5">
+		<p class="meta text-right">
+			Friday 1 August 2014 <span class="divider-dot">&bull;</span> 1AM<br/>
+			<a href="#" class="comments">43 comments</a>
+		</p>
+	</div>
+</div>
+
+
+
+```
+*/

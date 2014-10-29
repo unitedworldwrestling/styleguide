@@ -1,0 +1,122 @@
+.featuredPhoto {
+	width: 100%;
+	display: block;
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.title {
+		color: #fff;
+		position: absolute;
+		left: -15px;
+		top: -15px;
+		background-color: $col-orange;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 13px;
+		margin: 0;
+		text-align: center;
+		padding: 0 15px;
+		line-height: 40px;
+		z-index: 2;
+		&:after{
+			position: absolute;
+			left: 0;
+			bottom: -9px;
+			content: ' ';
+
+			width: 0;
+			height: 0;
+			border-top: 9px solid #231930;
+			border-left: 15px solid transparent;
+
+		}
+	}
+
+	.caption {
+		background-color: #ffffff;
+		width: 100%;
+		padding: 25px;
+		padding-right: 45px;
+		font-size: 14px;
+		line-height: 21px;
+		position: relative;
+		color: #121212;
+
+		strong { text-transform: uppercase; }
+		p { margin-bottom: 0; }
+
+		a {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-left: 1px solid #efefef;
+			border-top: 1px solid #efefef;
+			width: 40px;
+			height: 40px;
+			@include transition(opacity);
+			&:hover { opacity: .8; }
+
+			i {
+				position: absolute;
+				left: 12px;
+				top: 12px;
+			}
+		}
+	}
+
+	&.navy {
+		.caption {
+			background-color: $col-navy;
+			color: #fff;
+
+			a { border-color: #322f61; }
+		}
+	}
+}
+
+// Hologram
+
+/*doc
+---
+title: Photo of the day
+name: art_photooftheday
+category: article_types
+---
+
+Photo of the day along with caption. This is the variety with navy caption background.
+
+```html_example
+
+<div id="newsWall" style="width:360px;">
+
+	<div class="featuredPhoto shadowBox">
+		<p class="title">Champion of the week</p>
+		<img src="uploads/championoftheweek.jpg" alt="Champion of the week: John Jameson" />
+		<div class="caption">
+			<p><strong>John Jameson</strong></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos in animi impedit consequuntur sunt quaerat est nobis accusamus atque.</p>
+			<a href="#"><i class="icn icn-caption"><span>Open caption</span></i></a>
+		</div>
+	</div>
+
+	<p style="margin: 20px 0 40px;"><strong>It also comes in navy</strong></p>
+
+	<div class="featuredPhoto shadowBox navy">
+		<p class="title">Champion of the week</p>
+		<img src="uploads/championoftheweek.jpg" alt="Champion of the week: John Jameson" />
+		<div class="caption">
+			<p><strong>John Jameson</strong></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos in animi impedit consequuntur sunt quaerat est nobis accusamus atque.</p>
+			<a href="#"><i class="icn icn-caption"><span>Open caption</span></i></a>
+		</div>
+	</div>
+
+</div>
+
+```
+*/

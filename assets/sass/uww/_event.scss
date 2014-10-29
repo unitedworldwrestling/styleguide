@@ -1,0 +1,343 @@
+.events {
+	padding: 40px 0 20px;
+
+	.btn {
+		background-color: #150f1c;
+		margin: 0 15px;
+		color: #fff;
+	}
+}
+
+.event {
+	display: block;
+	margin-bottom: 40px;
+	border: 1px solid #292034;
+	border-radius: 3px;
+	position: relative;
+	background: url(../../img/bg-fancy.png) no-repeat center center $col-navy;
+	z-index: 1;
+
+	.fancyBG & {
+		background-image: none;
+		background-color: #181220;
+		background-color: rgba(0,0,0,.21);
+		margin-bottom: 20px;
+	}
+
+	a:hover { text-decoration: none; }
+
+	a.title {
+		display: block;
+		font-size: 12px;
+		line-height: 21px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 15px 20px;
+		color: #fff;
+		background-color: #030216;
+		border-bottom: 1px solid #231e2b;
+
+		div {
+	      display: inline;
+	    }
+
+		.field-name-title .field-item:after {
+			content: ",\00a0";
+		}
+
+		.icn {
+			margin-right: 10px;
+			display: inline-block;
+			position: relative;
+			top: 4px;
+		}
+
+		.date {
+			color: #9c94a5;
+			margin-left: 10px;
+		}
+	}
+
+	.event-title {
+		font-size: 16px;
+		line-height: 21px;
+		min-height: 42px;
+		font-weight: 700;
+		margin: 0;
+		display: block;
+		text-transform: none;
+		a { color: #fff; }
+	}
+
+	.event-image {
+		position: absolute;
+		left: 20px;
+		top: 17px;
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+
+		.content {
+			padding: 0;
+			width: auto;
+			height: auto;
+			position: none;
+		}
+
+		img {
+			// border-radius: 50%;
+			width: auto;
+			height: 100%;
+			display: block;
+		}
+	}
+
+	.event-ages {
+		color: $col-orange;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	.event-sports {
+		color: #ffffff;
+		text-transform: uppercase;
+		font-size: 10px;
+		font-weight: bold;
+		margin: 0;
+
+		div {
+			display: inline;
+			white-space: nowrap;
+		}
+	}
+
+	.tags {
+		position: static;
+		margin-top: 20px;
+	}
+
+
+	.content {
+		padding: 15px 15px 30px;
+		padding-left: 140px;
+		position: relative;
+	}
+
+	.event-details {
+		margin-bottom: 30px;
+		font-weight: normal;
+
+		li {
+			padding: 20px 0;
+			font-size: 16px;
+			line-height: 19px;
+			border-bottom: 1px solid #3a253c;
+			border-bottom: 1px solid rgba(255,255,255,.1);
+		}
+	}
+
+
+	// Big variant
+	&.big {
+		margin: 0;
+		border-radius: 0;
+		border: 0;
+		padding: 50px 30px;
+		color: #fff;
+
+		.margin { margin-bottom: 20px; }
+
+		.event-title {
+			margin: 0;
+			min-height: 0;
+			font-size: 20px;
+			line-height: 26px;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		.event-image { position: static; }
+
+		small {
+			font-size: 12px;
+			line-height: 17px;
+			display: block;
+		}
+
+		.icn { position: relative; top: 3px; }
+	}
+}
+
+
+// Monthly pager
+.monthPager {
+	position: absolute;
+	bottom:0;
+	left:0;
+	height: 59px;
+	z-index: 1;
+	width: 100%;
+	&.border-bottom { border-bottom: 1px solid #f1f1f2; height: 60px; }
+
+	.background-left,
+	.background-right {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		width: 50%;
+		z-index: 1;
+
+		span {
+			background-color: #f6f6f9;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.background-left { left: 0; padding-right: 559px; }
+	.background-right { right: 0; padding-left: 559px; }
+
+	ul {
+		position: relative;
+		z-index: 2;
+		max-width: 1120px;
+		padding: 0;
+	}
+
+	li {
+		text-transform: uppercase;
+		text-align: center;
+		background-color: #ffffff;
+		float: left;
+		width: 8.333%;
+		font-weight: 700;
+		border-right: 1px solid #f1f1f2;
+		line-height: 59px;
+		position: relative;
+		cursor: pointer;
+		color: #b0b0b0;
+		@include transition(color);
+		&:hover { color: darken(#b0b0b0,10%); }
+
+		&.active {
+			background-color: transparent;
+			color: #fff;
+			cursor: default;
+		}
+		&.dot{
+			color: #111111;
+			&:hover { color: $col-orange; }
+			&:after {
+				content: ' ';
+				left: 50%;
+				margin-left: -3px;
+				width: 6px;
+				height: 6px;
+				bottom: 10px;
+				background-color: $col-orange;
+				border-radius: 50%;
+				position: absolute;
+			}
+		}
+		&.active:after {
+			content: ' ';
+			background-color: $col-orange;
+			bottom: 0;
+			left: 0;
+			right:0;
+			height: 4px;
+			position: absolute;
+		}
+
+	}
+	.year {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		top: 0;
+		font-size: 11px;
+		color: #c6c6c6;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 25px;
+	}
+}
+
+
+// < 767
+@media only screen and (max-width: 767px) {
+	.events .event a.title .date { display: block; margin-left: 26px; }
+	.events .tags .tag { clear: both; }
+}
+
+// Hologram
+
+/*doc
+---
+title: Event
+name: event
+category: article_types
+---
+
+An event, listed on the homepage. The image example, to be connected to the CMS, uploadable by the user.
+
+```html_example
+
+<div style="width:360px">
+
+	<div class="event">
+		<a href="#" class="title">
+			<i class="icn icn-globe"></i> Los Angeles, USA <span class="date">12 June - 13 July</span>
+		</a>
+		<div class="content">
+			<h3 class="event-title"><a href="#">2014 Men’s Freestyle World Cup</a></h3>
+			<a href="#" class="event-image"><img src="uploads/event-1.jpg" alt="event: 2014 Men’s Freestyle World Cup" /></a>
+			<div class="tags clearfix">
+				<a href="#" class="tag orange">Tickets</a>
+				<a href="#" class="tag pearl">Registration</a>
+			</div>
+		</div><!-- .content -->
+	</div>
+
+</div>
+
+<p> And a large variant found on the featured article page</p>
+
+<div style="width:500px">
+
+	<div class="event big">
+		<div class="row margin">
+			<div class="col-xs-9">
+				<h4 class="title event-title"><a href="#">2014 Men’s Freestyle World Cup</a></h4>
+				<small>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et.</small>
+			</div>
+			<div class="col-xs-3">
+				<a href="#" class="event-image right"><img src="uploads/event-1.jpg" alt="event: 2014 Men’s Freestyle World Cup"></a>
+			</div>
+		</div>
+
+		<ul class="event-details listReset">
+			<li>
+				<i class="icn icn-globe inline left"></i>
+				<strong>Location</strong>
+				<span class="right">Los Angeles, USA</span>
+			</li>
+			<li>
+				<i class="icn icn-clock inline left"></i>
+				<strong>Dates</strong>
+				<span class="right">12 June - 13 July 2014</span>
+			</li>
+		</ul>
+
+		<a href="#" class="btn orange inline">Tickets</a>
+		<a href="#" class="btn grey inline">Registration</a>
+		<div class="clear"></div>
+	</div>
+
+</div>
+
+```
+*/

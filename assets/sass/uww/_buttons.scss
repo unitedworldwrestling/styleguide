@@ -1,0 +1,83 @@
+.btn {
+	color: #515151;
+	background-color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 40px;
+	padding: 0 20px;
+	border-radius: 0;
+	border: 0;
+	margin: 0;
+	@include transition(color);
+	
+	&:hover { color: $col-orange; }
+	
+	&.orange {
+		background-color: $col-orange;
+		color: #fff;
+		@include transition(background-color);
+		
+		&:hover { background-color: $col-orange-bg; }
+	}
+	
+	&.border-radius { border-radius: 2px; }
+	
+	&.readmore {
+		padding: 0px;
+		font-size: inherit;
+		line-height: 1em;
+		display: inline-block;
+		color: $col-orange;
+		background-color: transparent;
+		border: 0px;
+		text-align: left;
+		&:hover { color: $col-blue; }
+	}
+	
+	&.block {
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 700;
+		background-color: #000;
+		margin: 20px 15px;
+		border:0px;
+		line-height: 50px;
+		color: #fff;
+		
+		i {
+			display: inline-block;
+			margin-left: 10px;
+			position: relative;
+			top: 1px;
+		}
+
+	}
+}
+
+// < 480
+@media only screen and (max-width: 480px) {
+	.btn { display: block; }
+}
+
+// Hologram
+
+/*doc
+---
+title: Buttons
+name: buttons
+category: Base CSS
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+
+<a class="btn" href="#">An a element</a>
+<a class="btn orange" href="#">In orange</a>
+
+<button class="btn">A button element</button>
+<button class="btn orange">In orange</button>
+```
+
+*/

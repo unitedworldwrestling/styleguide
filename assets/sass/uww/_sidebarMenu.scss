@@ -1,0 +1,160 @@
+// Sidebar menu
+.menu {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 23px;
+	margin: 0;
+	
+	.title {
+		background-color: #e8660b;
+		color: #fff;
+		font-size: 16px;
+		padding: 14px 20px;
+		padding-right: 20px;
+		border-bottom: 0;
+		&:after,
+		&:before { content: none; }
+	}
+	
+	li {
+		border-bottom: 1px dashed #ebebeb;
+		&:after,
+		&:before {
+			content: ' ';
+			background-color: #c6c6c6;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: auto;
+			border-radius: 0;
+			border: 0;
+		}
+		&:after {
+			right: 25px;
+			width: 9px;
+			height: 1px;
+			margin-top: 0;
+		}
+		&:before {
+			right: 29px;
+			width: 1px;
+			height: 9px;
+			margin-top: -4px;
+		}
+		
+		
+		&:last-child { border-bottom: 0; }
+		&.active {
+			a {
+				color: $col-orange;
+				&:hover { color: $col-orange-bg; }
+			}
+			ul { display: block; }
+			
+			&:after {
+				width: 9px;
+				height: 1px;
+				background-color: #ed851c;
+				top: 25px;
+				right: 25px;
+			}
+			&:before { content: none; }
+		}
+	}
+	
+	a {
+		padding: 14px 20px;
+		display: block;
+		color: #131313;
+		&:hover {
+			color: $col-orange;
+			text-decoration: none;
+		}
+	}
+	
+	.hasSubnav {
+		position: relative;
+	}
+	.hasSubnav a { padding-right: 60px; }
+	.hasSubnav ul {
+		@include listReset();
+		font-weight: normal;
+		margin: 0;
+		background-color: #fafafd;
+		border-top: 1px solid #f2f2f2;
+		padding: 10px 40px;
+		font-size: 13px;
+		display: none;
+		
+		li {
+			margin: 0;
+			border-bottom: 0;
+			&:after,
+			&:before { content: none; }
+		}
+		a {
+			color: #000000;
+			padding: 5px 0;
+			&:hover { color: $col-orange; }
+		}
+	}
+}
+
+// Hologram
+
+/*doc
+---
+title: Sidebar menu
+name: sidebar_menu
+category: components
+---
+
+The sidebar menu on static pages. Just add 'hasSubnav' on nested items.
+
+```html_example
+
+<div style="width: 250px;">
+
+	<nav>
+		<ul class="menu listReset shadowBox">
+			<li class="title">Generic Sub Nav</li>
+			<li class="hasSubnav">
+				<a href="#">Menu Item</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+			<li class="hasSubnav active">
+				<a href="#">Active Menu Item</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+			<li class="hasSubnav">
+				<a href="#">A menu item that takes up two lines</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+			<li class="hasSubnav">
+				<a href="#">Menu Item</a>
+				<ul>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+					<li><a href="#">Sub menu item</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+<div class="clear"></div>
+
+```
+*/

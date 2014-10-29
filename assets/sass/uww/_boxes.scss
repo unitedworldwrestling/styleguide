@@ -1,0 +1,103 @@
+.shadowBox {
+  box-shadow: 0 1px 4px #efeff2;
+  box-shadow: 0 1px 4px rgba(0,0,0,.11);
+}
+.news {
+  margin-bottom: 40px;
+  background-color: #ccc;
+  height: 160px;
+  display: block;
+}
+
+.whiteBox { background-color: #fff; }
+.greyBox { background-color: #fafafd; }
+.pearlBox { background-color: #ebebeb; }
+
+/*doc
+---
+title: Base Box's
+name: base_box
+category: boxes
+---
+
+The basic boxes
+
+```html_example
+
+<p>Shadow box - includes a shadow on your box</p>
+<div class="shadowBox" style="width: 200px; height: 200px; display: block;"></div>
+
+<p>White box - Boxes with a white bg</p>
+<div class="whiteBox" style="width: 200px; height: 200px; display: block;"></div>
+
+<p>Grey box - Boxes with a grey bg</p>
+<div class="greyBox" style="width: 200px; height: 200px; display: block;"></div>
+
+
+```
+*/
+
+/*doc
+---
+title: Button Box
+name: button_box
+category: boxes
+---
+
+A box with buttons.
+
+```html_example
+
+<div class="row">
+  <div class="col-md-4 margin-bottom-big">
+    <div class="whiteBox shadowBox padding-medium text-medium">
+      <h3 class="no-margin-top">Funding Support</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio repellat aut porro cum quas totam.</p>
+      <a href="#" class="btn orange big">Olympic Solidarity <i class="icn icn-arrow-right-white right"></i></a>
+      <a href="#" class="btn fancyBG big">CONFEJES <i class="icn icn-arrow-right-white right"></i></a>
+      <a href="#" class="btn orange big">Contact Us <i class="icn icn-arrow-right-white right"></i></a>
+    </div>
+  </div>
+</div><!-- .row -->
+
+```
+*/
+
+/*doc
+---
+title: Link Box
+name: link_box
+category: boxes
+---
+
+A box with links
+
+```html_example
+
+<div class="row">
+  <div class="col-md-4 margin-bottom">
+    <div class="whiteBox shadowBox">
+      <div class="imgWrap">
+        <img src="uploads/gallery2.jpg" alt="Image example 1">
+      </div>
+      <div class="padding text-medium">
+        <h4>Athletes</h4>
+        <p>Quisque eget odio ac lectus vestib faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+      </div>
+      <ul class="link-list listReset">
+        <li>
+          <a href="#">Application Form <i class="icn icn-arrow-right-orange right"></i></a>
+        </li>
+        <li>
+          <a href="#">Athlete Career Program <i class="icn icn-arrow-right-orange right"></i></a>
+        </li>
+        <li>
+          <a href="#">Future Leaders Program Information <i class="icn icn-arrow-right-orange right"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div><!-- .row -->
+
+```
+*/

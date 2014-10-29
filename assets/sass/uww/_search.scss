@@ -1,0 +1,107 @@
+.search {
+	position: relative;
+	
+	input {
+		background-color: #0d0218;
+		color: lighten(#888888,15%);
+		border-radius: 30px 30px;
+		width: 165px;
+		padding: 5px 15px;
+		padding-right: 40px;
+		border: 0;
+		
+		&:hover,
+		&:focus {
+			box-shadow: none;
+			border: 0;
+		}
+	}
+	label {
+		position: absolute;
+		left: 15px;
+		top: 8px;
+		margin: 0;
+		padding: 0;
+		color: #888888;
+		font-weight: normal;
+	}
+	input,
+	label {
+		font-size: 12px;
+		line-height: 1em;
+	}
+	button {
+		background-color: transparent;
+		border: 0;
+		position: absolute;
+		right: 15px;
+		top: 8px;
+	}
+}
+
+.pageSearch {
+	position: relative;
+	
+	label,
+	input {
+		font-size: 14px;
+		line-height: 1em;
+		color: #111111;
+	}
+	
+	label,
+	button { position: absolute; }
+	
+	label {
+		left: 20px;
+		top: 14px;
+		font-weight: normal;
+	}
+	input {
+		padding: 11px 105px 10px 20px;
+		height: auto;
+		height: 40px;
+	}
+	
+	button {
+		right: 0;
+		top: 0;
+		border-radius: 0 2px 2px 0;
+	}
+}
+
+// Hologram
+
+
+/*doc
+---
+title: Search
+name: search
+category: components
+---
+
+The search form is found in the header for desktop and in the sidebar for mobile.
+
+```html_example
+
+<form class="search left" action="#" method="post">					
+	<div class="field">
+		<label for="searchInput" class="infield">Search</label>
+		<input id="searchInput" name="Search" type="text" />
+	</div>
+	<button type="submit" class="icn icn-search"><span>Search</span></button>
+</form>
+<div class="clear"></div>
+
+<p>A single page variant</p>
+<form role="form" class="pageSearch">
+	<div class="form-group">
+		<label for="pageSearchInput" class="infield">Search</label>
+		<input type="text" name="search input" class="form-control" id="pageSearchInput">
+	</div>
+	<button type="submit" class="btn orange">Search</button>
+</form>
+
+
+```
+*/

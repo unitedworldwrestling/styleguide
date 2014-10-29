@@ -1,0 +1,65 @@
+.bio {
+	width: 100%;
+	display: block;
+	background-color: #eeeeee;
+	color: #535353;
+	font-size: 12px;
+	line-height: 20px;
+	position: relative;
+	margin-bottom: 40px;
+	
+	&:hover { text-decoration: none; }
+	
+	.h3 {
+		font-size: 16px;
+		line-height: 21px;
+		margin-bottom: 10px;
+		display: block;
+		color: #535353;
+	}
+	.readmore {
+		color: $col-orange;
+		display: block;
+	}
+	
+	img {
+		max-width: 115px;
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+		margin: 20px 0;
+	}
+	
+	.btn { margin-bottom: 30px; }
+}
+
+// Hologram
+
+/*doc
+---
+title: Article type - bio
+name: art_bio
+category: article_types
+---
+
+A bio leadin, featured on the homepage
+
+```html_example
+
+<div style="width:360px;">
+
+	<div class="bio clearfix">
+		<div class="col-md-7">
+		        <h3>Tim Foley</h3>
+		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		        <a href="#" class="btn readmore">View Bio</a>
+	    </div>
+	    <div class="col-md-5">
+	        <img src="uploads/bio-tim.jpg" alt="mugshot: Tim Foley" class="img-circle">
+	    </div>
+	</div>
+
+</div>
+
+```
+*/

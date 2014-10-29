@@ -1,0 +1,182 @@
+footer {
+	height: 270px;
+	background-color: $col-navy;
+	
+	a:hover { text-decoration: none; }
+	
+	.col1,
+	.col2,
+	.col3,
+	.col4,
+	.col5 { position: absolute; top: 50px; }
+	
+	.col1 { left: 15px;	top: 37px; }
+	.col2 { right: 620px; width: 170px; }
+	.col3 { right: 330px; width: 220px; }
+	.col4 { width: 150px; right: 115px; top: 50px; }
+	.col5 { width: 46px; right: 15px; }
+	
+	.icn-logo { margin-bottom: 20px; }
+	.fineprint {
+		color: #b9b7cf;
+		a {
+			color: #b9b7cf;
+			&:hover { color: #fff; }
+		}
+	}
+	
+	p { margin: 0; }
+	
+	.title {
+		font-size: 13px;
+		line-height: 26px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #fff;
+		display: block;
+	}
+	
+	.social .title { display: block; margin-bottom: 15px; }
+	.social li { display: inline-block; }
+	.social a {
+		margin: 0 5px;
+		@include transition(color);
+		
+		&:hover { opacity: .8; }
+	}
+	
+	.col3 {
+		color: #e5989b;
+		font-size: 14px;
+		line-height: 26px;
+		margin-bottom: 0;
+		
+		
+		a {
+			color: #e5989b;
+			@include transition(color);
+			
+			&:hover { color: #fff; }
+		}
+	}
+	
+	.bigList {
+		li { display: block; margin-bottom: 10px; }
+		a {
+			color: #ceccf3;
+			font-size: 16px;
+			
+			&:hover { color: #fff; }
+		}
+	}
+	
+	.values li { margin-bottom: 10px; }
+}
+
+
+// < 960
+@media only screen and (max-width: 960px) {
+	footer .col1 {}
+	footer .col2 { right: 420px; }
+	footer .col3 { right: 200px; }
+	footer .col4 { right: 50px; }
+}
+
+// < 767
+@media only screen and (max-width: 767px) {
+	footer {
+		height: auto;
+		padding-top: 45px;
+		
+		p,
+		a,
+		.bigList a { font-size: 14px; line-height: 26px; }
+		
+		.wrapper { padding-bottom: 225px; }
+		
+		.title { margin-bottom: 15px; }
+		
+		.icn-logo { display: inline-block; margin-bottom: 15px; }
+		.fineprint,
+		.fineprint a { color: #fff; font-size: 10px; }
+		
+		.bigList {
+			li { margin-bottom: 0; }
+			a { color: #aaa5af; &:hover { color: #fff; } }
+		}
+		
+		.col1 {
+			width: 100%;
+			left: 0;
+			top: auto;
+			bottom: 0;
+			padding: 30px 0;
+		}
+		.col1 { text-align: center; }
+		.col2,
+		.col3,
+		.col4,
+		.col5 {
+			width: 100%;
+			position: static;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.col5 {
+			text-align: center;
+			li { display: inline-block; margin: 10px; }
+		}
+	
+	}
+}
+
+/*doc
+---
+title: Footer
+name: footer
+category: Page Sections
+---
+
+The footer - Please note, hologram wouldn't render the accented a in this line of the address. Please alter on proper builds: "Rue du Chateau".
+
+```html_example
+
+<footer class="fancyBG">
+	<div class="wrapper">
+		<div class="col1">
+			<a href="#" class="icn icn-logo"><span>United World Wrestling</a>
+			<p class="fineprint">&copy; <a href="#">UWW</a> 2014 - All rights reserved</p>
+		</div><!-- .col1 -->
+		<ul class="social col2 listReset">
+			<li class="title">Connect with us</li>
+			<li><a href="#" class="icn icn-facebook"><span>Facbeook</span></a></li>
+			<li><a href="#" class="icn icn-google"><span>Google</span></a></li>
+			<li><a href="#" class="icn icn-twitter"><span>Twitter</span></a></li>
+			<li><a href="#" class="icn icn-youtube"><span>YouTube</span></a></li>
+		</ul>
+		<p class="col3">
+			<span class="title">Contact</span>
+			Rue du Chateau<br/>
+			6 - 1804 Corsier-sur-Vevey<br/>
+			Switzerland<br/>
+			<a href="tel:+41 21 312 84 26">Tel. +41 21 312 84 26</a>
+		</p><!-- .col3 -->
+		<ul class="col4 listReset bigList">
+			<li><a href="#">Press</a></li>
+			<li><a href="#">Advertising</a></li>
+			<li><a href="#">Sponsorship</a></li>
+			<li><a href="#">Legal</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul><!-- .col4 -->
+
+		<ul class="col5 listReset values">
+			<li class="icn icn-value1"><span>Value 1</span></li>
+			<li class="icn icn-value2"><span>Value 2</span></li>
+			<li class="icn icn-value3"><span>Value 3</span></li>
+		</ul>
+	</div><!-- .wrapper -->
+</footer>
+
+
+```
+*/
