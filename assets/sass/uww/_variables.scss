@@ -1,0 +1,71 @@
+$font-stack: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$default_f: 16px; /* Default Font Size */
+
+// Site colours
+$col-grey: #d7d6c4;
+$col-yellowgrey: #9f9d83;
+$col-lightorange: #f7941e;
+$col-orange-bg: #f15a22;
+$col-orange: #f58220;
+$col-red: #ed1c24;
+$col-navy: #04003f;
+$col-purple: #231930;
+$col-blue: #2185cb;
+
+$col1: #333; /* Primary Colour */
+$col2: #666; /* Secondary Colour */
+
+$linkcol: $col-orange;
+$hovercol: lighten($col-orange,10%);
+
+// Hologram
+
+/*doc
+---
+title: Colours
+name: colours
+category: Base CSS
+---
+
+There's a few SCSS variables to sort out the primary swatches of the website. Listed as follows
+
+```html_example
+
+<div class="line txtC">
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #d7d6c4;"></div>
+      <code>$col-grey</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #9f9d83;"></div>
+      <code>$col-yellowgrey</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #f7941e;"></div>
+      <code>$col-lightorange</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #f15a22;"></div>
+      <code>$col-orange-bg</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #f58220;"></div>
+      <code>$col-orange</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #ed1c24;"></div>
+      <code>$col-red</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #04003f;"></div>
+      <code>$col-navy</code>
+    </div>
+    <div class="col cols6">
+      <div class="docSwatch" style="background-color: #231930;"></div>
+      <code>$col-purple</code>
+    </div>
+</div>
+
+```
+
+*/

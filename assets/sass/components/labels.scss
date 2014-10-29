@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/*doc
+---
+title: Default label
+name: a-labels
+category: Antistatique Components - Labels
+---
+
+```html_example
+<h1>Example heading <span class="label label-default">New</span></h1>
+<h2>Example heading <span class="label label-default">New</span></h2>
+<h3>Example heading <span class="label label-default">New</span></h3>
+<h4>Example heading <span class="label label-default">New</span></h4>
+<h5>Example heading <span class="label label-default">New</span></h5>
+<h6>Example heading <span class="label label-default">New</span></h6>
+```
+*/
+
+.label {
+  border-radius: 0;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  line-height: 10px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/*doc
+---
+title: Variations
+name: b-variations
+category: Antistatique Components - Labels
+---
+
+```html_example
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+```
+*/

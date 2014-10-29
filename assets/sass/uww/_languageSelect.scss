@@ -1,0 +1,146 @@
+.languageSelect {
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	width: 70px;
+	
+	li {
+		display: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 10px;
+		
+		a {
+			color: #fff;
+			font-size: 10px;
+			font-weight: bold;
+			color: #303030;
+			
+		}
+		.icn {
+			display: inline-block;
+			margin-right: 10px;
+			position: relative;
+			top: 3px;
+		}
+	}
+	
+	li.active {
+		display: inline-block;
+		cursor: pointer;
+		color: #fff;
+		line-height: 1em;
+		padding-right: 10px;
+		float: right;
+		text-align: right;
+		width: 100%;
+		transition: none!important;
+		padding: 8px 10px 9px 0;
+		
+		.icn {
+			display: block;
+			margin: 0;
+			position: absolute;
+			left: 17px;
+			top: 7px;
+		}
+		
+		// Arrow
+		&:after {
+			content: ' ';
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			pointer-events: none;
+			border-color: rgba(255, 255, 255, 0);
+			border-top-color: #fff;
+			border-width: 4px;
+			margin-left: -4px;
+			display: inline-block;
+			position: relative;
+			left: auto;
+			right: -10px;
+			top: 3px;
+		}
+	}
+	&:hover {
+		right: 0;
+		margin-top: 27px;
+		background-color: #fff;
+		z-index: 2;
+		padding: 10px;
+		border-radius: 2px;
+		box-shadow: 0 1px 5px rgba(0,0,0,.25);
+		
+		// Arrow
+		&:after {
+			content: ' ';
+			bottom: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: #ffffff;
+			border-width: 4px;
+			margin-left: -4px;
+		}
+		
+		li {
+			display: block;
+			width: 100%;
+			display: block;
+			@include transition(color);
+			
+			&:hover { color: $linkcol; }
+			
+			&.active {
+				position: absolute;
+				top: -27px;
+				left: 0;
+				&:hover { color: #fff; }
+			}
+		}
+	}
+}
+
+
+// Hologram
+
+/*doc
+---
+title: Language Selector
+name: languageselector
+category: components
+---
+
+The drop down language selector toggle. Please note, this should be contained in a relative positioned container and by default has white text for the active language.
+
+```html_example
+<div style="position:relative; background-color: #222; padding: 20px;">
+	<ul class="languageSelect listReset left clearfix">
+		<li class="active"><span class="icn icn-flag-eng"></span>EN</li>
+		<li><span class="icn icn-flag-eng"></span>GR</li>
+		<li><span class="icn icn-flag-eng"></span>FR</li>
+		<li><span class="icn icn-flag-eng"></span>IT</li>
+		<li><span class="icn icn-flag-eng"></span>AU</li>
+		<li><span class="icn icn-flag-eng"></span>GR</li>
+		<li><span class="icn icn-flag-eng"></span>FR</li>
+		<li><span class="icn icn-flag-eng"></span>IT</li>
+		<li><span class="icn icn-flag-eng"></span>AU</li>
+		<li><span class="icn icn-flag-eng"></span>GR</li>
+		<li><span class="icn icn-flag-eng"></span>FR</li>
+		<li><span class="icn icn-flag-eng"></span>IT</li>
+		<li><span class="icn icn-flag-eng"></span>AU</li>
+	</ul><!-- .languageSelect -->
+</div>
+
+```
+*/

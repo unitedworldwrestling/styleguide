@@ -1,0 +1,85 @@
+.photoWall {
+	figure {
+		border-left: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+		position: relative;
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+		
+		img {
+			width: 100%;
+			display: block;
+			margin: 0;
+		}
+		
+		figcaption {
+			border-left: 0;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			z-index: 3;
+			vertical-align: baseline;
+			color: #fff;
+			font-size: 12px;
+			font-style: italic;
+			line-height: 19px;
+			padding: 30px;
+		}
+		
+		&:after {
+			content: ' ';
+			background-color: rgba(27,9,15,.8);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+		
+		figcaption,
+		&:after {
+			opacity: 0;
+			@include transition(opacity);
+		}
+		&:hover:after,
+		&:hover figcaption { opacity: 1; }
+	}
+}
+
+// Hologram
+
+/*doc
+---
+title: Photo Wall
+name: photowall
+category: components
+---
+
+A section containing photo wall. Elements use the same format of markup as captioned images.
+
+```html_example
+
+<section class="photoWall clearfix row no-pad">
+	<div class="col-xs-12 col-sm-6 col-md-4">
+		<figure>
+			<img src="uploads/photoWall1.jpg" alt="Photo 1 of wall" />
+			<figcaption>England's CHINU accepts the cheers of a packed house after earning his Commonwealth Games bronze medal with a 12-1 victory over Hollis Ochineng MKANGA (KEN) Wednesday in the Wrestling Hall at the SECC Arena in Glasgow. (Photo: T.R. Foley, FILA-Wrestling.com)</figcaption>
+		</figure>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-4">
+		<figure>
+			<img src="uploads/photoWall1.jpg" alt="Photo 1 of wall" />
+			<figcaption>England's CHINU accepts the cheers of a packed house after earning his Commonwealth Games bronze medal with a 12-1 victory over Hollis Ochineng MKANGA (KEN) Wednesday in the Wrestling Hall at the SECC Arena in Glasgow. (Photo: T.R. Foley, FILA-Wrestling.com)</figcaption>
+		</figure>
+	</div>
+</section><!-- .photoWall -->
+
+```
+
+*/

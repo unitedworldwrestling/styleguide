@@ -1,0 +1,11 @@
+// < 992
+@media only screen and (max-width: 992px) {
+	#featuredNews,
+	#featuredNews div.col { height: auto; }
+	#featuredNews article { margin-top: 0; }
+	
+	#featuredNews div.col.left,
+	#featuredNews div.col.right { padding: 0; width: 100%; }
+	
+	#featuredNews .wrapper { padding: 0; }
+}

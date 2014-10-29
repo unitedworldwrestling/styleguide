@@ -1,0 +1,17 @@
+#content-area {
+	background-color: #fff;
+	
+	.wrapper {
+		max-width: 1220px;
+		padding: 40px;
+	}
+}
+
+
+
+// < 992
+@media only screen and (max-width: 992px) {
+	#content-area .wrapper {
+		padding: 30px 15px;
+	}
+}

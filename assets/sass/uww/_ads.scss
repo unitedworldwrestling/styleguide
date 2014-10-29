@@ -1,0 +1,44 @@
+.ads {
+	text-align: right;
+	
+	.ad {
+		float: right;
+		max-width: 302px;
+		background-color: #fff;
+		border: 1px solid #e6e6e6;
+		border-top: 0;
+		
+		&:first-child { border-top: 1px solid #e6e6e6; }
+		
+		img { width: 100%; height: auto; display: block; }
+	}
+	.clear {
+		margin: 0;
+		padding-top: 10px;
+		font-size: 12px;
+	}
+}
+
+/*doc
+---
+title: Ads 
+name: ads
+category: components
+---
+
+Ads - A default ad 
+
+```html_example
+
+<div class="ads">
+	<a href="#" class="ad whiteBox right">
+		<img src="uploads/ad.jpg" alt="Ad 1" />
+	</a>
+	<p class="clear">Advertising</p>
+</div>
+
+```
+*/
+
+
+

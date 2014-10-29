@@ -1,0 +1,54 @@
+// File list
+.file-list {
+	font-size: 16px;
+	line-height: 26px;
+	border-bottom: 1px solid #ebebeb;
+	
+	li { border-top: 1px solid #ebebeb; }
+	
+	a {
+		display: block;
+		padding: 20px 0;
+		color: #181818;
+		&:hover { text-decoration: none; color: $col-orange; }
+	}
+	a:before{
+		background-color: $col-orange-bg;
+		padding: 2px 5px;
+		border-radius: 2px;
+		margin-right: 15px;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 11px;
+	}
+	a[href$=".pdf"]:before { content: "pdf"; }
+	a[href$=".jpg"]:before { content: "jpg"; }
+	a[href$=".doc"]:before { content: "doc"; }
+	a[href$=".zip"]:before { content: "zip"; }
+	
+}
+
+// Hologram
+
+/*doc
+---
+title: File List
+name: filelist
+category: Base CSS
+---
+
+A file list example
+
+```html_example
+
+<ul class="file-list listReset">
+	<li><a href="example.pdf">PDF Listing Title</a></li>
+	<li><a href="example.doc">Word document download example</a></li>
+	<li><a href="example.jpg">Jpg document download example</a></li>
+	<li><a href="example.zip">Zip document download example</a></li>
+</ul>
+
+```
+
+*/

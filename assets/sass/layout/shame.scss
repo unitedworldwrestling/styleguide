@@ -1,0 +1,168 @@
+// Override Humaan class for lang switcher
+.block-search {
+  @extend .left;
+  @extend .search;
+  input {
+    line-height: auto !important;
+  }
+}
+
+#block-locale-language {
+  float: right;
+}
+
+#topNav .block-locale {
+  position: absolute;
+  top: 0;
+  right: 0;
+  ul a {
+    padding: 0;
+    color: #333;
+    &.active {
+      color: #fff;
+    }
+  }
+}
+
+.table {
+  border: none;
+  tbody td {
+    border: none;
+  }
+  tbody tr:first-child td {
+    border: none;
+  }
+}
+
+// original styles were hacking the admin menu from Drupal
+#admin-menu-wrapper {
+  overflow: visible;
+}
+
+// hacking humaan .event element because we don't have the events thumbnails
+.event .content {
+  // padding: 15px 15px 30px 15px;
+}
+
+.a-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+// Fix links color on front page for "Latest from..."
+.view-main-stories .heading a {
+  color: #f58220;
+}
+
+// Fix for hacky .col3 thingy in footer
+footer .col3 {
+  position: static;
+}
+
+
+// Fix fancy title event content blabla
+.fancyContent {
+  h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  h3 {
+    color: #fff;
+    .field {
+      margin-bottom: 0;
+    }
+  }
+  .tag  {
+    .field {
+      margin-bottom: 0;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  a {
+    color: $pumpkin;
+  }
+}
+
+.fancyImg {
+  img {
+    max-height: 200px;
+    width: auto;
+  }
+}
+
+body.page-events #block-views-upcoming-events-block.fancyBG {
+  background-position: 0 -96px !important;
+}
+
+body.node-type-page .hero {
+  background-position: 0 -180px !important;
+  background-size: normal !important;
+}
+
+#block-views-latest-stories-for-frontpage {
+  padding-bottom: 40px;
+  border-top: 1px solid #f1f1f2;
+  border-bottom: 1px solid #f1f1f2;
+
+}
+
+.views-field-field-cities {
+  div {
+    display: inline;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .field-name-field-country .field-item:after {
+    content: ",\00a0";
+  }
+}
+
+.views-field-field-sports {
+  div {
+    display: inline;
+  }
+}
+
+#block-views-latest-stories-block {
+
+  article {
+    margin-bottom: 20px;
+
+    h2.heading{ font-size: 14px; }
+    .no-padding { padding: 0; }
+  }
+}
+
+.media-youtube-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.media-youtube-video iframe,
+.media-youtube-video object,
+.media-youtube-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.node-type-article .field-type-image .icn.icn-play { display: none; }

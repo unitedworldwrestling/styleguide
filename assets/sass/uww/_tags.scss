@@ -1,0 +1,80 @@
+.tags {
+	position: relative;
+	
+	.tag {
+		float: left;
+		padding: 7px 10px;
+		line-height: 1em;
+		font-size: 10px;
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		
+		&.orange { background-color: $col-orange-bg; }
+		&.navy { background-color: $col-navy; }
+		&.pearl { background-color: #e3e3e3; color: #333333; }
+		&.purple { background-color: #651242; }
+		&.peach { background-color: #ee3f37; }
+		&.dark { background-color: #231930; }
+	}
+	
+	.events & .orange { background-color: $col-orange; }
+}
+
+// Variant positioning
+article .tags {
+	position: absolute;
+	top: -24px;
+	left: 0;
+}
+article.type-horz .tags {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: auto;
+}
+article.type-vert .tags {
+	top: auto;
+	bottom: 0;
+}
+
+.tags-list {
+	padding: 50px 0;
+	display: block;
+	a { margin-left: 10px; }	
+}
+
+
+@media only screen and (max-width: 767px) {
+	article.type-big .tags {
+		right: 0; left: auto;
+	}
+}
+
+
+/*doc
+---
+title: Tags 
+name: tags
+category: components
+---
+
+Tag examples
+
+```html_example
+
+<div class="tags clearfix">
+	<span class="tag orange">Tag Name</span>
+	<span class="tag navy">Tag Name</span>
+	<span class="tag pearl">Tag Name</span>
+	<span class="tag purple">Tag Name</span>
+	<span class="tag peach">Tag Name</span>
+	<span class="tag dark">Tag Name</span>
+</div>
+
+<div class="clear"></div>
+
+<small class="tags-list"><strong>Tags:</strong><a href="#">Olympic Games</a><a href="#">David Safaryan</a><a href="#">#GoldenGrandPrix</a><a href="#">gold</a><a href="#">medal</a></small>
+
+```
+*/

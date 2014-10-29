@@ -1,0 +1,471 @@
+$default_m: 0 0 20px; /* Default Margin */
+
+/*---------------------------------------------- GLOBAL SETTINGS */
+
+html, body{ height: 100%; }
+
+body {
+	background-color: #111;
+	font-family: $font-stack;
+	@include type($default_f);
+	color: $col1;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+.listReset {
+	@include listReset();
+	margin-bottom: 0;
+	li { margin-bottom: 0;
+		&:before {
+			content: none;
+			border: 0;
+			background-color: transparent;
+			position: static;
+			left: auto;
+			top: auto;
+			border-radius: 0;
+		}
+	}
+}
+
+#container {
+	width: 100%;
+}
+
+.content-section {
+	padding: 30px 0;
+	&.grey { background-color: #fafafa; }
+}
+
+.wrapper {
+	max-width: 1150px;
+	padding: 0 15px;
+	margin: 0 auto;
+	position: relative;
+
+
+	&.full-screen { max-width: 100%; }
+	&.wide { max-width: 1330px; }
+	&.narrow { max-width: 820px; }
+
+	.content-area & {
+		max-width: 1220px;
+		padding: 40px;
+
+		&.narrow { max-width: 860px }
+	}
+}
+
+.wrapper-grid {
+	padding: 0;
+	max-width: 1150px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.no-pad,
+.row.no-pad > [class*='col-'] {
+  padding-right:0 !important;
+  padding-left:0 !important;
+}
+
+.no-mar,
+.row.no-mar > [class*='col-'] {
+  margin-right:0;
+  margin-left:0;
+}
+
+.pad { padding-left: 15px; padding-right: 15px; }
+.padding-content { padding-top: 40px; padding-bottom: 40px; }
+
+// Manual padding / margin manipulation
+.no-padding { padding: 0; }
+.no-margin { margin: 0; }
+.no-margin-top { margin-top: 0; margin-bottom: 20px; }
+.padding-top { padding-top: 20px; }
+
+#mobSidebar { display: none; }
+
+.overflow-y { overflow-y: scroll; }
+
+.margin { margin-bottom: 50px; }
+.fancyBG { background: url(../../img/bg-fancy.png) no-repeat center top $col-navy; }
+.fancyBGWorld { background: url(../../img/bg-fancy-world.png) no-repeat right top #05003e; }
+.fancyBGContinental { background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f; }
+
+section { position: relative; }
+
+.shadow-right:after {
+	position: absolute;
+	right: -5px;
+	top: 0;
+	width: 5px;
+	height: 100%;
+	content: ' ';
+
+	// Gradient
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+}
+
+.content-sidebar {
+	.row > [class*='col-'] { position: relative; z-index: 2; }
+
+	&:before {
+		content: ' ';
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		z-index: 1;
+		background-color: #f9f9fa;
+	}
+}
+
+/*  --------------------------------------------------- Box sizing */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/*---------------------------------------------------- FORMATTING */
+
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { @include type(28px); a { color: #ebebeb; } }
+h2 { @include type(24px); }
+h3 { @include type(18px); }
+h4 { @include type(16px); text-transform: uppercase; }
+h5 { @include type(14px); }
+h6 { @include type(12px); }
+
+h3.title { margin: 0px; }
+h3.margin { margin-bottom: 20px; }
+
+h2.block-title {
+	@extend h3;
+	margin: 0 15px;
+}
+
+.sub-title { color: $col-orange-bg; margin: 0; font-weight: 600; }
+
+.divider-line {
+	width: 100%;
+	border-bottom: 1px solid #e3e3e3;
+	display: block;
+	clear: both;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+p { margin: $default_m; }
+em { font-style: italic; }
+strong { font-weight: bold; }
+small { font-size: 80%; }
+
+p strong { font-weight: 700; }
+
+/*	Blockquotes  */
+blockquote,
+blockquote p {
+	@include type(17px);
+	color: $col1;
+	font-style: italic;
+}
+blockquote {
+	font-family: $font-stack;
+	padding: 20px 5px;
+	border-bottom: 3px solid $col-orange;
+	border-left: 0;
+	width: 90%;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+blockquote cite { display: block; @include type(12px); color: $col2; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: $linkcol; }
+
+// Hologram
+
+/*doc
+---
+title: Blockquote
+name: blockquote
+category: Base CSS
+---
+
+A block quote example
+
+```html_example
+
+<blockquote>Here is a block quote. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. </blockquote>
+
+```
+
+*/
+
+a {
+	color: $linkcol;
+	text-decoration: none;
+	outline: 0;
+	@include transition(color);
+	}
+a:hover, a:focus {
+	color: $hovercol;
+	text-decoration: underline;
+	}
+p a {
+	line-height: inherit;
+	}
+
+.form-control { height: 41px; }
+
+label { margin-bottom: 10px; font-weight: 600; font-size: 16px; }
+
+input, textarea {
+	@include type($default_f);
+	font-family: $font-stack;
+	transition: border-color .2s ease-out,-webkit-box-shadow .2s ease-out;
+	background:  #fff;
+	border: 1px solid #ddd;
+	color: #666;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: checkbox !important;
+    -moz-appearance: checkbox !important;
+    -ms-appearance: checkbox !important;
+    -o-appearance: checkbox !important;
+    appearance: checkbox !important;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+    box-shadow: 0 0 6px 0 #4b9de3;
+	border: 1px solid #4b9de3;
+	-webkit-font-smoothing: antialiased;
+}
+
+button {
+	-webkit-font-smoothing: antialiased;
+	border: 0;
+	background-color: transparent;
+	border-radius: 0;
+	margin: 0;
+	}
+
+.field { margin-bottom: 20px; }
+
+ul, ol {
+	margin: $default_m;
+	}
+ul {
+	list-style: none;
+	}
+ol {
+	list-style: decimal;
+}
+ul ul, ul ol,
+ol ol, ol ul {
+	margin: 4px 0 5px 30px;
+	}
+ul ul li, ul ol li,
+ol ol li, ol ul li {
+	margin-bottom: 6px;
+	}
+li {
+	@include type(14px);
+	margin-bottom: 10px;
+	position: relative;
+
+	ul li:before {
+		background-color: transparent;
+	}
+}
+
+
+/* Custom styled select box */
+.styled {
+	outline: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	background: white url(../../img/bg-styled.png) no-repeat center right;
+	width: 12em;
+	border-radius: 3px;
+	box-shadow: 0;
+	border: 0;
+	-webkit-font-smoothing: antialiased;
+	display: block;
+	width: 100%;
+	height: 37px;
+	border: 1px solid #d7d7d7;
+
+
+
+    & select {
+		width: 115%;
+		background-color: transparent;
+		background-image: none;
+		-webkit-appearance: none;
+		border: none;
+		box-shadow: none;
+		padding: 12px 15px;
+		border-radius: 0;
+		border: 0;
+		margin: 0;
+		color: #494e63;
+		font-size: 11px;
+		font-family: $font-stack;
+		-webkit-font-smoothing: antialiased;
+		text-transform: uppercase;
+
+		&:focus,
+		&:active { outline: none; }
+	}
+}
+
+.ie7 div.styled {border:none; border-radius: 0; }
+.ie7 div.styled select {
+    width:100%;
+    background-color:white;
+    border: solid 1px #ccc;
+    padding:0.3em 0.5em;
+}
+
+table {
+	font-size: 14px;
+	border: 1px solid #dddddd;
+	border-right: 0;
+
+	thead {
+		font-size: 16px;
+		font-weight: 700;
+		color: #fff;
+
+		td {
+			border-right: 1px solid #343060;
+			background-color: $col-navy;
+		}
+	}
+
+	tbody {
+		td { border-right: 1px solid #dddddd; }
+	}
+}
+
+table caption {
+	caption-side: bottom;
+	text-align: left;
+	font-size: 12px;
+	color: #4c4c4c;
+	font-style: italic;
+	padding: 15px 0;
+
+	strong { font-style: italic; }
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td { padding: 15px 20px; }
+
+// Hologram
+
+/*doc
+---
+title: Table
+name: table
+category: Base CSS
+---
+
+Table styling for a default content table. Don't forget the caption. Add a .hidden class to the caption to have it hidden.
+
+```html_example
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<td>Column Heading</td>
+			<td>Column Heading</td>
+			<td>Column Heading</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+		<tr>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+			<td>Cell content here</td>
+		</tr>
+	</tbody>
+	<caption><strong>1a.</strong> A table caption</caption>
+</table>
+
+
+```
+
+*/
+
+
+.fineprint { font-size: 11px; }
+
+/*  --------------------------------------------------- CUSTOM CLASSES */
+
+.left { float: left; }
+.right { float: right; }
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-orange { color: $col-orange; }
+
+.hidden { display: none; }
+.clear { clear: both; }
+
+.colCount2 {
+	.col1,
+	.col2 { width: 50%; }
+
+	.col1 { float: left; }
+	.col2 { float: right; }
+}
+
+
+// < 992
+@media only screen and (max-width: 992px) {
+	.wrapper {
+		.content-area & {
+			padding: 30px 15px;
+		}
+	}
+	.shadow-right:after {
+		background: none;
+	}
+}
+
+// < 992
+@media only screen and (max-width: 767px) {
+}

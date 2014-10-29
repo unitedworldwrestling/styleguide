@@ -1,0 +1,20 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+// mainly used for divider-dots
+.divider {
+  display: inline-block;
+  padding: 0 7px;
+}
+
+// all bg-color classes
+.bg-white {
+  background: #fff;
+}
+
+.spacer {
+  display: block;
+  height: 30px;
+  background: none;
+}

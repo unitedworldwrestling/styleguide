@@ -1,0 +1,359 @@
+header {
+	position: relative;
+	z-index: 10;
+	a:hover { text-decoration: none; }
+}
+
+// Top nav
+#topNav {
+	position: relative;
+	z-index: 2;
+
+	.icn-logo {
+		position: absolute;
+		top: 12px;
+		left: 20px;
+	}
+
+	ul {
+		li { float: left; }
+
+		a {
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 11px;
+			line-height: 1em;
+			display: block;
+			padding: 19px 0 20px;
+			@include transition(opacity);
+
+			&:hover { opacity:.8; }
+		}
+
+		&.social {
+			position: absolute;
+			left: 590px;
+			top: 0;
+			background: url(../../img/bg-nav-top-social.png) repeat-y left top;
+			height: 50px;
+			padding-top: 15px;
+			padding-left: 20px;
+
+			li { padding: 0 5px; }
+		}
+	}
+	nav {
+		width: 570px;
+		padding-left: 195px;
+
+		li { margin-right: 35px; display: block; }
+	}
+
+
+	// Right bar
+	.rightBox {
+		position: absolute;
+		right: 20px;
+		top: 11px;
+		padding-right: 143px;
+	}
+	.signin {
+		position: absolute;
+		right: 50px;
+		top: 0;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 11px;
+		line-height: 27px;
+		padding: 0 25px;
+		@include transition(color);
+
+		&:hover { color: lighten($col-orange, 40%); }
+	}
+
+	// Custom drop navs
+	.hasSubnav {
+		position: relative;
+
+		&:hover .subnav { display: block; }
+
+		.subnav {
+			display: none;
+			width: 200px;
+			position: absolute;
+			left: 50%;
+			top: 48px;
+			margin-left: -100px;
+			margin-top: 0;
+			border-radius: 2px;
+			background-color: #f1f1f1;
+
+			text-shadow: 0 1px 0 #fff;
+			box-shadow: 0 5px 15px rgba(0,0,0, .25);
+
+			// Arrow
+			&:after {
+				bottom: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-color: rgba(255, 255, 255, 0);
+				border-bottom-color: #Ffffff;
+				border-width: 5px;
+				margin-left: -5px;
+			}
+
+			li {
+				float: none;
+				width: 100%;
+				display: block;
+				border-top: 1px solid #e5e5e5;
+
+				&:first-child { border-top: 0; }
+			}
+
+			a {
+				padding: 14px 15px;
+				line-height: 1.2em;
+				text-transform: none;
+				color: #222222;
+				font-weight: normal;
+				@include transition(all);
+
+				&:hover {
+					background-color: #fff;
+					color: $linkcol;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+// main navigation bar
+#mainNav {
+	background-color: #fff;
+	height: 130px;
+
+	ul {
+		position: absolute;
+		right: 20px;
+		top: 35px;
+
+		li {
+			float: left;
+
+			&:first-child a { padding-left: 0; }
+			&:last-child a { padding-right: 0; }
+			
+			&.active a {
+				color: $col-orange;
+				&:hover { color: $col-orange-bg; }
+			}
+
+			a {
+				font-size: 24px;
+				color: #303030;
+				padding: 15px 30px;
+				display: inline-block;
+				@include transition(color);
+
+				&:hover { color: $linkcol; }
+			}
+		}
+	}
+
+	.title {
+		position: relative;
+		top: 48px;
+		padding-left: 195px;
+		padding-right: 500px;
+		margin-bottom: 0;
+		display: block;
+		font-size: 24px;
+		margin-bottom: 0;
+		color: #303030;
+		&:hover { color: $col-orange; }
+
+		.date {
+			display: block;
+			font-size: 10px;
+			color: #898989;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+}
+
+#hamburger {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 35px;
+	width: 70px;
+	text-align: center;
+	font-size: 16px;
+	color: #000000;
+	z-index: 3;
+	cursor: pointer;
+
+	@include noSelect();
+
+	.divider {
+		width: 25px;
+		height: 3px;
+		background-color: $linkcol;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 4px;
+		font-size: 16px;
+		color: #000000;
+	}
+}
+
+
+// < 1100
+@media only screen and (max-width: 1100px) {
+	#topNav nav,
+	#mainNav .title { padding-left: 150px; }
+
+	#topNav ul.social { left: 510px; }
+
+	#mainNav .title,
+	#mainNav ul li a { font-size: 20px; }
+
+	#mainNav .title { padding-right: 430px; }
+}
+
+
+// < 992
+@media only screen and (max-width: 992px) {
+	#topNav .search,
+	#topNav ul.social { display: none; }
+}
+
+// < 960
+@media only screen and (max-width: 960px) {
+	#mainNav ul li a { padding: 15px 7px; }
+	#mainNav .title { padding-right: 310px; }
+}
+
+// < 767
+@media only screen and (max-width: 767px) {
+	#topNav {
+		height: 110px;
+		background-color: #fff;
+		background-image: none;
+	}
+}
+
+
+/*doc
+---
+title: Header
+name: header
+category: Page Sections
+---
+
+The header
+
+```html_example
+
+<header class="fancyBG">
+	<div id="topNav">
+		<div class="wrapper clearfix">
+			<a href="/" title="United World Wrestling" class="icn icn-logo">
+				<span>United World Wrestling</span>
+			</a>
+			<nav class="hidden-tb">
+				<ul class="listReset clearfix">
+					<li class="hasSubnav"><a href="#">Organisation</a>
+						<ul class="subnav listReset">
+							<li><a href="#">News</a></li>
+							<li><a href="#">History of UWW</a></li>
+							<li><a href="#">Wrestling History</a></li>
+							<li><a href="#">President</a></li>
+							<li><a href="#">Bureau Members</a></li>
+							<li><a href="#">Organisation Chart</a></li>
+							<li><a href="#">Constitution</a></li>
+							<li><a href="#">Councils</a></li>
+							<li><a href="#">Committees</a></li>
+							<li><a href="#">Commissions</a></li>
+							<li><a href="#">National Federations</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Development</a></li>
+					<li><a href="#">Governance</a></li>
+				</ul>
+			</nav>
+			<ul class="hidden-tb social listReset clearfix">
+				<li><a href="#" class="icn icn-facebook"><span>Facbeook</span></a></li>
+				<li><a href="#" class="icn icn-google"><span>Google</span></a></li>
+				<li><a href="#" class="icn icn-twitter"><span>Twitter</span></a></li>
+				<li><a href="#" class="icn icn-youtube"><span>YouTube</span></a></li>
+			</ul>
+			<div class="hidden-tb rightBox">
+				<form class="search left" action="#" method="post">
+					<div class="field">
+						<label for="searchInput" class="infield">Search</label>
+						<input id="searchInput" name="Search" type="text" />
+					</div>
+					<button type="submit" class="icn icn-search"><span>Search</span></button>
+				</form>
+
+				<a href="#" class="left signin">Sign In</a>
+
+				<ul class="languageSelect listReset left clearfix">
+					<li class="active"><span class="icn icn-flag-eng"></span>EN</li>
+					<li><span class="icn icn-flag-eng"></span>GR</li>
+					<li><span class="icn icn-flag-eng"></span>FR</li>
+					<li><span class="icn icn-flag-eng"></span>IT</li>
+					<li><span class="icn icn-flag-eng"></span>AU</li>
+					<li><span class="icn icn-flag-eng"></span>GR</li>
+					<li><span class="icn icn-flag-eng"></span>FR</li>
+					<li><span class="icn icn-flag-eng"></span>IT</li>
+					<li><span class="icn icn-flag-eng"></span>AU</li>
+					<li><span class="icn icn-flag-eng"></span>GR</li>
+					<li><span class="icn icn-flag-eng"></span>FR</li>
+					<li><span class="icn icn-flag-eng"></span>IT</li>
+					<li><span class="icn icn-flag-eng"></span>AU</li>
+				</ul><!-- .languageSelect -->
+
+			</div><!-- .right -->
+		</div><!-- .wrapper -->
+	</div><!-- #topNav -->
+	<div id="mainNav" class="hidden-tb">
+	<div class="wrapper">
+
+		<a href="#" class="title">2014 Greco Roman World Cup
+			<span class="date">May 15 – 16 2014  Tehran, iran</span>
+		</a>
+
+		<nav>
+			<ul class="listReset clearfix">
+				<li><a href="#">Events</a></li>
+				<li><a href="#">Sports</a></li>
+				<li><a href="#">Media</a></li>
+				<li><a href="#">Stats</a></li>
+			</ul>
+		</nav>
+	</div><!-- .wrapper -->
+</div><!-- #mainNav -->
+
+	<div id="hamburger" class="visible-tb">
+		<span class="divider"></span>
+		<span class="divider"></span>
+		<span class="divider"></span>
+		<span>Menu</span>
+	</div><!-- #hamburger -->
+</header>
+
+
+```
+*/

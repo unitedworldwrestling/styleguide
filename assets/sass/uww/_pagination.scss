@@ -1,0 +1,35 @@
+.pagination { font-weight: 700; margin: 20px auto; }
+
+.pagination > li > a, .pagination > li > span { color: #343434; }
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+	background-color: $col-orange;
+	padding: 7px 12px;
+	border: 0;
+}
+
+/*doc
+---
+title: Pagination 
+name: pagination
+category: components
+---
+
+Default pagination bar. Text align center the parent container
+
+```html_example
+
+<div class="col-md-12 margin text-center">
+	<ul class="pagination listReset">
+		<li><a href="#">&lt;</a></li>
+		<li class="disabled"><a href="#">1</a></li>
+		<li class="active"><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li><a href="#">&gt;</a></li>
+	</ul>
+</div>
+
+```
+*/

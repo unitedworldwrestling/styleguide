@@ -1,0 +1,116 @@
+// Sidebar styling
+@media only screen and (max-width: 767px) {
+	.mobOpen {
+
+		#container {
+			position: relative;
+			left: -210px;
+			box-shadow: 0 0 5px rgba(0,0,0,.35);
+		}
+
+		#mobSidebar {
+			width: 210px;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			display: block;
+			color: #ffffff;
+			background: url(../../img/bg-sidebar.jpg) no-repeat top right #211026;
+			text-align: center;
+			color: #fff;
+
+			a:hover { text-decoration: none; }
+
+			.search {
+				float: none;
+				position: relative;
+				display: block;
+
+				label { left: 35px; }
+				button { right: 35px }
+
+				.field { margin: 10px 15px; }
+			}
+
+			.linkBar {
+				position: relative;
+				text-align: left;
+				padding: 10px 25px;
+				background-color: #2b1229;
+				background-color: rgba(13,02,24,.32%);
+				border-top: 1px solid #260f26;
+				border-top: 1px solid rgba(13,02,24,.44);
+				border-bottom: 1px solid #260f26;
+				border-bottom: 1px solid rgba(13,02,24,.44);
+
+				a {
+					margin-right: 12px;
+					display: inline-block;
+					color: #ccaeda;
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 11px;
+					@include transition(color);
+					&:hover { color: #fff; }
+				}
+
+				.languageSelect li {
+					color: #222;
+					&.active { color: #fff; }
+					&:hover{ color: $linkcol; }
+				}
+			}
+
+			ul {
+				&.languageSelect {
+					right: 15px;
+					top: 9px;
+				}
+				&.mainLinks {
+					padding: 15px 0;
+
+					li { display: block; }
+
+					a {
+						display: block;
+						padding: 10px 0;
+						font-size: 20px;
+						color: #d5cad4;
+						@include transition(color);
+						&:hover { color: #fff; }
+					}
+					.active { color: #fff; }
+				}
+				&.subLinks {
+					border-top: 1px solid #28172c;
+					border-top: 1px solid rgba(242,236,242,.03);
+					margin-bottom: 40px;
+
+					a {
+						color: #fff;
+						text-transform: uppercase;
+						font-weight: 700;
+						font-size: 12px;
+						border-bottom: 1px solid #28172c;
+						border-bottom: 1px solid rgba(242,236,242,.03);
+						line-height: 1em;
+						padding: 15px 0;
+						display: block;
+						@include transition(color);
+
+						&:hover { color: $linkcol; }
+					}
+				}
+				&.social {
+					text-align: center;
+					li { display:inline-block; margin: 0 5px; }
+					a { @include transition(opacity); }
+					a:hover { opacity: .8; }
+				}
+			}
+		}
+	}
+
+}

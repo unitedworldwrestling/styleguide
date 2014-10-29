@@ -1,0 +1,78 @@
+.titleBar {
+	font-weight: 700;
+	font-size: 18px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	h3 { margin: 0px; }
+
+	p { margin: 0; }
+	a {
+		font-size: 11px;
+		line-height: 28px;
+		text-transform: uppercase;
+		color: $col-blue;
+		&:hover {
+			color: $col-orange;
+			&:hover { text-decoration: none; }
+		}
+
+		&:after {
+			content: ' ';
+			display: block;
+			background-image: url(../img/sprites.png);
+			background-repeat: no-repeat;
+
+			display: inline-block;
+			position: relative;
+			top: 2px;
+			margin-left: 15px;
+		}
+	}
+
+	&.fancy {
+		color: #fff;
+		border-bottom: 1px solid #3c3545;
+		border-bottom: 1px solid rgba(117,117,117,.3);
+
+		a {
+			color: #fff;
+			@include transition(opacity);
+			&:hover { opacity: .8; }
+		}
+
+		.social a:after { content: none; }
+	}
+}
+
+
+/*doc
+---
+title: Title Bar
+name: titlebar
+category: components
+---
+
+Title bars
+
+```html_example
+<div class="titleBar">
+	<div class="wrapper clearfix">
+		<h3 class="title left">Latest from the 2014 Greco Roman World Cup</h3>
+		<a href="#" class="right">More stories</a>
+	</div>
+</div>
+
+<p>Titlebar on fancy background</p>
+
+<div class="fancyBG">
+	<div class="fancy titleBar">
+		<div class="wrapper clearfix">
+			<h3 class="title left">Events</h3>
+			<a href="#" class="right">See all events</a>
+		</div>
+	</div>
+</div>
+
+```
+*/

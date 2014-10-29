@@ -1,0 +1,194 @@
+.schedule {
+	$schedule_colour:#8a2143;
+	@include listReset();
+	background-color: #fff;
+	
+	.title {
+		background-color: $schedule_colour;
+		color: #fff;
+		padding: 15px 25px;
+		font-size: 16px;
+		line-height: 21px;
+		margin: 0;
+		position: relative;
+		cursor: pointer;
+		border-bottom: 1px solid #fff;
+		
+		&:after {
+			content: ' ';
+			position: absolute;
+			right: 25px;
+			top: 50%;
+			margin-top: -4px;
+			width: 11px;
+			height: 8px;
+			display: block;
+			cursor: pointer;
+			background-image: url(../img/sprites.png);
+			background-repeat: no-repeat;
+			background-position: -128px -576px;
+		}
+	}
+	.active .title:after { background-position: -128px -513px; }
+	
+	ul {
+		display: none;
+		margin: 0; padding: 0;
+		border-right: 1px solid #f2f2f2;
+		border-left: 1px solid #f2f2f2;
+
+		li {
+			border-bottom: 1px solid #f2f2f2;
+			
+			.row { margin: 0px; }
+			div > [class*='col-'] {
+				padding: 20px;
+				&:last-child {
+					border-left: 1px solid #f2f2f2;
+					strong { color: $schedule_colour; }
+				}
+			}
+		}
+	}
+	
+	.active ul { display: block; }
+	.striped > li:nth-child(odd) { background-color: #fafafd; }
+}
+
+// Hologram
+
+/*doc
+---
+title: Schedule
+name: schedule
+category: components
+---
+
+Table styling for a default content table. Don't forget the caption. Add a .hidden class to the caption to have it hidden.
+
+```html_example
+
+<ul class="schedule">
+	<li class="active">
+		<p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
+		
+		<ul class="striped">
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						Inscriptions dwfinitives pour LL Cat<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li class="active">
+		<p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
+		
+		<ul class="striped">
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						<strong>Inscriptions dwfinitives pour LL</strong> Cat 57-70-86-125kg<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+		</ul>
+	</li>
+	
+	
+	<li>
+		<p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
+		
+		<ul class="striped">
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						<strong>Inscriptions dwfinitives pour LL</strong> Cat 57-70-86-125kg<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+		</ul>
+	</li>
+	
+	<li>
+		<p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
+		
+		<ul class="striped">
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						<strong>Inscriptions dwfinitives pour LL</strong> Cat 57-70-86-125kg<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<strong>19:00</strong>
+					</div>
+					<div class="col-md-9">
+						Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
+						Final entries for FS Cat 57-70-86-125kg 
+					</div>
+				</div>
+			</li>
+		</ul>
+	</li>
+	
+</ul>
+
+
+```
+
+*/
+

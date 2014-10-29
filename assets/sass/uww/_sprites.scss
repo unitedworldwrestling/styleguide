@@ -1,0 +1,210 @@
+/* Spritesheet */
+
+@mixin backgroundDetails() {
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@mixin icn( $x, $y, $w, $h) {
+	background-position: $x $y;
+	width: $w;
+	height: $h;
+}
+
+.icn {
+	display: block;
+	background-image: url(../img/sprites.png);
+	background-repeat: no-repeat;
+	
+	&.inline {
+		display: inline-block;
+		&.left { margin-right: 10px; float: none; }
+		&.right { margin-left: 10px; float: none; }
+	}
+}
+.icn span { display: none; }
+
+
+header .icn-logo { @include icn(0,0,106px,146px); }
+footer .icn-logo { @include icn(0,-320px,96px,134px); }
+
+.icn-logo-emblem { @include icn(0,-512px,85px,85px); }
+
+.icn-facebook { @include icn(-128px,0,18px,18px); }
+.icn-google { @include icn(-192px,0,18px,18px); }
+.icn-twitter { @include icn(-256px,0,18px,18px); }
+.icn-youtube { @include icn(-320px,0,18px,18px); }
+.icn-instagram { @include icn(-384px,0,18px,18px); }
+.icn-vk { @include icn(-448px,0,18px,18px); }
+
+.icn-facebook-color { @include icn(-128px,-64px,18px,18px); }
+.icn-google-color { @include icn(-192px,-64px,18px,18px); }
+.icn-twitter-color { @include icn(-256px,-64px,18px,18px); }
+.icn-youtube-color { @include icn(-320px,-64px,18px,18px); }
+.icn-instagram-color { @include icn(-384px,-64px,18px,18px); }
+.icn-vk-color { @include icn(-448px,-64px,18px,18px); }
+
+.icn-share-facebook { @include icn(-448px,0,20px,20px); }
+.icn-share-twitter { @include icn(-512px,0,20px,20px); }
+.icn-share-pinterest { @include icn(-576px,0,20px,20px); }
+.icn-share-linkedin { @include icn(-640px,0,20px,20px); }
+.icn-share-share { @include icn(-704px,0,20px,20px); }
+
+.icn-search { @include icn(-128px,-128px,12px,12px); }
+
+.icn-readmore { @include icn(-128px,-192px,10px,9px); }
+.icn-play { @include icn(-192px,-128px,50px,50px); }
+.icn-globe { @include icn(-192px,-320px,16px,16px); }
+.icn-clock { @include icn(-192px,-384px,16px,16px); }
+
+.icn-video { @include icn(-320px,-128px,18px,18px); }
+
+.icn-flag-eng { @include icn(-896px,0,16px,13px); }
+
+.navy .icn-caption { @include icn(-192px,-192px,18px,14px); }
+.icn-caption { @include icn(-192px,-256px,18px,14px); }
+
+.icn-value1 { @include icn(-513px,0,46px,46px); }
+.icn-value2 { @include icn(-513px,-64px,46px,46px); }
+.icn-value3 { @include icn(-513px,-128px,46px,46px); }
+
+
+
+.icn-arrow-right,
+.titleBar a:after { @include icn(-128px,-320px,8px,11px); }
+.icn-arrow-right-white,
+.titleBar.fancy a:after { @include icn(-128px,-256px,8px,11px); }
+
+.icn-arrow-up { @include icn(-128px,-513px,11px,8px); }
+.icn-arrow-down { @include icn(-128px,-576px,11px,8px); }
+
+.leaderboard .up .icn { @include icn(-256px,-128px,21px,21px); }
+.leaderboard .down .icn { @include icn(-256px,-192px,21px,21px); }
+
+.gallery-prev { @include icn(-128px,-384px,50px,50px); }
+.gallery-next { @include icn(-128px,-448px,50px,50px); }
+
+
+/* Swapping out for mobile sizes */
+@media only screen and (max-width: 767px) {
+	/* Seperate icons to swap out */
+	header .icn-logo { @include icn(0,-192px,54px,75px); }
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+	.icn { background-image: url(../../img/sprites@2x.png); background-size: 960px 960px; }
+
+}
+
+// Hologram
+
+/*doc
+---
+title: Sprites
+name: sprites
+category: sprites
+---
+
+All of the image assets found inside of the sprite sheet.
+To hide text within the <i> element, wrap it inside of a span.
+
+```html_example
+<p>Logos</p>
+<header>
+	<p>
+		Header Logo
+		<i class="icn icn-logo"></i>
+	</p>
+</header>
+<footer style="text-align: left; background-color: #333; color: #fff; padding: 20px;">
+	<p>
+		footer Logo
+		<i class="icn icn-logo"></i>
+	</p>
+</footer>
+
+<p>
+	Logo emblem, no text
+	<i class="icn icn-logo-emblem"></i>
+</p>
+
+```
+*/
+
+
+/*doc
+---
+title: Flags
+name: flags
+category: sprites
+---
+
+All of the flags included in the language drop down
+
+```html_example
+
+<p>English
+<i class="icn icn-flag-eng"></i>
+</p>
+
+```
+*/
+
+
+/*doc
+---
+title: Social Media
+name: socialmedia
+category: sprites
+---
+
+The social media icons used throughout the website.
+
+```html_example
+
+<p> Social media icons</p>
+<div style="background-color: #333; padding: 20px; margin-bottom: 20px;">
+	<i class="icn icn-facebook"></i>
+	<i class="icn icn-google"></i>
+	<i class="icn icn-twitter"></i>
+	<i class="icn icn-youtube"></i>
+</div>
+
+<p>Social media icons in colour</p>
+<i class="icn icn-facebook-color"></i>
+<i class="icn icn-google-color"></i>
+<i class="icn icn-twitter-color"></i>
+<i class="icn icn-youtube-color"></i>
+
+
+```
+*/
+
+/*doc
+---
+title: Other Icons
+name: othericons
+category: sprites
+---
+
+The social media icons used throughout the website.
+
+```html_example
+
+<p>Search icon
+<i class="icn icn-search"></i>
+</p>
+
+<p>Read more arrow
+<i class="icn icn-readmore"></i>
+</p>
+
+<p>Play icon
+<i class="icn icn-play"></i>
+</p>
+
+```
+*/

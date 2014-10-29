@@ -1,0 +1,41 @@
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin type($font-size) {
+	font-size: $font-size;
+	line-height: $font-size * 1.62;	
+}
+
+@mixin cover() {
+	background-size: cover;
+	-ms-behavior: url(/backgroundsize.min.htc);
+}
+
+@mixin listReset() {
+	list-style: none;
+	padding: 0px;
+	
+	li { margin: 0px; padding: 0px; }
+	
+	li:before { content: none; }
+}
+
+@mixin noSelect() {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin transition($type) {
+	-webkit-transition: $type .2s ease-in-out;
+	-moz-transition: $type .2s ease-in-out;
+	-ms-transition: $type .2s ease-in-out;
+	-o-transition: $type .2s ease-in-out;
+	transition: $type .2s ease-in-out;
+}
