@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title></title>
+    <title>Antistatique Components - Panels</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.css">
@@ -174,7 +174,7 @@
       <nav class="cortana-nav">
         <ul>
           
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
           
         </ul>
         
@@ -438,7 +438,7 @@
             
               
               
-                <li><a href="antistatique_components_-_panels.html">Panels</a></li>
+                <li><a class="active" href="antistatique_components_-_panels.html">Panels</a></li>
               
             
           
@@ -1171,7 +1171,7 @@
 
     <header class="cortana-header sb-slide">
       
-        <h1>Styleguide home</h1>
+        <h1>Panels</h1>
       
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
@@ -1190,6 +1190,30 @@
         <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
           <ul bs-scrollspy-list data-offset="-30">
             
+              
+                <li><a href="#a-panel">Basic panel</a></li>
+              
+            
+              
+                <li><a href="#b-panel-heading">Panel with heading</a></li>
+              
+            
+              
+                <li><a href="#c-panel-footer">Panel with footer</a></li>
+              
+            
+              
+                <li><a href="#d-contextual">Contextual</a></li>
+              
+            
+              
+                <li><a href="#e-panel-table">Panel with table</a></li>
+              
+            
+              
+                <li><a href="#f-panel-list">Panel with list</a></li>
+              
+            
           </ul>
         </nav>
 
@@ -1198,207 +1222,230 @@
 
 
 
-<h1>United World Wrestling Styleguide</h1>
-
-<p><a href="http://unitedworldwrestling.org">http://unitedworldwrestling.org</a></p>
-</div><div class="container-fluid"><div class="col-sm-12"><div class="row">
-  <div class="col-md-6">
-    <h3 class="text-muted">Titles</h3>
-    <h1>H1. My title level 1</h1>
-    <h2>H2. My title level 2</h2>
-    <h3>H3. My title level 3</h3>
-    <h4>H4. My title level 4</h4>
-    <h5>H5. My title level 5</h5>
-    <h6>H6. My title level 6</h6>
-  </div>
-  <div class="col-md-6">
-    <h3 class="text-muted">Standard Text</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing <a href="#">Link</a>. Earum perferendis incidunt eaque itaque, sed quos, ullam obcaecati perspiciatis deserunt nihil, unde iste vitae inventore eum. Delectus error veniam libero hic.</p>
-    <p>Lorem ipsum <strong>Strong</strong> sit amet, consectetur adipisicing elit. Accusantium doloribus totam debitis, illo architecto eos. Repellat earum id tempora optio <em>Italic</em> quas atque laborum odit ullam necessitatibus animi, eligendi deserunt!</p>
+<h1 id="a-panel">Basic panel</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="panel panel-default">
+  <div class="panel-body">
+    Basic panel example
   </div>
 </div>
-<hr>
-<div class="row">
-  <div class="col-md-6">
-    <h3 class="text-muted">Listes</h3>
-    <ul>
-      <li>Lorem</li>
-      <li>Ipsum</li>
-      <li>Dolor</li>
-      <li>Sit amet</li>
-    </ul>
-    <div class="spacer"></div>
-    <ol>
-      <li>Lorem</li>
-      <li>Ipsum</li>
-      <li>Dolor</li>
-      <li>Sit amet</li>
-    </ol>
-  </div>
-  <div class="col-md-6">
-    <h3 class="text-muted">Composants</h3>
-    <form role="form">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-      </div>
-    </form>
-    <p><button class="btn btn-primary">Primary</button></p>
-    <p><button class="btn btn-primary btn-lg">Primary Large</button></p>
-    <p><button class="btn btn-success">Success</button></p>
-    <p><button class="btn btn-danger">Danger</button></p>
-    ...
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Basic panel example
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="b-panel-heading">Panel with heading</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="panel panel-default">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
   </div>
 </div>
-<div class="row">
-  <ul class="schedule">
-      <li class="active">
-          <p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
 
-          <ul class="striped">
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          Inscriptions dwfinitives pour LL Cat<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-          </ul>
-      </li>
-      <li class="active">
-          <p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-          <ul class="striped">
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          <strong>Inscriptions dwfinitives pour LL</strong> Cat 57-70-86-125kg<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-          </ul>
-      </li>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="c-panel-footer">Panel with footer</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="panel panel-default">
+  <div class="panel-body">
+    Panel content
+  </div>
+  <div class="panel-footer">Panel footer</div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-footer"</span><span class="nt">&gt;</span>Panel footer<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="d-contextual">Contextual</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="panel panel-primary">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
 
+<div class="panel panel-success">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
 
-      <li>
-          <p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
+<div class="panel panel-info">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
 
-          <ul class="striped">
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          <strong>Inscriptions dwfinitives pour LL</strong> Cat 57-70-86-125kg<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-          </ul>
-      </li>
+<div class="panel panel-warning">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
 
-      <li>
-          <p class="title"><strong>6 September 2014</strong> Dimanche / Sunday</p>
+<div class="panel panel-danger">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-          <ul class="striped">
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          <strong>Inscriptions dwfinitives pour LL</strong> Cat 57-70-86-125kg<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="row">
-                      <div class="col-md-3">
-                          <strong>19:00</strong>
-                      </div>
-                      <div class="col-md-9">
-                          Inscriptions dwfinitives pour LL Cat 57-70-86-125kg<br/>
-                          Final entries for FS Cat 57-70-86-125kg
-                      </div>
-                  </div>
-              </li>
-          </ul>
-      </li>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-success"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-info"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-warning"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-danger"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="e-panel-table">Panel with table</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="panel panel-default">
+  <div class="panel-heading">Panel heading</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;thead&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/thead&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="f-panel-list">Panel with list</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="panel panel-default">
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid igitur, inquit, eos responsuros putas? Sed residamus.</p>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Morbi leo risus</li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li>
   </ul>
 </div>
-<div class="row">
-  <div id="newsWall" style="width:360px;">
-
-      <div class="featuredPhoto shadowBox">
-          <p class="title">Champion of the week</p>
-          <img src="uploads/championoftheweek.jpg" alt="Champion of the week: John Jameson" />
-          <div class="caption">
-              <p><strong>John Jameson</strong></p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos in animi impedit consequuntur sunt quaerat est nobis accusamus atque.</p>
-              <a href="#"><i class="icn icn-caption"><span>Open caption</span></i></a>
-          </div>
-      </div>
-
-      <p style="margin: 20px 0 40px;"><strong>It also comes in navy</strong></p>
-
-      <div class="featuredPhoto shadowBox navy">
-          <p class="title">Champion of the week</p>
-          <img src="uploads/championoftheweek.jpg" alt="Champion of the week: John Jameson" />
-          <div class="caption">
-              <p><strong>John Jameson</strong></p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos in animi impedit consequuntur sunt quaerat est nobis accusamus atque.</p>
-              <a href="#"><i class="icn icn-caption"><span>Open caption</span></i></a>
-          </div>
-      </div>
-
-  </div>
-
-</div>
-</div></div><div class="cortana-content">
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid igitur, inquit, eos responsuros putas? Sed residamus.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Cras justo odio<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
         </div>
       </div>
     </div>
