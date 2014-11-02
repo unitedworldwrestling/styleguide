@@ -1,9 +1,9 @@
 {
   "name": "unitedworldwrestling",
   "devDependencies": {
-    "jquery": "~1.11.1",
-    "Cortana": "~1.2.1",
-    "bootstrap-sass-official": "~3.2.0",
+    "jquery": "~2.1.1",
+    "Cortana": "~1.2.6",
+    "bootstrap-sass-official": "v3.2.0+1",
     "FlexSlider": "master",
     "angular": "~1.2.20",
     "font-awesome": "~4.2.0",
@@ -11,7 +11,6 @@
     "jquery-infield-label": "~0.1.5",
     "iCheck": "~1.0.2",
     "fitvids": "~1.1.0",
-    "masonry": "~3.1.5",
     "imagesloaded": "~3.1.8",
     "packery": "~1.2.4",
     "swiper": "~2.7.0"
