@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.2 Release / 2014-11-03
+ * Fix sprites.png path
+
 * 0.1.1 Release / 2014-11-03
  * Small fix
 
