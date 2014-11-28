@@ -74,11 +74,13 @@ gulp.task('vendors', function() {
  */
 gulp.task('styles', function() {
   return gulp.src('assets/sass/uww.scss')
-    .pipe($.rubySass())
-      .on('error', $.util.beep)
-      .on('error', $.notify.onError(function (error) {
-        return 'Message to the notifier: ' + error.message;
-      }))
+    .pipe($.rubySass({
+      container: 'local_sass'
+    }))
+    .on('error', $.util.beep)
+    .on('error', $.notify.onError(function (error) {
+      return 'Message to the notifier: ' + error.message;
+    }))
     .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
     .pipe($.minifyCss())
     .pipe(gulp.dest('build/css'));
