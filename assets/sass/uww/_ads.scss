@@ -4,9 +4,8 @@
 	.ad {
 		float: right;
 		max-width: 302px;
-		background-color: #fff;
+		background-color: #e6e6e6;
 		border: 1px solid #e6e6e6;
-		border-top: 0;
 		
 		&:first-child { border-top: 1px solid #e6e6e6; }
 		
@@ -14,8 +13,9 @@
 	}
 	.clear {
 		margin: 0;
-		padding-top: 10px;
+		padding-top: 0;
 		font-size: 12px;
+		color: #e6e6e6;
 	}
 }
 
