@@ -9,6 +9,7 @@
 		font-weight: 700;
 		color: #fff;
 		text-transform: uppercase;
+		border-right: 1px solid #fff;
 		
 		&.orange { background-color: $col-orange-bg; }
 		&.navy { background-color: $col-navy; }
@@ -16,6 +17,11 @@
 		&.purple { background-color: #651242; }
 		&.peach { background-color: #ee3f37; }
 		&.dark { background-color: #231930; }
+
+		&.big {
+			font-size: 18px;
+			line-height: 23px;
+		}
 	}
 	
 	.events & .orange { background-color: $col-orange; }

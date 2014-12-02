@@ -47,7 +47,7 @@ footer {
 	
 	.col3 {
 		color: #e5989b;
-		font-size: 14px;
+		font-size: $default_f;
 		line-height: 26px;
 		margin-bottom: 0;
 		
@@ -90,7 +90,7 @@ footer {
 		
 		p,
 		a,
-		.bigList a { font-size: 14px; line-height: 26px; }
+		.bigList a { font-size: $default_f; line-height: 26px; }
 		
 		.wrapper { padding-bottom: 225px; }
 		

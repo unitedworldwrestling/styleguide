@@ -29,6 +29,8 @@ header .icn-logo { @include icn(0,0,106px,146px); }
 footer .icn-logo { @include icn(0,-320px,96px,134px); }
 
 .icn-logo-emblem { @include icn(0,-512px,85px,85px); }
+.icn-logo-50 { @include icn(0,-640px,50px,50px); }
+.icn-logo-25 { @include icn(0,-704px,25px,25px); }
 
 .icn-facebook { @include icn(-128px,0,18px,18px); }
 .icn-google { @include icn(-192px,0,18px,18px); }

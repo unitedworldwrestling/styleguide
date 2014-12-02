@@ -43,6 +43,33 @@
 
 		.social a:after { content: none; }
 	}
+
+	&.branded {
+		color: #fff;
+		margin: 0 15px 0 40px;
+		padding-top: 0;
+
+		h3 {
+			@extend .fancyBG;
+			line-height: 40px;
+			position: relative;
+			padding-left: 40px;
+		}
+
+		i.icn { 
+			position: absolute;
+			top: -5px;
+			left: 15px;
+		}
+
+		a {
+			color: #fff;
+			@include transition(opacity);
+			&:hover { opacity: .8; }
+		}
+
+		.social a:after { content: none; }
+	}
 }
 
 

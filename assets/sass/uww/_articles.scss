@@ -2,7 +2,7 @@
 	font-size: 36px;
 	line-height: 48px;
 	margin-bottom: 40px;
-	font-weight: 600;
+	font-weight: $bold-title;
 }
 
 article {
@@ -20,15 +20,15 @@ article {
 	p { margin: 0; }
 
 	.heading, {
-		font-size: 16px;
-		line-height: 24px;
-		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: $bold-title;
 		margin-top: 0;
 		margin-bottom: 0;
 
 		a {
 			color: #111111;
-			font-weight: 600;
+			font-weight: $bold-title;
 			font-style: normal;
 			&:hover { color: $col-orange; }
 		}
@@ -50,7 +50,7 @@ article {
 	&.type-big {
 		height: 525px;
 		background-color: #fff;
-		font-size: 14px;
+		font-size: $default_f;
 		line-height: 24px;
 		overflow: hidden;
 
@@ -91,8 +91,16 @@ article {
 	// Horizontal type article
 	&.type-horz {
 		margin-bottom: 40px;
-		font-size: 14px;
+		font-size: $default_f;
 		line-height: 23px;
+		
+		/* .heading {
+			font-weight: 900;
+
+			a {
+				font-weight: 900;
+			}
+		} */
 
 		img {
 			width: 100%;
@@ -108,7 +116,7 @@ article {
 	}
 
 	&.location {
-		.heading a { font-weight: 700; }
+		.heading a { font-weight: $bold-title; }
 		.textWrap {
 			background: url(../../img/bg-location.png) no-repeat center center;
 			@include cover();
@@ -122,8 +130,14 @@ article {
 	}
 
 	&.type-vert {
-		font-size: 14px;
+		font-size: $default_f;
 		line-height: 24px;
+		
+		.heading {
+			font-size: $default_f;
+			line-height: $default_lh;
+			margin-bottom: 10px;
+		}
 
 		.imgWrap {
 			position: relative;
@@ -152,7 +166,6 @@ article {
 		@include cover();
 		position: relative;
 		// height: 200px;
-		border-bottom: 1px solid #fff;
 		overflow: hidden;
 
 		img {
@@ -160,7 +173,7 @@ article {
 		}
 
 		.gradient {
-			background: url(../../img/bg-gradient-story.png) repeat-x bottom left;
+			background: url(../../img/bg-gradient-story2.png) repeat-x bottom left;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -181,7 +194,10 @@ article {
 
 			margin-bottom: -29px;
 			-webkit-transition: margin-bottom .07s ease-in-out;
-
+			
+			&.heading {
+				font-weight: 600;
+			}
 		}
 		&:hover h2 { margin-bottom: 0; }
 
@@ -267,8 +283,6 @@ article {
 			margin: 0;
 			padding: 15px 30px;
 			margin-bottom: 0;
-			font-size: 12px;
-			line-height: 16px;
 
 			.views-field-field-image,
 			.views-field-body {
@@ -276,11 +290,17 @@ article {
 			}
 
 			h2 {
-				font-weight: 700;
+				font-size: $default_f;
+				font-weight: 600;
 				display: block;
 				margin-bottom: 3px;
 				white-space: nowrap;
+
+				a {
+					font-weight: 600 !important;
+				}
 			}
+
 			.meta {
 				margin-bottom: 0;
 				display: block;
@@ -299,9 +319,9 @@ article {
 		.padding{ padding: 15px 20px; display: block; }
 
 		article {
-			font-size: 13px;
-			line-height: 18px;
-			padding: 0px;
+			font-size: $default_f;
+			line-height: $default_lh;
+			padding: 0;
 
 			.views-field-field-image,
 			.views-field-body {
@@ -314,7 +334,7 @@ article {
 
 			h2 {
 				font-size: 16px;
-				line-height: 20px;
+				line-height: $default_lh;
 				margin-bottom: 0;
 				white-space: normal;
 			}
@@ -374,7 +394,7 @@ article {
 		&.type-horz {
 			margin-bottom: 15px;
 			h2 {
-				font-size: 14px;
+				font-size: $default_f;
 				font-weight: 600;
 				line-height: 18px;
 				margin-bottom: 0;
@@ -391,7 +411,7 @@ article {
 		.shadowBox { box-shadow: none; }
 
 		ul li.views-row-first h2,
-		h2 { font-size: 14px; line-height: 18px; }
+		h2 { font-size: $default_f; line-height: 18px; }
 
 		ul { border: 1px solid #e7e7e7; }
 

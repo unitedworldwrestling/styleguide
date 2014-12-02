@@ -22,7 +22,7 @@
 		text-align: center;
 		padding: 0 15px;
 		line-height: 40px;
-		z-index: 2;
+		z-index: 9;
 		&:after{
 			position: absolute;
 			left: 0;
@@ -35,22 +35,34 @@
 			border-left: 15px solid transparent;
 
 		}
+
+		&.to-right {
+			left: auto;
+			right: -15px;
+
+			&:after{
+				left: auto;
+				right: 0;
+				border-left: 0;
+				border-right: 15px solid transparent;
+			}
+		}
 	}
 
 	.caption {
 		background-color: #ffffff;
 		width: 100%;
-		padding: 25px;
+		padding: 25px 45px 70px 25px;
 		padding-right: 45px;
 		font-size: 14px;
 		line-height: 21px;
 		position: relative;
 		color: #121212;
 
-		strong { text-transform: uppercase; }
+		a { font-weight: bold; }
 		p { margin-bottom: 0; }
-
-		a {
+	
+		a.icon {
 			position: absolute;
 			bottom: 0;
 			right: 0;
@@ -67,6 +79,19 @@
 				top: 12px;
 			}
 		}
+		div.sharebutton {
+			padding: 10px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-left: 1px solid #efefef;
+			border-top: 1px solid #efefef;
+			
+			span {
+				margin-bottom: 0;
+			}
+		}
+
 	}
 
 	&.navy {
@@ -74,7 +99,7 @@
 			background-color: $col-navy;
 			color: #fff;
 
-			a { border-color: #322f61; }
+			a.icon { border-color: #322f61; }
 		}
 	}
 }
