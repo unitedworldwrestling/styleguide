@@ -1,8 +1,11 @@
 $font-stack: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $default_f: 16px; /* Default Font Size */
+$default_lh: $default_f * 1.5; /* Default FLine-height */
+$bold-title: 600;
 
 // Site colours
 $col-grey: #d7d6c4;
+$col-grey2: lighten(#000, 35%);
 $col-yellowgrey: #9f9d83;
 $col-lightorange: #f7941e;
 $col-orange-bg: #f15a22;
@@ -14,6 +17,7 @@ $col-blue: #2185cb;
 
 $col1: #333; /* Primary Colour */
 $col2: #666; /* Secondary Colour */
+
 
 $linkcol: $col-orange;
 $hovercol: lighten($col-orange,10%);

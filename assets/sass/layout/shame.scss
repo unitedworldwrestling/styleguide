@@ -55,7 +55,8 @@
 }
 
 // Fix links color on front page for "Latest from..."
-.view-main-stories .heading a {
+.view-main-stories .heading a,
+.view-editorial-stories .heading a {
   color: #f58220;
 }
 
@@ -138,12 +139,14 @@ body.node-type-page .hero {
   }
 }
 
-#block-views-latest-stories-block {
+#block-views-latest-stories-block,
+#block-views-latest-galleries-block {
 
   article {
     margin-bottom: 20px;
 
-    h2.heading{ font-size: 14px; }
+    h2.heading{ font-size: 14px; line-height: 21px; }
+    a{ font-size: 14px; line-height: 21px; font-weight: $bold-title; }
     .no-padding { padding: 0; }
   }
 }
@@ -166,3 +169,8 @@ body.node-type-page .hero {
 }
 
 .node-type-article .field-type-image .icn.icn-play { display: none; }
+
+.media-collection-item {
+  overflow: hidden;
+  a { white-space: nowrap; overflow: hidden;}
+}

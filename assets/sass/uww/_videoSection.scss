@@ -89,12 +89,12 @@
 	display: block;
 	position: relative;
 	color: #fff;
-	font-size: 14px;
+	font-size: $default_f;
 
 	&:hover { background-color: lighten(#27272c,2%); }
 
 	h3 {
-		font-size: 14px;
+		font-size: $default_f;
 		margin: 0;
 		line-height: 1.2em;
 		color: #fff;

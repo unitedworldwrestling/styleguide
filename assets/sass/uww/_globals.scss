@@ -166,7 +166,7 @@ h2.block-title {
 	margin-bottom: 20px;
 }
 
-p { margin: $default_m; }
+p { margin: $default_m; text-align: justify; }
 em { font-style: italic; }
 strong { font-weight: bold; }
 small { font-size: 80%; }
@@ -346,7 +346,7 @@ li {
 }
 
 table {
-	font-size: 14px;
+	font-size: $default_f;
 	border: 1px solid #dddddd;
 	border-right: 0;
 
