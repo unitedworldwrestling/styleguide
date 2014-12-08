@@ -3,7 +3,10 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
-* 0.1.2 Release / 2014-12-02
+* 0.1.5 Release / 2014-12-02
+ * Embeded tweets max-width 100% - misc
+
+* 0.1.4 Release / 2014-12-02
  * Overall improvement - 16px default font-size && more
 
 * 0.1.3 Release / 2014-11-28
