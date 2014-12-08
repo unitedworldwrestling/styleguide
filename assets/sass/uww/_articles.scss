@@ -285,7 +285,8 @@ article {
 			margin-bottom: 0;
 
 			.views-field-field-image,
-			.views-field-body {
+			.views-field-body,
+			.views-field-field-teasing {
 				display: none;
 			}
 
@@ -324,11 +325,13 @@ article {
 			padding: 0;
 
 			.views-field-field-image,
-			.views-field-body {
+			.views-field-body,
+			.views-field-field-teasing {
 				display: block;
 			}
 
-			.views-field-body-small {
+			.views-field-body-small,
+			.views-field-field-teasing-small {
 				display: none;
 			}
 
