@@ -367,14 +367,8 @@ table {
 }
 
 table caption {
-	caption-side: bottom;
 	text-align: left;
-	font-size: 12px;
-	color: #4c4c4c;
-	font-style: italic;
-	padding: 15px 0;
-
-	strong { font-style: italic; }
+	@extend h3;
 }
 
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td { padding: 15px 20px; }

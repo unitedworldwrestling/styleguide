@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.6 Release / 2014-12-10
+ * Style Table caption used in Calendar
+
 * 0.1.5 Release / 2014-12-02
  * Embeded tweets max-width 100% - misc
 
