@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.7 Release / 2014-12-15
+ * Table
+
 * 0.1.6 Release / 2014-12-10
  * Style Table caption used in Calendar
 
