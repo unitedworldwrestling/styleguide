@@ -14,6 +14,21 @@
 	
 	//background-position: 0 -180px !important;
 	@include cover();
+	
+	&.feature {
+		padding-top: 175px;
+		padding-bottom: 45px;
+		height: 435px;
+	}
+
+	.tags {
+		position: absolute;
+		top: -175px;
+		left: 15px;
+		bottom: auto;
+		right: auto;
+		z-index: 9;
+	}
 
 	.wrapper { z-index: 3; }
 
@@ -68,6 +83,25 @@
 		}
 	}
 
+	.fancyImg {
+		.icn {
+			position: absolute;
+			top: -150px;
+			right: 0;
+		}
+
+		.file-image {
+			width: 100px !important;
+			height: 100px !important;
+			top: -150px;
+			right: 0;
+			left: auto;
+			min-width: inherit;
+
+			.overlay { background: none;}
+		}
+	}
+
 	.icn.icn-play { display: none;}
 
 	.overlay {
@@ -105,7 +139,6 @@
 
 		span strong {
 			text-transform: uppercase;
-			font-size: 10px;
 			font-weight: 700;
 		}
 

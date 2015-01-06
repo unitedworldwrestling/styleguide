@@ -55,9 +55,11 @@
 }
 
 // Fix links color on front page for "Latest from..."
-.view-main-stories .heading a,
-.view-editorial-stories .heading a {
-  color: #f58220;
+body.front {
+  .view-main-stories .heading a,
+  .view-editorial-stories .heading a {
+    color: #f58220;
+  }
 }
 
 // Fix for hacky .col3 thingy in footer
@@ -82,16 +84,18 @@ footer .col3 {
       margin-bottom: 0;
     }
   }
-  .tag  {
-    .field {
-      margin-bottom: 0;
-    }
-    a {
-      color: #fff;
-    }
-  }
+  
   a {
     color: $pumpkin;
+  }
+}
+
+.tag {
+  .field {
+    margin-bottom: 0;
+  }
+  a {
+    color: #fff;
   }
 }
 
@@ -129,6 +133,61 @@ body.node-type-page .hero {
   }
 
   .field-name-field-country .field-item:after {
+    content: ",\00a0";
+  }
+}
+
+.field-name-field-cities {
+  display: inline;
+
+  div {
+    display: inline;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .field-name-title .field-item:before {
+    content: "\00a0|\00a0";
+  }
+
+  .field-name-title .field-item:after {
+    content: ",\00a0";
+  }
+}
+
+.field-name-field-sports {
+  display: inline;
+
+  div {
+    display: inline;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .field-item:not(:first-child):before {
+    content: ",\00a0";
+  }
+}
+
+.field-name-field-age-groups {
+  display: inline;
+
+  div {
+    display: inline;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .field-item:not(:first-child):before {
     content: ",\00a0";
   }
 }

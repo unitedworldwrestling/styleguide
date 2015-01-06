@@ -47,7 +47,7 @@
 				$containerDetail.packery();
 			});
 
-			var $containerBlock = $('.node-type-article .media-gallery-media').packery({
+			var $containerBlock = $('.node-type-article .media-gallery-media, .node-type-event .media-gallery-media').packery({
 				itemSelector: '.field-item',
   				gutter: 0,
   				isHorizontal: true,
@@ -121,6 +121,11 @@
 						'marginRight': '0px',
 					});
 				}
+			});
+
+			$('#nav-event li.active a[data-toggle="tab"]').each(function(){
+				var tabPane = $(this).attr('href');
+				$(tabPane).addClass('active');
 			});
 		});
     }

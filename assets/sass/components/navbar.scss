@@ -53,20 +53,66 @@ category: Antistatique Components - Navbar
       color: $carrot-orange;
     }
   }
-}
 
-.nav.navbar-huge {
-  margin: 35px 0;
-  a {
-    font-size: 24px;
-    color: $nero;
-    &:hover,
-    &.active {
-      background: none;
-      color: $carrot-orange;
+  &.navbar-huge {
+    margin: 0;
+    background: #ffffff;
+
+    a {
+      font-size: 24px;
+      color: $nero;
+      &:hover,
+      &.active {
+        background: none;
+        color: $carrot-orange;
+      }
+    }
+  }
+
+  &.navbar-event {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 40px;
+    
+    .nav-tabs {
+      border-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 0;
+
+      a {
+        text-transform:  none;
+        border: 0;
+        border-right: 1px solid #f2f2f2;
+        font-size: 14px;
+        color: $col-navy;
+        padding: 0 35px;
+        margin: 0;
+        line-height: 60px;
+        &:hover,
+        &.active {
+          border: 0;
+          border-right: 1px solid #f2f2f2;
+          margin: 0;
+          background: $col-navy;
+          color: #ffffff !important;
+        }
+      }
+
+      &.active {
+        a {
+          border: 0;
+          border-right: 1px solid #f2f2f2;
+          margin: 0;
+          background: $col-navy;
+          color: #ffffff !important;
+        }
+      }
     }
   }
 }
+
+
 
 .nav-subnav {
   display: none;

@@ -116,11 +116,19 @@ article {
 	}
 
 	&.location {
-		.heading a { font-weight: $bold-title; }
+		height: 525px;
+		overflow: hidden;
+		.heading { 
+			margin-bottom: 0 !important;
+			color: #fff;
+			font-weight: 700 !important;
+		}
 		.textWrap {
+			height: 350px;
 			background: url(../../img/bg-location.png) no-repeat center center;
 			@include cover();
 			color: #dedcdd;
+			font-size: 14px;
 			a, strong {
 				color: #fff;
 				display: block;
@@ -281,7 +289,7 @@ article {
 
 		article {
 			margin: 0;
-			padding: 15px 30px;
+			padding: 5px 30px;
 			margin-bottom: 0;
 
 			.views-field-field-image,

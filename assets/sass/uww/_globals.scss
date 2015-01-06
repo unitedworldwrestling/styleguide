@@ -91,9 +91,244 @@ body {
 .overflow-y { overflow-y: scroll; }
 
 .margin { margin-bottom: 50px; }
+
 .fancyBG { background: url(../../img/bg-fancy.png) no-repeat center top $col-navy; }
-.fancyBGWorld { background: url(../../img/bg-fancy-world.png) no-repeat right top #05003e; }
-.fancyBGContinental { background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f; }
+
+// Tabbable tabs
+// -------------------------
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  .tab-pane {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+}
+
+body.continental-championship {
+	
+	a {
+		color: #651242;
+
+		&:hover {
+			color: #ee3f37;
+		}
+	}
+	
+	#mainNav {
+		ul {
+			li {
+				&.active a {
+					color: #651242;
+					&:hover { color: #651242; }
+				}
+
+				a {
+					&:hover { color: #651242; }
+				}
+			}
+		}
+	}
+
+	.fancyBG {
+		background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f;
+	}
+	
+	.navbar {
+		&.navbar-event {
+			li {
+				a {
+					color: #49152f;
+
+					&:hover,
+					&.active {
+						background: #49152f;
+					}
+				}
+
+				&.active {
+					a {
+						background: #49152f;
+						color: #ffffff !important;
+					}
+				}
+			}
+		}
+	}
+	
+	.schedule {
+		.title {
+			background-color: #49152f;
+		}
+
+		ul {
+			li {
+				div > [class*='col-'] {
+					&:last-child {
+						strong { color: #49152f; }
+					}
+				}
+			}
+		}
+	}
+
+	article{
+		a {
+			&:hover { color: #ee3f37; }
+		}
+
+		.heading {
+			a {
+				&:hover { color: #ee3f37; }
+			}
+		}
+
+		&.location {
+			.textWrap {
+				background: url(../../img/bg-location-continental.png) no-repeat center center #49152f;
+				@include cover();
+			}
+		}
+	}
+
+	.featuredPhoto {
+		.title {
+			background-color: #651242;
+		}
+	}
+
+	.tags {
+		.tag {
+			&.primary { background-color: #651242; }
+			&.secondary { background-color: #ee3f37; }
+		}
+	}
+
+	.btn.orange {
+		background-color: #651242;
+	}
+
+	footer .col3 {
+		color: #b9b7cf;
+
+		a {
+			color: #b9b7cf;
+		}
+	}
+}
+
+body.world-championship {
+	
+	a {
+		color: #0089cf;
+
+		&:hover {
+			color: #0066b3;
+		}
+	}
+	
+	#mainNav {
+		ul {
+			li {
+				&.active a {
+					color: #0089cf;
+					&:hover { color: #0089cf; }
+				}
+
+				a {
+					&:hover { color: #0089cf; }
+				}
+			}
+		}
+	}
+
+	.fancyBG {
+		background: url(../../img/bg-fancy-world.png) no-repeat right top #05003e;
+	}
+	
+	.navbar {
+		&.navbar-event {
+			li {
+				a {
+					color: #05003e;
+
+					&:hover,
+					&.active {
+						background: #05003e;
+					}
+				}
+
+				&.active {
+					a {
+						background: #05003e;
+						color: #ffffff !important;
+					}
+				}
+			}
+		}
+	}
+	
+	.schedule {
+		.title {
+			background-color: #05003e;
+		}
+
+		ul {
+			li {
+				div > [class*='col-'] {
+					&:last-child {
+						strong { color: #05003e; }
+					}
+				}
+			}
+		}
+	}
+
+	article{
+		a {
+			&:hover { color: #0066b3; }
+		}
+
+		.heading {
+			a {
+				&:hover { color: #0066b3; }
+			}
+		}
+		&.location {
+			.textWrap {
+				background: url(../../img/bg-location-world.png) no-repeat center center #05003e;
+				@include cover();
+			}
+		}
+	}
+
+	.featuredPhoto {
+		.title {
+			background-color: #0089cf;
+		}
+	}
+
+	.tags {
+		.tag {
+			&.primary { background-color: #0089cf; }
+			&.secondary { background-color: #0066b3; }
+		}
+	}
+
+	.btn.orange {
+		background-color: #0089cf;
+	}
+
+	footer .col3 {
+		color: #b9b7cf;
+
+		a {
+			color: #b9b7cf;
+		}
+	}
+}
 
 section { position: relative; }
 
@@ -166,7 +401,11 @@ h2.block-title {
 	margin-bottom: 20px;
 }
 
-p { margin: $default_m; text-align: justify; }
+p { margin: $default_m; }
+.node-type-article{
+	p { text-align: justify;}
+}
+
 em { font-style: italic; }
 strong { font-weight: bold; }
 small { font-size: 80%; }

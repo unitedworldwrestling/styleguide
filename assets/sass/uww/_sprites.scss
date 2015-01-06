@@ -24,8 +24,24 @@
 }
 .icn span { display: none; }
 
+.icn-logo-bw { @include icn(-640px,-768px,106px,146px); }
 
 header .icn-logo { @include icn(0,0,106px,146px); }
+body.continental-championship {
+	header .icn-logo { 
+		@include icn(0,-768px,106px,146px);
+		img { display: none;}
+	}
+	.icn-logo-bw { @include icn(-384px,-768px,106px,146px); }
+}
+body.world-championship {
+	header .icn-logo { 
+		@include icn(-128px,-768px,106px,146px);
+		img { display: none;}
+	}
+	.icn-logo-bw { @include icn(-512px,-768px,106px,146px); }
+}
+
 footer .icn-logo { @include icn(0,-320px,96px,134px); }
 
 .icn-logo-emblem { @include icn(0,-512px,85px,85px); }
@@ -57,6 +73,12 @@ footer .icn-logo { @include icn(0,-320px,96px,134px); }
 .icn-readmore { @include icn(-128px,-192px,10px,9px); }
 .icn-play { @include icn(-192px,-128px,50px,50px); }
 .icn-globe { @include icn(-192px,-320px,16px,16px); }
+body.continental-championship {
+	.icn-globe { @include icn(-320px,-320px,16px,16px); }
+}
+body.world-championship {
+	.icn-globe { @include icn(-256px,-320px,16px,16px); }
+}
 .icn-clock { @include icn(-192px,-384px,16px,16px); }
 
 .icn-video { @include icn(-320px,-128px,18px,18px); }
@@ -67,8 +89,26 @@ footer .icn-logo { @include icn(0,-320px,96px,134px); }
 .icn-caption { @include icn(-192px,-256px,18px,14px); }
 
 .icn-value1 { @include icn(-513px,0,46px,46px); }
+body.continental-championship {
+	.icn-value1 { @include icn(-577px,0,46px,46px); }
+}
+body.world-championship {
+	.icn-value1 { @include icn(-641px,0,46px,46px); }
+}
 .icn-value2 { @include icn(-513px,-64px,46px,46px); }
+body.continental-championship {
+	.icn-value2 { @include icn(-577px,-64px,46px,46px); }
+}
+body.world-championship {
+	.icn-value2 { @include icn(-641px,-64px,46px,46px); }
+}
 .icn-value3 { @include icn(-513px,-128px,46px,46px); }
+body.continental-championship {
+	.icn-value3 { @include icn(-577px,-128px,46px,46px); }
+}
+body.world-championship {
+	.icn-value3 { @include icn(-641px,-128px,46px,46px); }
+}
 
 
 
