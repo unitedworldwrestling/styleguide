@@ -11,6 +11,9 @@
 		text-transform: uppercase;
 		border-right: 1px solid #fff;
 		
+		&.primary { background-color: $col-orange-bg; }
+		&.secondary { background-color: $col-navy; }
+
 		&.orange { background-color: $col-orange-bg; }
 		&.navy { background-color: $col-navy; }
 		&.pearl { background-color: #e3e3e3; color: #333333; }
@@ -22,6 +25,10 @@
 			font-size: 18px;
 			line-height: 23px;
 		}
+
+		&:nth-last-child(-n+1) {
+			border-right: 0;
+		}
 	}
 	
 	.events & .orange { background-color: $col-orange; }
@@ -32,6 +39,7 @@ article .tags {
 	position: absolute;
 	top: -24px;
 	left: 0;
+	z-index: 9;
 }
 article.type-horz .tags {
 	position: absolute;
