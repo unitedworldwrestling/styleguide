@@ -79,6 +79,16 @@ body.continental-championship {
 body.world-championship {
 	.icn-globe { @include icn(-256px,-320px,16px,16px); }
 }
+.event {
+	&.event-continental-championship {
+		.icn-globe { @include icn(-320px,-320px,16px,16px); }
+	}
+
+	&.event-world-championship {
+		.icn-globe { @include icn(-256px,-320px,16px,16px); }
+	}
+}
+
 .icn-clock { @include icn(-192px,-384px,16px,16px); }
 
 .icn-video { @include icn(-320px,-128px,18px,18px); }
