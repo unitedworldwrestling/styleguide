@@ -32,6 +32,7 @@
 				});
 				
 				// Schedule
+				$('.schedule li:first-child').addClass('active');
 				$('.schedule .title').click(function(){
 					if(!$(this).parent().hasClass('active')){
 						$(this).parent().addClass('active');
@@ -58,36 +59,37 @@
 			});
 
 			$containerBlock.packery( 'on', 'layoutComplete', function() {
-				var galleryWidth = $('.media-gallery-media .field-items').width();
-
 				$('.media-gallery-media').wrap('<div class="swiper-slide"></div>');
 				$('.swiper-slide').wrap('<div class="swiper-wrapper"></div>');
 				$('.swiper-wrapper').wrap('<div class="swiper-container"></div>');
 
 				$('.swiper-container').prepend('<div class="swiper-scrollbar"></div>');
-				//$('.swiper-container').prepend('<span class="icn gallery-prev"><span>Prev</span></span><span class="icn gallery-next"><span>Next</span></span>');
-
-				$('.swiper-slide').css('width', galleryWidth + 'px');
-
-				var mySwiper = $('.swiper-container').swiper({
-					scrollContainer: true,
-					/*freeMode: true,
-					freeModeFluid: true,*/
-					preventLinks: true,
-					preventLinksPropagation: true,
-					grabCursor: true,
-					mousewheelControl: true,
-					mousewheelControlForceToAxis: true,
-					centeredSlides: false,
-					momentumBounce: false,
-					resistance: '100%',
-					mode:'horizontal',
-					scrollbar: {
-				        container : '.swiper-scrollbar',
-				        draggable : true,
-				        hide: false,
-				        snapOnRelease: true
-				    }
+				
+				var i=0;
+				$('.media-gallery-media .field-items').each(function(){
+					i++;
+					$(this).closest('.swiper-slide').css('width', $(this).width() + 'px');
+					$(this).closest('.swiper-container').find('.swiper-scrollbar').attr('id', 'swiper-scrollbar-' + i)
+					var mySwiper = $(this).closest('.swiper-container').swiper({
+						scrollContainer: true,
+						/*freeMode: true,
+						freeModeFluid: true,*/
+						preventLinks: true,
+						preventLinksPropagation: true,
+						grabCursor: true,
+						mousewheelControl: true,
+						mousewheelControlForceToAxis: true,
+						centeredSlides: false,
+						momentumBounce: false,
+						resistance: '100%',
+						mode:'horizontal',
+						scrollbar: {
+					        container : '#swiper-scrollbar-' + i,
+					        draggable : true,
+					        hide: false,
+					        snapOnRelease: true
+					    }
+					});
 				});
 			});
 

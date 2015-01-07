@@ -16,6 +16,34 @@
 	position: relative;
 	background: url(../../img/bg-fancy.png) no-repeat center center $col-navy;
 	z-index: 1;
+	
+	a {
+		&:hover {
+			color: darken(#b0b0b0,10%) !important;
+		}
+	}
+
+	&.event-continental-championship {
+		background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f;
+
+		.tags {
+			.tag {
+				&.primary { background-color: #651242; }
+				&.secondary { background-color: #ee3f37; }
+			}
+		}
+	}
+	
+	&.event-world-championship {
+		background: url(../../img/bg-fancy-world.png) no-repeat right top #05003e;
+
+		.tags {
+			.tag {
+				&.primary { background-color: #0089cf; }
+				&.secondary { background-color: #0066b3; }
+			}
+		}
+	}
 
 	.fancyBG & {
 		background-image: none;
