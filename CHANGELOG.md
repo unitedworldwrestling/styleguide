@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.9 Release / 2015-01-07
+ * Event page
+
 * 0.1.8 Release / 2015-01-06
  * Event page
 
