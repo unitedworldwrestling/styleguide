@@ -99,26 +99,19 @@ body.world-championship {
 .icn-caption { @include icn(-192px,-256px,18px,14px); }
 
 .icn-value1 { @include icn(-513px,0,46px,46px); }
-body.continental-championship {
-	.icn-value1 { @include icn(-577px,0,46px,46px); }
-}
-body.world-championship {
-	.icn-value1 { @include icn(-641px,0,46px,46px); }
-}
 .icn-value2 { @include icn(-513px,-64px,46px,46px); }
-body.continental-championship {
-	.icn-value2 { @include icn(-577px,-64px,46px,46px); }
-}
-body.world-championship {
-	.icn-value2 { @include icn(-641px,-64px,46px,46px); }
-}
 .icn-value3 { @include icn(-513px,-128px,46px,46px); }
-body.continental-championship {
+
+/* body.continental-championship {
+	.icn-value1 { @include icn(-577px,0,46px,46px); }
+	.icn-value2 { @include icn(-577px,-64px,46px,46px); }
 	.icn-value3 { @include icn(-577px,-128px,46px,46px); }
 }
 body.world-championship {
+	.icn-value1 { @include icn(-641px,0,46px,46px); }
+	.icn-value2 { @include icn(-641px,-64px,46px,46px); }
 	.icn-value3 { @include icn(-641px,-128px,46px,46px); }
-}
+} */
 
 
 
