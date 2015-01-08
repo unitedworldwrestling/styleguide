@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.10 Release / 2015-01-08
+ * Branding Event page
+
 * 0.1.9 Release / 2015-01-07
  * Event page
 

@@ -210,11 +210,25 @@ body.continental-championship {
 		background-color: #651242;
 	}
 
-	footer .col3 {
-		color: #b9b7cf;
+	footer{
+		
+		&.fancyBG {
+			background: $col-navy;
+		}
 
-		a {
-			color: #b9b7cf;
+		li a {
+			color: #f58220;
+			&:hover {
+				color: #f58220;
+			}
+		}
+
+		.col3 {
+			/* color: #b9b7cf;
+
+			a {
+				color: #b9b7cf;
+			} */
 		}
 	}
 }
@@ -321,11 +335,24 @@ body.world-championship {
 		background-color: #0089cf;
 	}
 
-	footer .col3 {
-		color: #b9b7cf;
+	footer {		
+		&.fancyBG {
+			background: $col-navy;
+		}
 
-		a {
-			color: #b9b7cf;
+		li a {
+			color: #f58220;
+			&:hover {
+				color: #f58220;
+			}
+		}
+
+		.col3 {
+			/* color: #b9b7cf;
+
+			a {
+				color: #b9b7cf;
+			} */
 		}
 	}
 }
