@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.11 Release / 2015-01-16
+ * Event page : Videos
+
 * 0.1.10 Release / 2015-01-08
  * Branding Event page
 
