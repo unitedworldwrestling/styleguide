@@ -129,7 +129,76 @@
 				var tabPane = $(this).attr('href');
 				$(tabPane).addClass('active');
 			});
+
+			$('a.ajax-link').click(function(e) {
+				e.preventDefault();
+
+				var url = $(this).attr("href");
+				var id = $(this).attr("rel");
+				var selector = $(this).attr("rel");
+				var callback = $(this).attr('data-callback');
+				ajaxBefore(selector);
+				ajaxLink(selector, url, callback);
+			});
+
+			$('a.video-close').click(function() {
+				$('#video-player-inner').html('');
+				$('.hero.feature').css('height', '435px');
+  				$('.video-section').css('height', '435px');
+  				$('a.video-close').hide();
+				return false;
+			});
 		});
     }
   };
+
+  function ajaxBefore(selector){
+    $(selector).css({
+    	'height': $(selector).height() + 'px',
+    	'background': 'black'
+    });
+    $(selector).html("<div class='ajax-loading'></div>");
+  }
+
+  function  ajaxLink(selector, url, callback) {
+    $.ajax({
+      url: url,
+      type: "GET",
+      data: "ajax=1",
+
+      success: function (data) {        
+        ajaxAfter(selector, url, data, window, document);
+        /*Drupal.attachBehaviors(selector);*/
+        var callbacks = $.Callbacks();
+		callbacks.add(eval(callback));
+		callbacks.fire(selector);
+      },
+      error: function (xhr) {
+        var data = xhr.response.replace("?ajax=1", "");
+        ajaxAfter(selector, url, data, window, document);
+      },
+      cache: false
+    });
+  }
+
+  function ajaxAfter(selector, url, data, window, document){
+    $(selector).css({
+    	'height': '',
+    });
+    $(selector).html(data);
+
+    $('a.active').removeClass('active').parents('li').removeClass('active-trail');
+    $('a').filter(function() {
+      return $(this).attr('href')== url
+    }).addClass('active').parents('li').addClass('active-trail'); 
+  }
+
+  function videoCallback(selector){
+  	var height = $('#video-player iframe').height();
+  	$('.hero.feature').css('height', height + 'px');
+  	$('.video-section').css('height', height + 'px');
+  	
+  	$('a.video-close').show();
+  }
+
 })(jQuery);

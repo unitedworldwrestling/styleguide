@@ -16,9 +16,22 @@
 	@include cover();
 	
 	&.feature {
-		padding-top: 175px;
-		padding-bottom: 45px;
 		height: 435px;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.inner {
+			padding-top: 175px;
+			padding-bottom: 45px;
+
+			.tags {
+				top: 0;
+			}
+
+			.icn {
+				top: 25px;
+			}
+		}
 	}
 
 	.tags {

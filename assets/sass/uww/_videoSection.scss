@@ -1,5 +1,10 @@
 .video-section {
-	position: relative;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* max-width: 500px; */
+	width: 33%; 
+	height: 435px;
 
 	img {
 		width: 100%;
@@ -14,6 +19,7 @@
 		right: 0;
 		top:0;
 		height:100%;
+		width:100%;
 		float: none;
 		box-shadow: -3px 0 5px rgba(0,0,0,.35);
 
@@ -21,15 +27,15 @@
 	}
 
 	.overflow-y {
-		overflow-y: scroll;
 		position: absolute;
-		top: 0;
+		top: 50px;
 		left: 0;
 		right: 0;
-		padding-top: 50px;
 		z-index: 1;
 		height: 100%;
 		width: 100%;
+		overflow-y: auto;
+		padding-bottom: 50px
 	}
 
 	.titleBar {
@@ -83,15 +89,36 @@
 
 .video-item {
 	border-bottom: 1px solid #1f1b1b;
-	padding: 20px;
-	padding-left: 195px;
+	
+	height: 128px;
+	overflow: hidden;
+	/* padding-left: 195px; */
 	width: 100%;
 	display: block;
 	position: relative;
 	color: #fff;
 	font-size: $default_f;
-
+	
 	&:hover { background-color: lighten(#27272c,2%); }
+	
+	.file-video,
+	.file-image {
+		position: relative;
+		min-width: inherit;
+
+		.content {
+			padding: 0;
+		}
+
+		img {
+			position: relative;
+		}
+	}
+
+	.content {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 
 	h3 {
 		font-size: $default_f;
@@ -119,7 +146,7 @@
 		@include cover();
 	}
 
-	&.active {
+	.active {
 		background-color: #38383e;
 		.preview { opacity: 1; }
 		&:hover { background-color: lighten(#38383e,2%); }
@@ -157,6 +184,53 @@
 	&.offline { background-color: #363535; }
 }
 
+#video-player {
+	z-index: 9; 
+	position: absolute;
+	width: 67%; 
+	height: 435px; 
+	top: 0; 
+	left: 0;
+
+	.file-video,
+	.file-image {
+		position: relative;
+		min-width: inherit;
+	
+		.content {
+			padding: 0;
+		}
+
+		.media-youtube-video {
+			position: relative !important;
+			left: inherit;
+			right: inherit;
+			top: inherit;
+			margin-top: 0;
+		}
+
+		img {
+			position: relative;
+		}
+	}
+
+	a.video-close {
+		display: none;
+		position: absolute;
+		top: 0; right: 0;
+		width: 50px; height: 50px;
+		line-height: 50px;
+		color: #fff;
+		font-size: 18px;
+		text-align: center;
+		background: #ee3f37;
+
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
 
 // < 992
 @media only screen and (max-width: 992px) {
