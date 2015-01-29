@@ -210,7 +210,8 @@ body.node-type-page .hero {
   }
 }
 
-.media-youtube-video {
+.media-youtube-video,
+#video-player .field-name-field-embed {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -219,7 +220,10 @@ body.node-type-page .hero {
 
 .media-youtube-video iframe,
 .media-youtube-video object,
-.media-youtube-video embed {
+.media-youtube-video embed,
+#video-player .field-name-field-embed iframe,
+#video-player .field-name-field-embed object,
+#video-player .field-name-field-embed embed {
   position: absolute;
   top: 0;
   left: 0;
