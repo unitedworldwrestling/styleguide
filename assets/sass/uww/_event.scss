@@ -45,6 +45,17 @@
 		}
 	}
 
+	&.event-world-cup {
+		background: url(../../img/bg-fancy-cup.png) no-repeat right top #03412c;
+
+		.tags {
+			.tag {
+				&.primary { background-color: #82BC00; }
+				&.secondary { background-color: #023423; }
+			}
+		}
+	}
+
 	.fancyBG & {
 		background-image: none;
 		background-color: #181220;

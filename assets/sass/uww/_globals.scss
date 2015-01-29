@@ -357,6 +357,132 @@ body.world-championship {
 	}
 }
 
+body.world-cup {
+	
+	a {
+		color: #023423;
+
+		&:hover {
+			color: #82BC00;
+		}
+	}
+	
+	#mainNav {
+		ul {
+			li {
+				&.active a {
+					color: #023423;
+					&:hover { color: #023423; }
+				}
+
+				a {
+					&:hover { color: #023423; }
+				}
+			}
+		}
+	}
+
+	.fancyBG {
+		background: url(../../img/bg-fancy-cup.png) no-repeat right top #03412c;
+	}
+	
+	.navbar {
+		&.navbar-event {
+			li {
+				a {
+					color: #03412c;
+
+					&:hover,
+					&.active {
+						background: #03412c;
+					}
+				}
+
+				&.active {
+					a {
+						background: #03412c;
+						color: #ffffff !important;
+					}
+				}
+			}
+		}
+	}
+	
+	.schedule {
+		.title {
+			background-color: #03412c;
+		}
+
+		ul {
+			li {
+				div > [class*='col-'] {
+					&:last-child {
+						strong { color: #03412c; }
+					}
+				}
+			}
+		}
+	}
+
+	article{
+		a {
+			&:hover { color: #82BC00; }
+		}
+
+		.heading {
+			a {
+				&:hover { color: #82BC00; }
+			}
+		}
+
+		&.location {
+			.textWrap {
+				background: url(../../img/bg-location-cup.png) no-repeat center center #03412c;
+				@include cover();
+			}
+		}
+	}
+
+	.featuredPhoto {
+		.title {
+			background-color: #023423;
+		}
+	}
+
+	.tags {
+		.tag {
+			&.primary { background-color: #82BC00; }
+			&.secondary { background-color: #023423; }
+		}
+	}
+
+	.btn.orange {
+		background-color: #023423;
+	}
+
+	footer{
+		
+		&.fancyBG {
+			background: $col-navy;
+		}
+
+		li a {
+			color: #f58220;
+			&:hover {
+				color: #f58220;
+			}
+		}
+
+		.col3 {
+			/* color: #b9b7cf;
+
+			a {
+				color: #b9b7cf;
+			} */
+		}
+	}
+}
+
 section { position: relative; }
 
 .shadow-right:after {
