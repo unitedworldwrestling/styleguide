@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.13 Release / 2015-01-29
+ * Event page : World cup branding
+
 * 0.1.12 Release / 2015-01-29
  * Event page : Embedded Videos - check responsive
 
