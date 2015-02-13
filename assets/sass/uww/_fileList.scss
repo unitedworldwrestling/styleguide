@@ -24,7 +24,13 @@
 	}
 	a[href$=".pdf"]:before { content: "pdf"; }
 	a[href$=".jpg"]:before { content: "jpg"; }
+	a[href$=".jpeg"]:before { content: "jpg"; }
+	a[href$=".gif"]:before { content: "gif"; }
+	a[href$=".png"]:before { content: "png"; }
 	a[href$=".doc"]:before { content: "doc"; }
+	a[href$=".docx"]:before { content: "doc"; }
+	a[href$=".xls"]:before { content: "xls"; }
+	a[href$=".xlsx"]:before { content: "xls"; }
 	a[href$=".zip"]:before { content: "zip"; }
 	
 }

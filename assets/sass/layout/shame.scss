@@ -135,6 +135,17 @@ body.node-type-page .hero {
   .field-name-field-country .field-item:after {
     content: ",\00a0";
   }
+
+  .field-name-field-cities {
+
+    .field-name-title .field-item:before {
+      content: none;
+    }
+
+    .field-name-title .field-item:after {
+      content: none;
+    }
+  }
 }
 
 .field-name-field-cities {
