@@ -3,6 +3,10 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.14 Release / 2015-02-16
+ * Referees courses - Document list update
+ * Custom fancyImg
+
 * 0.1.13 Release / 2015-01-29
  * Event page : World cup branding
 
