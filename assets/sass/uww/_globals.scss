@@ -758,9 +758,28 @@ table {
 	}
 }
 
-table caption {
+table caption,
+.view-grouping-header {
 	text-align: left;
 	@extend h3;
+}
+
+.view-grouping-content caption {display: none;}
+
+.view-grouping-content .table > tbody+tbody {
+	border-top: 0;
+
+	td {
+		border-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.view-grouping-content .table {
+	.views-align-right { text-align: right;}
+	.field {
+		margin-bottom: 0 !important;
+	}
 }
 
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td { padding: 15px 20px; }

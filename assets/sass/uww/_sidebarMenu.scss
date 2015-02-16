@@ -95,7 +95,13 @@
 		a {
 			color: #000000;
 			padding: 5px 0;
-			&:hover { color: $col-orange; }
+			&:hover,
+			&.active { color: $col-orange; }
+		}
+
+		.hasSubnav ul {
+			border-top: 0;
+			padding: 0 0 10px 20px;
 		}
 	}
 }
