@@ -5,41 +5,39 @@
 
     		//$('.infield').inFieldLabels();
 				
-				// Toggle active class in language drop
-				$('.languageSelect li').click(function(){
-					$('.languageSelect li').removeClass('active');
+			// Toggle active class in language drop
+			$('.languageSelect li').click(function(){
+				$('.languageSelect li').removeClass('active');
+				$(this).addClass('active');
+			});
+			
+			// Toggle hamburger function and add height for sidebar
+			$('#hamburger').click(function(){
+				if(!$('body').hasClass('mobOpen')){
+					$('#mobSidebar').css({'height':$(document).height()});
+					$('body').addClass('mobOpen');
+				}else{
+					$('#mobSidebar').css({'height':'auto'});
+					$('body').removeClass('mobOpen');
+				}
+			});
+			
+			// Sidebar menu toggle
+			$('.sidebarMenu li').click(function(){
+				if( $(this).hasClass('hasSubMenu') ){
+					$('.sidebarMenu li').removeClass('active');
 					$(this).addClass('active');
-				});
-				
-				// Toggle hamburger function and add height for sidebar
-				$('#hamburger').click(function(){
-					if(!$('body').hasClass('mobOpen')){
-						$('#mobSidebar').css({'height':$(document).height()});
-						$('body').addClass('mobOpen');
-					}else{
-						$('#mobSidebar').css({'height':'auto'});
-						$('body').removeClass('mobOpen');
-					}
-				});
-				
-				// Sidebar menu toggle
-				$('.sidebarMenu li').click(function(){
-					if( $(this).hasClass('hasSubMenu') ){
-						$('.sidebarMenu li').removeClass('active');
-						$(this).addClass('active');
-						return false;
-					}
-				});
-				
-				// Schedule
-				$('.schedule li:first-child').addClass('active');
-				$('.schedule .title').click(function(){
-					if(!$(this).parent().hasClass('active')){
-						$(this).parent().addClass('active');
-					}else{
-						$(this).parent().removeClass('active');
-					}
-				});
+					return false;
+				}
+			});
+			
+			// Schedule
+			$('.schedule li:first-child').addClass('active');
+			$('.schedule .title').click(function(){
+				$('.schedule .title').closest('ul').find('.active').removeClass('active');
+				$(this).closest('li').addClass('active');
+			});
+
     		var $containerDetail = $('.media-gallery-media.media-gallery-view-full').packery({
 				itemSelector: '.field-item',
   				gutter: 0
@@ -126,11 +124,11 @@
 			});
 
 			$('#nav-event li.active a[data-toggle="tab"]').each(function(){
-				var tabPane = $(this).attr('href');
+				var tabPane = $(this).attr('rel');
 				$(tabPane).addClass('active');
 			});
 
-			$('a.ajax-link').click(function(e) {
+			$('a.ajax-link', context).click(function(e){
 				e.preventDefault();
 
 				var url = $(this).attr("href");
@@ -153,25 +151,34 @@
   };
 
   function ajaxBefore(selector){
+  	var styleLoading = '';
     $(selector).css({
-    	'height': $(selector).height() + 'px',
-    	'background': 'black'
+    	//'height': $(selector).height() + 'px'
+    	'height': '20px'
     });
-    $(selector).html("<div class='ajax-loading'></div>");
+    if($(selector).attr('id') == 'video-player-inner'){
+    	$(selector).css({
+	    	'background': 'black'
+	    });
+	    styleLoading = " style='background-color: black;'";
+    }
+    $(selector).html("<div class='ajax-loading'"+  styleLoading + "></div>");
   }
 
   function  ajaxLink(selector, url, callback) {
-    $.ajax({
+    var request = $.ajax({
       url: url,
       type: "GET",
       data: "ajax=1",
 
-      success: function (data) {        
+      success: function (data) {     
         ajaxAfter(selector, url, data, window, document);
-        /*Drupal.attachBehaviors(selector);*/
-        var callbacks = $.Callbacks();
-		callbacks.add(eval(callback));
-		callbacks.fire(selector);
+        Drupal.attachBehaviors(selector);
+        if(callback != ''){
+	        var callbacks = $.Callbacks();
+			callbacks.add(eval(callback));
+			callbacks.fire(selector);
+		}
       },
       error: function (xhr) {
         var data = xhr.response.replace("?ajax=1", "");
@@ -187,8 +194,8 @@
     });
     $(selector).html(data);
 
-    $('a.active').removeClass('active').parents('li').removeClass('active-trail');
-    $('a').filter(function() {
+    $('.video-section a.active').removeClass('active').parents('li').removeClass('active-trail');
+    $('.video-section a').filter(function() {
       return $(this).attr('href')== url
     }).addClass('active').parents('li').addClass('active-trail'); 
   }

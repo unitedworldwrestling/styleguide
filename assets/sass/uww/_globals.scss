@@ -231,6 +231,18 @@ body.continental-championship {
 			} */
 		}
 	}
+
+	.arena-table {
+		div.tabled > [class*='col-'] { 
+			&.bg-primary {
+				background: #ee3f37;
+			}
+		}
+
+		.winner {
+			color: #ee3f37;
+		}
+	}
 }
 
 body.world-championship {
@@ -353,6 +365,18 @@ body.world-championship {
 			a {
 				color: #b9b7cf;
 			} */
+		}
+	}
+
+	.arena-table {
+		div.tabled > [class*='col-'] { 
+			&.bg-primary {
+				background: #0089cf;
+			}
+		}
+
+		.winner {
+			color: #0089cf;
 		}
 	}
 }
@@ -479,6 +503,18 @@ body.world-cup {
 			a {
 				color: #b9b7cf;
 			} */
+		}
+	}
+
+	.arena-table {
+		div.tabled > [class*='col-'] { 
+			&.bg-primary {
+				background: #82BC00;
+			}
+		}
+
+		.winner {
+			color: #82BC00;
 		}
 	}
 }
@@ -863,7 +899,7 @@ Table styling for a default content table. Don't forget the caption. Add a .hidd
 	position: absolute;
 	top: 0; left: 0;
 	width: 100%; height: 100%;
-	background: black url(../../img/ajax-loading.gif) no-repeat center center;
+	background: url(../../img/ajax-loading.gif) no-repeat center center;
 }
 
 // < 992
