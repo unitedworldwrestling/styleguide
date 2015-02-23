@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.15 Release / 2015-02-23
+ * Arena integration
+
 * 0.1.14 Release / 2015-02-16
  * Referees courses - Document list update
  * Custom fancyImg
