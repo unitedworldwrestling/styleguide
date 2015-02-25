@@ -1,18 +1,20 @@
 (function ($) {
   Drupal.behaviors.uww = {
     attach: function (context, settings) {
+    	var xhr = null;
+
     	$( document ).ready(function() {
 
     		//$('.infield').inFieldLabels();
 				
 			// Toggle active class in language drop
-			$('.languageSelect li').click(function(){
+			$('.languageSelect li', context).click(function(){
 				$('.languageSelect li').removeClass('active');
 				$(this).addClass('active');
 			});
 			
 			// Toggle hamburger function and add height for sidebar
-			$('#hamburger').click(function(){
+			$('#hamburger', context).click(function(){
 				if(!$('body').hasClass('mobOpen')){
 					$('#mobSidebar').css({'height':$(document).height()});
 					$('body').addClass('mobOpen');
@@ -23,7 +25,7 @@
 			});
 			
 			// Sidebar menu toggle
-			$('.sidebarMenu li').click(function(){
+			$('.sidebarMenu li', context).click(function(){
 				if( $(this).hasClass('hasSubMenu') ){
 					$('.sidebarMenu li').removeClass('active');
 					$(this).addClass('active');
@@ -32,66 +34,68 @@
 			});
 			
 			// Schedule
-			$('.schedule li:first-child').addClass('active');
-			$('.schedule .title').click(function(){
+			$('.schedule li:first-child', context).addClass('active');
+			$('.schedule .title', context).click(function(){
 				$('.schedule .title').closest('ul').find('.active').removeClass('active');
 				$(this).closest('li').addClass('active');
 			});
 
-    		var $containerDetail = $('.media-gallery-media.media-gallery-view-full').packery({
-				itemSelector: '.field-item',
-  				gutter: 0
-			});
-			$containerDetail.imagesLoaded( function() {
-				$containerDetail.packery();
-			});
+			if($('.media-gallery-media.media-gallery-view-full', context).length > 0){
+	    		var $containerDetail = $('.media-gallery-media.media-gallery-view-full').packery({
+					itemSelector: '.field-item',
+	  				gutter: 0
+				});
+				$containerDetail.imagesLoaded( function() {
+					$containerDetail.packery();
+				});
+			}
 
-			var $containerBlock = $('.node-type-article .media-gallery-media, .node-type-event .media-gallery-media').packery({
-				itemSelector: '.field-item',
-  				gutter: 0,
-  				isHorizontal: true,
-  				containerStyle: null
-			});
-			$containerBlock.imagesLoaded( function() {
-				$containerBlock.packery();
-			});
+			if($('.node-type-article .media-gallery-media, .node-type-event .media-gallery-media', context).length > 0){
+				var $containerBlock = $('.node-type-article .media-gallery-media, .node-type-event .media-gallery-media').packery({
+					itemSelector: '.field-item',
+	  				gutter: 0,
+	  				isHorizontal: true,
+	  				containerStyle: null
+				});
+				$containerBlock.imagesLoaded( function() {
+					$containerBlock.packery();
+				});
 
-			$containerBlock.packery( 'on', 'layoutComplete', function() {
-				$('.media-gallery-media').wrap('<div class="swiper-slide"></div>');
-				$('.swiper-slide').wrap('<div class="swiper-wrapper"></div>');
-				$('.swiper-wrapper').wrap('<div class="swiper-container"></div>');
+				$containerBlock.packery( 'on', 'layoutComplete', function() {
+					$('.media-gallery-media').wrap('<div class="swiper-slide"></div>');
+					$('.swiper-slide').wrap('<div class="swiper-wrapper"></div>');
+					$('.swiper-wrapper').wrap('<div class="swiper-container"></div>');
 
-				$('.swiper-container').prepend('<div class="swiper-scrollbar"></div>');
-				
-				var i=0;
-				$('.media-gallery-media .field-items').each(function(){
-					i++;
-					$(this).closest('.swiper-slide').css('width', $(this).width() + 'px');
-					$(this).closest('.swiper-container').find('.swiper-scrollbar').attr('id', 'swiper-scrollbar-' + i)
-					var mySwiper = $(this).closest('.swiper-container').swiper({
-						scrollContainer: true,
-						/*freeMode: true,
-						freeModeFluid: true,*/
-						preventLinks: true,
-						preventLinksPropagation: true,
-						grabCursor: true,
-						mousewheelControl: true,
-						mousewheelControlForceToAxis: true,
-						centeredSlides: false,
-						momentumBounce: false,
-						resistance: '100%',
-						mode:'horizontal',
-						scrollbar: {
-					        container : '#swiper-scrollbar-' + i,
-					        draggable : true,
-					        hide: false,
-					        snapOnRelease: true
-					    }
+					$('.swiper-container').prepend('<div class="swiper-scrollbar"></div>');
+					
+					var i=0;
+					$('.media-gallery-media .field-items').each(function(){
+						i++;
+						$(this).closest('.swiper-slide').css('width', $(this).width() + 'px');
+						$(this).closest('.swiper-container').find('.swiper-scrollbar').attr('id', 'swiper-scrollbar-' + i)
+						var mySwiper = $(this).closest('.swiper-container').swiper({
+							scrollContainer: true,
+							preventLinks: true,
+							preventLinksPropagation: true,
+							grabCursor: true,
+							mousewheelControl: true,
+							mousewheelControlForceToAxis: true,
+							centeredSlides: false,
+							momentumBounce: false,
+							resistance: '100%',
+							mode:'horizontal',
+							scrollbar: {
+						        container : '#swiper-scrollbar-' + i,
+						        draggable : true,
+						        hide: false,
+						        snapOnRelease: true
+						    }
+						});
 					});
 				});
-			});
+			}
 
-			$('.media-wysiwyg').each(function(){
+			$('.media-wysiwyg', context).each(function(){
 				var img = $(this).find('img');
 				var caption = $(this).find('figcaption');
 
@@ -123,7 +127,7 @@
 				}
 			});
 
-			$('#nav-event li.active a[data-toggle="tab"]').each(function(){
+			$('#nav-event li.active a[data-toggle="tab"]', context).each(function(){
 				var tabPane = $(this).attr('rel');
 				$(tabPane).addClass('active');
 			});
@@ -136,10 +140,10 @@
 				var selector = $(this).attr("rel");
 				var callback = $(this).attr('data-callback');
 				ajaxBefore(selector);
-				ajaxLink(selector, url, callback);
+				ajaxLink(selector, url, callback, context);
 			});
 
-			$('a.video-close').click(function() {
+			$('a.video-close', context).click(function() {
 				$('#video-player-inner').html('');
 				$('.hero.feature').css('height', '435px');
   				$('.video-section').css('height', '435px');
@@ -165,15 +169,15 @@
     $(selector).html("<div class='ajax-loading'"+  styleLoading + "></div>");
   }
 
-  function  ajaxLink(selector, url, callback) {
-    var request = $.ajax({
+  function  ajaxLink(selector, url, callback, context) {
+    var xhr = $.ajax({
       url: url,
       type: "GET",
       data: "ajax=1",
 
-      success: function (data) {     
-        ajaxAfter(selector, url, data, window, document);
-        Drupal.attachBehaviors(selector);
+      success: function (data) {  
+        ajaxAfter(context, selector, url, data, window, document);
+        Drupal.attachBehaviors(selector, context);
         if(callback != ''){
 	        var callbacks = $.Callbacks();
 			callbacks.add(eval(callback));
@@ -182,17 +186,16 @@
       },
       error: function (xhr) {
         var data = xhr.response.replace("?ajax=1", "");
-        ajaxAfter(selector, url, data, window, document);
-      },
-      cache: false
+        ajaxAfter(context, selector, url, data, window, document);
+      }
     });
   }
 
-  function ajaxAfter(selector, url, data, window, document){
+  function ajaxAfter(context, selector, url, data, window, document){
     $(selector).css({
     	'height': '',
     });
-    $(selector).html(data);
+    $(selector, context).html(data);
 
     $('.video-section a.active').removeClass('active').parents('li').removeClass('active-trail');
     $('.video-section a').filter(function() {

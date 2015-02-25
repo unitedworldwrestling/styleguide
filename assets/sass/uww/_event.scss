@@ -180,12 +180,13 @@
 
 	// Big variant
 	&.big {
+		position: relative;
 		margin: 0;
 		border-radius: 0;
 		border: 0;
-		padding: 50px 30px;
 		color: #fff;
-
+		padding: 0 30px;
+		
 		.margin { margin-bottom: 20px; }
 
 		.event-title {
