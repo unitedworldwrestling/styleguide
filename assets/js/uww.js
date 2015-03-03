@@ -195,7 +195,7 @@
     $(selector).css({
     	'height': '',
     });
-    $(selector, context).html(data);
+    $(selector).html(data);
 
     $('.video-section a.active').removeClass('active').parents('li').removeClass('active-trail');
     $('.video-section a').filter(function() {
