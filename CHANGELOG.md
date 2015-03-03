@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.17 Release / 2015-03-03
+ * ajax request
+
 * 0.1.16 Release / 2015-02-25
  * Bug fix memory leak with ajax request
 
