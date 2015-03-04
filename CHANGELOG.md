@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.18 Release / 2015-03-04
+ * disable caching ajax request
+
 * 0.1.17 Release / 2015-03-03
  * ajax request
 
