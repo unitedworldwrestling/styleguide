@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.19 Release / 2015-03-24
+ * Change size video-close btn
+
 * 0.1.18 Release / 2015-03-04
  * disable caching ajax request
 
