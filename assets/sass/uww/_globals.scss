@@ -243,6 +243,25 @@ body.continental-championship {
 			color: #ee3f37;
 		}
 	}
+	
+	.bracketTable .bracketRound {
+		.bracketRoundName { 
+			background: #651242;
+		}
+
+		.bracketFight {
+			border-color: #651242;
+			
+			.winner {
+				color: #ee3f37;
+			}
+
+			.fightNumber {
+				background: #651242;
+				border-color: #651242;
+			}
+		}
+	}
 }
 
 body.world-championship {
@@ -377,6 +396,25 @@ body.world-championship {
 
 		.winner {
 			color: #0089cf;
+		}
+	}
+	
+	.bracketTable .bracketRound {
+		.bracketRoundName { 
+			background: #05003e;
+		}
+
+		.bracketFight {
+			border-color: #05003e;
+			
+			.winner {
+				color: #0089cf;
+			}
+
+			.fightNumber {
+				background: #05003e;
+				border-color: #05003e;
+			}
 		}
 	}
 }
@@ -515,6 +553,25 @@ body.world-cup {
 
 		.winner {
 			color: #82BC00;
+		}
+	}
+	
+	.bracketTable .bracketRound {
+		.bracketRoundName { 
+			background: #023423;
+		}
+
+		.bracketFight {
+			border-color: #023423;
+			
+			.winner {
+				color: #82BC00;
+			}
+
+			.fightNumber {
+				background: #023423;
+				border-color: #023423;
+			}
 		}
 	}
 }
