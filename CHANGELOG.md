@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.21 Release / 2015-04-22
+ * Fix https issue with importing the google font
+
 * 0.1.19 Release / 2015-03-24
  * Change size video-close btn
 
