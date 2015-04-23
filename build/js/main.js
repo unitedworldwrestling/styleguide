@@ -185,7 +185,8 @@
 		}
       },
       error: function (xhr) {
-        var data = xhr.response.replace("?ajax=1", "");
+      	console.log(xhr);
+        //var data = xhr.response.replace("?ajax=1", "");
         ajaxAfter(context, selector, url, data, window, document);
       },
       cache: false
