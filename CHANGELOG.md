@@ -3,6 +3,10 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.26 Release / 2015-06-08
+ * Fix pagination
+ * Add new read-more style
+
 * 0.1.21 Release / 2015-04-22
  * Fix https issue with importing the google font
 
