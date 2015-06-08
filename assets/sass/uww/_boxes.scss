@@ -13,6 +13,30 @@
 .greyBox { background-color: #fafafd; }
 .pearlBox { background-color: #ebebeb; }
 
+.more-link {
+  text-align: right;
+
+  a {
+    font-size: 12px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: $col-orange;
+
+    &:after {
+      content: ' ';
+      display: block;
+      background-image: url(../../img/sprites.png);
+      background-position: -128px -192px;
+      width: 10px;
+      height: 9px;
+      background-repeat: no-repeat;
+
+      display: inline-block;
+      position: relative;
+      margin-left: 5px;
+    }
+  }
+}
 /*doc
 ---
 title: Base Box's
