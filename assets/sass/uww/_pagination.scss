@@ -2,6 +2,10 @@
 
 .pagination > li > a, .pagination > li > span { color: #343434; }
 
+.pagination > .active {
+	display: inline;
+}
+
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
 	background-color: $col-orange;
 	padding: 7px 12px;
