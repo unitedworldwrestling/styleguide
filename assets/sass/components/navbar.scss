@@ -118,6 +118,29 @@ category: Antistatique Components - Navbar
   display: none;
 }
 
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    &.navbar-event {
+      li {
+        a {
+          font-size: 12px !important;
+          padding: 0 15px !important;
+        }
+      }
+    }
+  }
+}
+
+// < 480
+@media only screen and (max-width: 767px) {
+  .navbar {
+    li {  
+      width: 100%; 
+    }
+  }
+}
+
 /*doc
 ---
 title: Inverted navbar

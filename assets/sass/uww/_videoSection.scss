@@ -5,6 +5,7 @@
 	/* max-width: 500px; */
 	width: 33%; 
 	height: 435px;
+	z-index: 10;
 
 	img {
 		width: 100%;
@@ -240,11 +241,47 @@
 		.titleBar,
 		.overflow-y {
 			position: static;
-			height: auto;
+			// height: auto;
 			overflow: visible;
 		}
 		.list { float: left; }
 		.overflow-y { padding-top: 0; }
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.video-section {
+		top: 280px;
+		left: 0;
+		width: 100%;
+
+		.list {
+			height: 100%;
+		}
+
+		// .video-item {
+		// 	float: left;
+		// 	width: 33%;
+		// 	padding: 10px;
+		// 	height: 380px;
+		// }
+
+		.overflow-y {
+			position: absolute;
+			top: 50px;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			height: 100%;
+			width: 100%;
+			overflow-y: none;
+			overflow-x: auto;
+			padding-bottom: 50px
+		}
+	}
+
+	#video-player {
+		width: 100%;
 	}
 }
 

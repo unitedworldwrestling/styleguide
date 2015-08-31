@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.27 Release / 2015-08-31
+ * Event mobile optimization
+
 * 0.1.26 Release / 2015-06-08
  * Fix pagination
  * Add new read-more style

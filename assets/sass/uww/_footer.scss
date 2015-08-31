@@ -19,6 +19,7 @@ footer {
 	.icn-logo { margin-bottom: 20px; }
 	.fineprint {
 		color: #b9b7cf;
+		text-align: left;
 		a {
 			color: #b9b7cf;
 			&:hover { color: #fff; }
@@ -99,7 +100,11 @@ footer {
 		.icn-logo { display: inline-block; margin-bottom: 15px; }
 		.fineprint,
 		.fineprint a { color: #fff; font-size: 10px; }
-		
+			
+		.fineprint {
+			text-align: center;
+		}
+
 		.bigList {
 			li { margin-bottom: 0; }
 			a { color: #aaa5af; &:hover { color: #fff; } }

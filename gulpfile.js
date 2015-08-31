@@ -19,7 +19,9 @@ gulp.task('vendors', function() {
    * CSS VENDORS
    */
   gulp.src([
-        'bower_components/swiper/dist/idangerous.swiper.css'
+        'bower_components/swiper/dist/idangerous.swiper.css',
+        'bower_components/owl.carousel.2.0.0-beta.3/assets/owl.carousel.min.css',
+        'bower_components/owl.carousel.2.0.0-beta.3/assets/owl.theme.default.min.css'
       ])
       .pipe($.concat('vendors.css'))
       .pipe($.minifyCss())
@@ -50,7 +52,8 @@ gulp.task('vendors', function() {
       'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
       'bower_components/packery/dist/packery.pkgd.min.js',
       'bower_components/swiper/dist/idangerous.swiper.min.js',
-      'assets/js/vendors/idangerous.swiper.scrollbar.min.js'
+      'assets/js/vendors/idangerous.swiper.scrollbar.min.js',
+      'bower_components/owl.carousel.2.0.0-beta.3/owl.carousel.min.js'
      ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
