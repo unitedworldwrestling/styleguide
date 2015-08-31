@@ -35,14 +35,255 @@
 	}
 	
 	strong { font-weight: 700; }
+	
+	&.mainEvent {
+		background: url(../../img/bg-fancy.png) no-repeat right top $col-orange-bg;
+
+		.wrapper {
+			padding-left: 120px;
+
+			&.no-image {
+				padding-left: 0;
+			}
+		}
+
+		.title {
+			font-size: 12px;
+			line-height: 21px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #fff;
+
+			div {
+		      display: inline;
+		    }
+
+			.field-name-title .field-item:after {
+				content: ",\00a0";
+			}
+
+			.icn {
+				margin-right: 10px;
+				display: inline-block;
+				position: relative;
+				top: 4px;
+			}
+
+			.date {
+				color: #9c94a5;
+				margin-left: 10px;
+			}
+		}
+
+		.event-title {
+			font-size: 24px;
+			line-height: 36px;
+			min-height: 42px;
+			font-weight: 700;
+			margin: 0;
+			display: block;
+			text-transform: none;
+		}
+
+		.event-image {
+			position: absolute;
+			left: -120px;
+			top: 0;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+
+			.content {
+				padding: 0;
+				width: auto;
+				height: auto;
+				position: none;
+			}
+
+			img {
+				// border-radius: 50%;
+				width: auto;
+				height: 100%;
+				display: block;
+			}
+		}
+
+		.event-ages {
+			color: $col-orange;
+			text-transform: uppercase;
+			font-size: 11px;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.event-sports {
+			color: #ffffff;
+			text-transform: uppercase;
+			font-size: 10px;
+			font-weight: bold;
+			margin: 0;
+
+			div {
+				display: inline;
+				white-space: nowrap;
+			}
+		}
+
+		.tags {
+			position: static;
+			margin-top: 20px;
+
+			.tag {
+				
+				&.live {
+					background: #eb212e;
+				}
+
+				&.twitter-hashtag {
+					position: relative;
+					padding-left: 30px;
+					text-transform: none;
+					
+					a {
+						color: #ffffff;
+					}
+
+					.icn {
+						position: absolute;
+						top: 50%;
+						margin-top: -9px;
+						left: 10px;
+					}
+				}
+			}
+		}
+
+		&.score-ticker {
+			background: $col-orange-bg;
+			padding: 0;
+			
+			.wrapper {
+				height: 30px;
+				padding-left: 0;
+				
+				h4 {
+					position: absolute;
+			    line-height: 30px;
+			    font-size: 12px;
+			    margin-top: 0;
+				}
+
+				.owl-carousel {
+					padding-left: 120px;
+
+					.owl-item {
+						font-size: 12px;
+						line-height: 30px;
+						white-space: nowrap;
+
+						a, a:hover { color: #ffffff;}
+					}
+				}
+			}
+		}
+	}
+
+	&.event-continental-championship {
+		background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f;
+
+		.tags {
+			.tag {
+				&.primary { background-color: #651242; }
+				&.secondary { background-color: #ee3f37; }
+			}
+		}
+
+		&.score-ticker {
+			background: #651242;
+		}
+	}
+	
+	&.event-world-championship {
+		background: url(../../img/bg-fancy-world.png) no-repeat right top #05003e;
+
+		.tags {
+			.tag {
+				&.primary { background-color: #0089cf; }
+				&.secondary { background-color: #0066b3; }
+			}
+		}
+
+		&.score-ticker {
+			background: #0089cf;
+		}
+	}
+
+	&.event-world-cup {
+		background: url(../../img/bg-fancy-cup.png) no-repeat right top #03412c;
+
+		.tags {
+			.tag {
+				&.primary { background-color: #82BC00; }
+				&.secondary { background-color: #023423; }
+			}
+		}
+
+		&.score-ticker {
+			background: #82BC00;
+
+			.owl-carousel {
+				.owl-item {
+					font-size: 12px;
+					white-space: nowrap;
+					padding-right: 80px;
+					width: auto !important;
+				}
+			}
+		}
+	}
 }
 
+@media only screen and (max-width: 767px) {
+	.breakingNews {
+		&.mainEvent {
+			.wrapper {
+				padding-left: 0;
+
+				.event-image { 
+					left: inherit;
+					right: 0;
+					width: 70px; 
+					height: 70px;
+				}
+			}
+		}
+	}
+}
 // < 480
 @media only screen and (max-width: 480px) {
+	.breakingNews {
+		.title,
+		p.text { padding: 0; }
 
-	.breakingNews .title,
-	.breakingNews p.text { padding: 0; }
+		p.text { margin-bottom: 20px; font-size: 16px; }
+		.btn { position: static; }
+		
+		&.mainEvent {
+			&.score-ticker {
+				.wrapper {
+					h4 {
+						display: none;
+					}
 
-	.breakingNews p.text { margin-bottom: 20px; font-size: 16px; }
-	.breakingNews .btn { position: static; }
+					.owl-carousel {
+						padding-left: 0;
+					}
+				}
+			}
+
+			.event-image { 
+				display: none;
+			}
+		}
+	}
 }

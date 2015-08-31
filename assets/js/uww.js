@@ -143,14 +143,41 @@
 				ajaxLink(selector, url, callback, context);
 			});
 
+      var heroHeight = $('.hero.feature').css('height');
+      console.log(heroHeight);
 			$('a.video-close', context).click(function() {
+        console.log(heroHeight);
 				$('#video-player-inner').html('');
-				$('.hero.feature').css('height', '435px');
-  				$('.video-section').css('height', '435px');
+				$('.hero.feature').css('height', heroHeight);
+  				$('.video-section').css('height', heroHeight);
   				$('a.video-close').hide();
 				return false;
 			});
-		});
+
+      var videoSwiper = new Swiper ('.swiper-container', {
+        scrollContainer: true,
+        preventLinks: true,
+        preventLinksPropagation: true,
+        grabCursor: true,
+        mousewheelControl: true,
+        mousewheelControlForceToAxis: true,
+        centeredSlides: false,
+        momentumBounce: false,
+        resistance: '100%',
+        mode:'horizontal',
+      });
+
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        autoplaySpeed: 2000,
+        margin: 50,
+        merge: true,
+        autoWidth: true
+      });
+    });
     }
   };
 

@@ -177,6 +177,24 @@ body.world-cup {
 @media only screen and (max-width: 767px) {
 	/* Seperate icons to swap out */
 	header .icn-logo { @include icn(0,-192px,54px,75px); }
+
+	body.continental-championship {
+		header .icn-logo { 
+			@include icn(-576px,-192px,64px,75px);
+		}
+	}
+
+	body.world-championship {
+		header .icn-logo { 
+			@include icn(-512px,-192px,64px,75px);
+		}
+	}
+
+	body.world-cup {
+		header .icn-logo { 
+			@include icn(-640px,-192px,64px,75px);
+		}
+	}
 }
 
 

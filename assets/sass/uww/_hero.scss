@@ -26,10 +26,52 @@
 
 			.tags {
 				top: 0;
+
+				&.twitter-hashtag {
+					top: 435px;
+					margin-top: -35px;
+					left: inherit;
+					right: 0;
+					z-index: 1000;
+					
+					.tag {
+						position: relative;
+						padding-left: 30px;
+						text-transform: none;
+						
+						a {
+							color: #ffffff;
+
+							.icn {
+								position: absolute;
+								top: 50%;
+								margin-top: -9px;
+								left: 10px;
+							}
+						}
+					}
+				}
 			}
 
 			.icn {
 				top: 25px;
+			}
+		}
+
+		h2 {
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100;
+		}
+
+		&.has-video {
+			.fancyImg {
+				.icn {
+					right: -80px;
+				}
 			}
 		}
 	}
@@ -234,6 +276,32 @@ body.node-type-event {
 		.file-image {
 			min-width: 850px;
 		}
+
+		&.feature {
+			height: 280px;
+			padding-top: 0;
+
+			.inner {
+				padding-top: 75px;
+
+				.tags {
+					&.twitter-hashtag {
+						top: 280px;
+					}
+				}
+			}
+
+			&.has-video {
+				height: 710px;
+				padding-bottom: 0;
+
+				.fancyImg {
+					.icn {
+						right: 20px;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -243,6 +311,12 @@ body.node-type-event {
 		.file-video,
 		.file-image {
 			min-width: 820px;
+		}
+
+		.fancyImg {
+			.icn {
+				display: none;
+			}
 		}
 	}
 }
