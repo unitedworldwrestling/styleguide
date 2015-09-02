@@ -144,13 +144,12 @@
 			});
 
       var heroHeight = $('.hero.feature').css('height');
-      console.log(heroHeight);
 			$('a.video-close', context).click(function() {
-        console.log(heroHeight);
-				$('#video-player-inner').html('');
+        $('#video-player-inner').html('');
 				$('.hero.feature').css('height', heroHeight);
   				$('.video-section').css('height', heroHeight);
   				$('a.video-close').hide();
+          $('.tags.twitter-hashtag').show();
 				return false;
 			});
 
@@ -212,7 +211,6 @@
 		}
       },
       error: function (xhr) {
-      	console.log(xhr);
         //var data = xhr.response.replace("?ajax=1", "");
         ajaxAfter(context, selector, url, data, window, document);
       },
@@ -238,6 +236,7 @@
   	$('.video-section').css('height', height + 'px');
   	
   	$('a.video-close').show();
+    $('.tags.twitter-hashtag').hide();
   }
 
 })(jQuery);
