@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.28.1 Hotfix / 2015-09-02
+ * Hide twitter hashtag when playing a video
+
 * 0.1.28 Release / 2015-08-31
  * Event mobile optimization
 
