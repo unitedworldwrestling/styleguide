@@ -33,7 +33,7 @@ header {
 
 		&.social {
 			position: absolute;
-			left: 590px;
+			left: 640px;
 			top: 0;
 			background: url(../../img/bg-nav-top-social.png) repeat-y left top;
 			height: 50px;
@@ -44,7 +44,7 @@ header {
 		}
 	}
 	nav {
-		width: 570px;
+		width: 640px;
 		padding-left: 195px;
 
 		li { margin-right: 35px; display: block; }
@@ -56,7 +56,7 @@ header {
 		position: absolute;
 		right: 20px;
 		top: 11px;
-		padding-right: 143px;
+		padding-right: 60px;
 	}
 	.signin {
 		position: absolute;
@@ -223,7 +223,7 @@ header {
 	#topNav nav,
 	#mainNav .title { padding-left: 150px; }
 
-	#topNav ul.social { left: 510px; }
+	#topNav ul.social { left: 590px; }
 
 	#mainNav .title,
 	#mainNav ul li a { font-size: 20px; }
