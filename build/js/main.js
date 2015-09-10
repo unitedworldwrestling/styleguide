@@ -197,10 +197,17 @@
   }
 
   function  ajaxLink(selector, url, callback, context) {
+    // As for the moment we don't receive correct cache headers
+    // let the browser and reverse proxy cache this resource
+    // for a limited time.
+    var ttl = 3*60*1000; // 3min
+    var ts = new Date().getTime();
+    var cacheKey = Math.floor(ts/ttl) * ttl;
+
     var xhr = $.ajax({
       url: url,
       type: "GET",
-      data: "ajax=1",
+      data: "ajax=1&__=" + cacheKey,
 
       success: function (data) {  
         ajaxAfter(context, selector, url, data, window, document);
@@ -214,8 +221,7 @@
       error: function (xhr) {
         //var data = xhr.response.replace("?ajax=1", "");
         ajaxAfter(context, selector, url, data, window, document);
-      },
-      cache: false
+      }
     });
   }
 
