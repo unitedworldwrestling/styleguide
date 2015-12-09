@@ -3,7 +3,7 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
-* 0.1.31 / 2015-12-02
+* 0.1.32 / 2015-12-02
  * Fix sec nav persian
 
 * 0.1.30 / 2015-09-10
