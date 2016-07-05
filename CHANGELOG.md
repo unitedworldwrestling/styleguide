@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.33 / 2016-07-05
+ * Rio 2016 Theme
+
 * 0.1.32.1 / 2015-12-02
  * Fix sec nav persian
 
