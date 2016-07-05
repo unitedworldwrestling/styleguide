@@ -188,6 +188,21 @@
 		}
 	}
 
+	&.event-olympic-rio {
+		background: #55aa4d;
+
+		.tags {
+			.tag {
+				&.primary { background-color: #0e65ab; }
+				&.secondary { background-color: #ffdd00; }
+			}
+		}
+
+		&.score-ticker {
+			background: #0e65ab;
+		}
+	}
+
 	&.event-continental-championship {
 		background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f;
 
