@@ -23,35 +23,94 @@
 		}
 	}
 
-	&.event-continental-championship {
-		background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f;
+	&.event-olympic-rio {
+		background: url(../../img/bg-fancy-rio.png) no-repeat center center #55aa4d;
+	
+		a {
+			color: #ffdd00 !important;
+
+			&:hover {
+				color: #55aa4d !important;
+			}
+
+			&.tag.orange {
+				background-color: #030216;
+			}
+		}
 
 		.tags {
 			.tag {
-				&.primary { background-color: #651242; }
-				&.secondary { background-color: #ee3f37; }
+				&.primary { background-color: #ffdd00; }
+				&.secondary { background-color: #0e65ab; }
+			}
+		}
+	}
+
+	&.event-continental-championship {
+		background: url(../../img/bg-fancy-continental.png) no-repeat right top #49152f;
+
+		a {
+			color: #ee3f37 !important;
+
+			&:hover {
+				color: #651242 !important;
+			}
+
+			&.tag.orange {
+				background-color: #030216;
+			}
+		}
+		
+		.tags {
+			.tag {
+				&.primary { background-color: #651242 !important; }
+				&.secondary { background-color: #ee3f37 !important; }
 			}
 		}
 	}
 	
 	&.event-world-championship {
 		background: url(../../img/bg-fancy-world.png) no-repeat right top #05003e;
+		
+		a {
+			color: #0089cf !important;
 
+			&:hover {
+				color: #0066b3 !important;
+			}
+
+			&.tag.orange {
+				background-color: #030216;
+			}
+		}
+		
 		.tags {
 			.tag {
-				&.primary { background-color: #0089cf; }
-				&.secondary { background-color: #0066b3; }
+				&.primary { background-color: #0089cf !important; }
+				&.secondary { background-color: #0066b3 !important; }
 			}
 		}
 	}
 
 	&.event-world-cup {
 		background: url(../../img/bg-fancy-cup.png) no-repeat right top #03412c;
+		
+		a {
+			color: #82BC00 !important;
 
+			&:hover {
+				color: #023423 !important;
+			}
+
+			&.tag.orange {
+				background-color: #030216;
+			}
+		}
+		
 		.tags {
 			.tag {
-				&.primary { background-color: #82BC00; }
-				&.secondary { background-color: #023423; }
+				&.primary { background-color: #82BC00 !important; }
+				&.secondary { background-color: #023423 !important; }
 			}
 		}
 	}

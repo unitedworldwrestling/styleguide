@@ -107,6 +107,225 @@ body {
   }
 }
 
+body.olympic-rio:not(.other-championship):not(.continental-championship):not(.world-championship):not(.world-cup) {
+	
+	a {
+		color: #55aa4d;
+
+		&:hover {
+			color: #ffdd00;
+		}
+	}
+	
+	.heading a {
+		color: #111;
+
+		&:hover {
+			color: #ffdd00;
+		}
+	}
+
+
+	
+	.more-link a {
+		color: #ffdd00;
+
+    &:after {
+      background-position: -256px -192px;
+    }
+	}
+	
+	#mobSidebar {
+		background: url(../../img/bg-sidebar-rio.jpg) no-repeat top right #55aa4d;
+	}
+	#mainNav {
+		ul {
+			li {
+				&.active a {
+					color: #55aa4d;
+					&:hover { color: #55aa4d; }
+				}
+
+				a {
+					&:hover { color: #55aa4d; }
+				}
+			}
+		}
+	}
+	
+	.hero {
+		background-color: #55aa4d;
+	}
+
+	.featuredStory {
+		a {
+			color: #fff;
+		}
+	}
+
+	.fancyBG {
+		background: url(../../img/bg-fancy-rio.png) no-repeat right top #55aa4d;
+	}
+	
+	.navbar {
+		&.navbar-event {
+			li {
+				a {
+					color: #0e65ab;
+
+					&:hover,
+					&.active {
+						background: #0e65ab;
+					}
+				}
+
+				&.active {
+					a {
+						background: #0e65ab;
+						color: #ffffff !important;
+					}
+				}
+			}
+		}
+	}
+	
+	.schedule {
+		.title {
+			background-color: #55aa4d;
+
+			a {
+				color: #fff;
+			}
+		}
+
+		ul {
+			li {
+				div > [class*='col-'] {
+					&:last-child {
+						strong { color: #55aa4d; }
+					}
+				}
+			}
+		}
+	}
+
+	article{
+		a {
+			&:hover { color: #ffdd00; }
+		}
+
+		.heading {
+			a {
+				&:hover { color: #ffdd00; }
+			}
+		}
+
+		&.location {
+			.textWrap {
+				background: url(../../img/bg-location-rio.png) no-repeat center center #55aa4d;
+				@include cover();
+			}
+		}
+
+		// Image and video
+		&.type-img,
+		&.type-vid {
+			a {
+				color: #ffdd00 !important;
+				&:hover { color: #fff; }
+			}
+		}
+	}
+
+	.featuredPhoto {
+		.title {
+			background-color: #0e65ab;
+		}
+	}
+
+	.tags {
+		.tag {
+			&.primary { 
+				background-color: #55aa4d; 
+
+				&.twitter-hashtag { background-color: #0e65ab; }
+			}
+			&.secondary { background-color: #0e65ab; }
+
+			&.big {
+				&.primary { background-color: #0e65ab; }
+				&.secondary { background-color: #ffdd00; }
+			}
+		}
+	}
+
+	.btn.orange {
+		background-color: #55aa4d;
+	}
+
+	footer{
+
+		a {
+			color: #b9b7cf;
+		}	
+		
+		// &.fancyBG {
+		// 	background: $col-navy;
+		// }
+
+		li a {
+			color: #55aa4d;
+			&:hover {
+				color: #55aa4d;
+			}
+		}
+
+		.col3 {
+			color: #fff;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	.arena-table {
+		div.tabled > [class*='col-'] { 
+			&.bg-primary {
+				background: #ffdd00;
+			}
+		}
+
+		.winner {
+			color: #ffdd00;
+		}
+	}
+	
+	.bracketTable .bracketRound {
+		.bracketRoundName { 
+			background: #0e65ab;
+		}
+
+		.bracketFight {
+			border-color: #0e65ab;
+			
+			.winner {
+				color: #ffdd00;
+			}
+
+			.fightNumber {
+				background: #0e65ab;
+				border-color: #0e65ab;
+			}
+		}
+	}
+
+	.breakingNews {
+		background-color: #55aa4d;
+		color: #ffdd00;
+	}
+}
+
 body.continental-championship {
 	
 	a {
@@ -203,6 +422,11 @@ body.continental-championship {
 		.tag {
 			&.primary { background-color: #651242; }
 			&.secondary { background-color: #ee3f37; }
+
+			&.big {
+				&.primary { background-color: #651242 !important; }
+				&.secondary { background-color: #ee3f37 !important; }
+			}
 		}
 	}
 
@@ -359,7 +583,17 @@ body.world-championship {
 		.tag {
 			&.primary { background-color: #0089cf; }
 			&.secondary { background-color: #0066b3; }
+
+			&.big {
+				&.primary { background-color: #0089cf !important; }
+				&.secondary { background-color: #0066b3 !important; }
+			}
 		}
+
+			&.big {
+				&.primary { background-color: #0089cf !important; }
+				&.secondary { background-color: #0066b3 !important; }
+			}
 	}
 
 	.btn.orange {
@@ -515,6 +749,11 @@ body.world-cup {
 		.tag {
 			&.primary { background-color: #82BC00; }
 			&.secondary { background-color: #023423; }
+
+			&.big {
+				&.primary { background-color: #82BC00 !important; }
+				&.secondary { background-color: #023423 !important; }
+			}
 		}
 	}
 
