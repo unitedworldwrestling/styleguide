@@ -103,7 +103,9 @@
       /**
        * Manage Gallery as Photoswipe
        */
-      $(document).on("click", '.media-gallery-media a',function() {
+      $('.media-gallery-media ').on('click', 'a', function(event) {
+        console.log('open');
+
           // Prevent location change
           event.preventDefault();
 
@@ -131,6 +133,16 @@
           var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
           gallery.init();
       });
+
+      // Media Page - same Height Element
+      if( $('.page-taxonomy-term .node-media-gallery.mg-gallery').length > 0) {
+        var size = $.map($('.page-taxonomy-term .node-media-gallery.mg-gallery'), function(e) { return $(e).height(); });
+
+        console.log(size);
+        var highest = Math.max(size);
+        console.log(highest);
+        $('.page-taxonomy-term .node-media-gallery.mg-gallery').height(highest);
+      }
 
 			$('.media-wysiwyg', context).each(function(){
 				var img = $(this).find('img');
