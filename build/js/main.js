@@ -7,13 +7,13 @@
     	$( document ).ready(function() {
 
     		//$('.infield').inFieldLabels();
-				
+
 			// Toggle active class in language drop
 			$('.languageSelect li', context).click(function(){
 				$('.languageSelect li').removeClass('active');
 				$(this).addClass('active');
 			});
-			
+
 			// Toggle hamburger function and add height for sidebar
 			$('#hamburger', context).click(function(){
 				if(!$('body').hasClass('mobOpen')){
@@ -24,7 +24,7 @@
 					$('body').removeClass('mobOpen');
 				}
 			});
-			
+
 			// Sidebar menu toggle
 			$('.sidebarMenu li', context).click(function(){
 				if( $(this).hasClass('hasSubMenu') ){
@@ -33,7 +33,7 @@
 					return false;
 				}
 			});
-			
+
 			// Schedule
 			$('.schedule li:first-child', context).addClass('active');
 			$('.schedule .title', context).click(function(){
@@ -51,24 +51,28 @@
 				});
 			}
 
-			if($('.node-type-article .media-gallery-media, .node-type-event .media-gallery-media', context).length > 0){
+      /**
+       * Generate the Packery and the Swiper for Galleries
+       */
+      if($('.node-type-article .media-gallery-media, .node-type-event .media-gallery-media', context).length > 0){
 				var $containerBlock = $('.node-type-article .media-gallery-media, .node-type-event .media-gallery-media').packery({
-					itemSelector: '.field-item',
+					itemSelector: 'figure',
 	  				gutter: 0,
 	  				isHorizontal: true,
 	  				containerStyle: null
 				});
-				$containerBlock.imagesLoaded( function() {
+
+        $containerBlock.imagesLoaded( function() {
 					$containerBlock.packery();
 				});
 
-				$containerBlock.packery( 'on', 'layoutComplete', function() {
+        $containerBlock.packery( 'on', 'layoutComplete', function() {
 					$('.media-gallery-media').wrap('<div class="swiper-slide"></div>');
 					$('.swiper-slide').wrap('<div class="swiper-wrapper"></div>');
 					$('.swiper-wrapper').wrap('<div class="swiper-container"></div>');
 
 					$('.swiper-container').prepend('<div class="swiper-scrollbar"></div>');
-					
+
 					var i=0;
 					$('.media-gallery-media .field-items').each(function(){
 						i++;
@@ -94,7 +98,40 @@
 						});
 					});
 				});
-			}
+      }
+
+      /**
+       * Manage Gallery as Photoswipe
+       */
+      $(document).on("click", '.media-gallery-media a',function() {
+          // Prevent location change
+          event.preventDefault();
+
+          // Generate the tree
+          var container = [];
+          $('.gallery [itemprop="associatedMedia"]').each(function(){
+            var $that = $(this);
+            container.push({
+              src: $that.find('a').attr('href'),
+              w: $(this).find('a').data('width'),
+              h: $(this).find('a').data('height'),
+            });
+          });
+
+          // Define object and gallery options
+          var $pswp = $('.pswp')[0],
+              options = {
+                index: $(this).data('index'),
+                bgOpacity: 0.85,
+                showHideOpacity: true,
+                shareEl: true,
+                shareButtons: [{id: 'download', label: 'Download', url:'{{raw_image_url}}', download:true }]
+              };
+
+          // Initialize PhotoSwipe
+          var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
+          gallery.init();
+      });
 
 			$('.media-wysiwyg', context).each(function(){
 				var img = $(this).find('img');
@@ -209,7 +246,7 @@
       type: "GET",
       data: "ajax=1&__=" + cacheKey,
 
-      success: function (data) {  
+      success: function (data) {
         ajaxAfter(context, selector, url, data, window, document);
         Drupal.attachBehaviors(selector, context);
         if(callback != ''){
@@ -234,14 +271,14 @@
     $('.video-section a.active').removeClass('active').parents('li').removeClass('active-trail');
     $('.video-section a').filter(function() {
       return $(this).attr('href')== url
-    }).addClass('active').parents('li').addClass('active-trail'); 
+    }).addClass('active').parents('li').addClass('active-trail');
   }
 
   function videoCallback(selector){
   	var height = $('#video-player iframe').height();
   	$('.hero.feature').css('height', height + 'px');
   	$('.video-section').css('height', height + 'px');
-  	
+
   	$('a.video-close').show();
     $('.tags.twitter-hashtag').hide();
   }
