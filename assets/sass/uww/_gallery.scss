@@ -316,11 +316,24 @@
 
 
 .node-type-event {
-	.gallery-more { 
+	.gallery-more {
 		margin-bottom: 40px;
 
 		a {
-			display: none; 
+			display: none;
+		}
+	}
+}
+
+.node-media-gallery {
+	&.mg-gallery {
+		h2.same-height {
+			position: relative;
+
+			a {
+				position: absolute;
+				bottom: 0;
+			}
 		}
 	}
 }

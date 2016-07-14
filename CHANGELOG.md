@@ -3,6 +3,12 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.35 / 2016-07-14
+ * Fix galery
+
+* 0.1.34 / 2016-07-14
+ * Tmp version
+
 * 0.1.33 / 2016-07-05
  * Rio 2016 Theme
 

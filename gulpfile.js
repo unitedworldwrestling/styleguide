@@ -21,7 +21,10 @@ gulp.task('vendors', function() {
   gulp.src([
         'bower_components/swiper/dist/idangerous.swiper.css',
         'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
-        'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css'
+        'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css',
+        'bower_components/swiper/dist/idangerous.swiper.css',
+        'bower_components/photoswipe/dist/photoswipe.css',
+        'bower_components/photoswipe/dist/default-skin/default-skin.css'
       ])
       .pipe($.concat('vendors.css'))
       .pipe($.minifyCss())
@@ -53,13 +56,21 @@ gulp.task('vendors', function() {
       'bower_components/packery/dist/packery.pkgd.min.js',
       'bower_components/swiper/dist/idangerous.swiper.min.js',
       'assets/js/vendors/idangerous.swiper.scrollbar.min.js',
-      'bower_components/owl.carousel/dist/owl.carousel.min.js'
+      'bower_components/owl.carousel/dist/owl.carousel.min.js',
+      'bower_components/photoswipe/dist/photoswipe.js',
+      'bower_components/photoswipe/dist/photoswipe-ui-default.js',
      ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
 
-
+  /**
+   * IMG VENDORS
+   */
+  gulp.src([
+        'bower_components/photoswipe/dist/default-skin/*.{png,gif,svg}'
+      ])
+      .pipe(gulp.dest('build/css'));
 
   /**
    * FONTS SOURCES
@@ -157,4 +168,3 @@ gulp.task('deploy', function () {
 gulp.task('default', ['clean'], function(cb) {
   runSequence('vendors', 'styles', 'scripts', 'styleguide', cb);
 });
-
