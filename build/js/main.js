@@ -41,6 +41,7 @@
 				$(this).closest('li').addClass('active');
 			});
 
+      // View of Media Gallery
 			if( $('.media-gallery-view-full .media-gallery-media').length > 0){
 	    		var $containerDetail = $('.media-gallery-view-full .media-gallery-media').packery({
 					itemSelector: 'figure',
@@ -50,6 +51,11 @@
 					$containerDetail.packery();
 				});
 			}
+
+      if( jQuery('.page-taxonomy-term-275 .pagination').length > 0) {
+        var jQuerypagination = jQuery('.page-taxonomy-term-275 .pagination').closest('div');
+        jQuerypagination.parent().after(jQuerypagination);
+      }
 
       /**
        * Generate the Packery and the Swiper for Galleries
