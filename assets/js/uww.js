@@ -40,9 +40,9 @@
 				$(this).closest('li').addClass('active');
 			});
 
-			if($('.media-gallery-media.media-gallery-view-full', context).length > 0){
-	    		var $containerDetail = $('.media-gallery-media.media-gallery-view-full').packery({
-					itemSelector: '.field-item',
+			if( $('.media-gallery-view-full .media-gallery-media').length > 0){
+	    		var $containerDetail = $('.media-gallery-view-full .media-gallery-media').packery({
+					itemSelector: 'figure',
 	  				gutter: 0
 				});
 				$containerDetail.imagesLoaded( function() {
@@ -102,7 +102,7 @@
       /**
        * Manage Gallery as Photoswipe
        */
-      $('.media-gallery-media ').on('click', 'a', function(event) {
+      $('.media-gallery-media').on('click', 'a', function(event) {
           // Prevent location change
           event.preventDefault();
 

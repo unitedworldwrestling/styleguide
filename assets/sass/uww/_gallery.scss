@@ -324,7 +324,7 @@
 		}
 	}
 }
-pagination
+
 .node-media-gallery {
 	&.mg-gallery {
 		h2.same-height {
@@ -334,15 +334,6 @@ pagination
 				position: absolute;
 				bottom: 0;
 			}
-		}
-	}
-}
-
-.page-taxonomy-term {
-	.pagination {
-		:before {
-			content: '';
-			clear: both;
 		}
 	}
 }
