@@ -64,7 +64,13 @@ gulp.task('vendors', function() {
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
 
-
+  /**
+   * IMG VENDORS
+   */
+  gulp.src([
+        'bower_components/photoswipe/dist/default-skin/*.{png,gif,svg}'
+      ])
+      .pipe(gulp.dest('build/css'));
 
   /**
    * FONTS SOURCES

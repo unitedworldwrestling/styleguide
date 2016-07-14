@@ -123,8 +123,7 @@
                 index: $(this).data('index'),
                 bgOpacity: 0.85,
                 showHideOpacity: true,
-                shareEl: true,
-                shareButtons: [{id: 'download', label: 'Download', url:'{{raw_image_url}}', download:true }]
+                shareEl: false,
               };
 
           // Initialize PhotoSwipe
