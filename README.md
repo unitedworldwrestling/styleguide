@@ -27,6 +27,13 @@ $ bower install
 
 ### How to build the styleguide
 
+This styleguide use `Hologram` as Ruby dependencies to generate a styleguide.
+First step is to install `Hologram` v1.3.1 as global dependencies.
+
+```bash
+$ gem install hologram --version 1.3.1
+```
+
 (All tasks are available on their own, just type `$ gulp -T` to list them all.)
 
 The default `$ gulp` command will clean all previously built folders, compile all `.scss` files, compile all `.js` files, concatenate all `.js` files, lint .js files, build the hologram styleguide.
@@ -45,7 +52,7 @@ $ gulp serve
 
 ### How to publish to GH Pages
 
-Just use this to publish the styleguide to the [gh-pages](http://unitedworldwrestling.github.io/styleguide/). 
+Just use this to publish the styleguide to the [gh-pages](http://unitedworldwrestling.github.io/styleguide/).
 
 ```bash
 $ gulp deploy

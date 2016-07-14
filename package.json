@@ -19,7 +19,7 @@
     "gulp-ruby-sass": "^0.7.1",
     "gulp-shell": "^0.2.9",
     "gulp-svgmin": "^0.4.6",
-    "gulp-uglify": "~0.3.2",
+    "gulp-uglify": "0.3.2",
     "gulp-util": "^3.0.0",
     "jshint-stylish": "^0.4.0",
     "run-sequence": "~0.3.6"
