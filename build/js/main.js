@@ -104,8 +104,6 @@
        * Manage Gallery as Photoswipe
        */
       $('.media-gallery-media ').on('click', 'a', function(event) {
-        console.log('open');
-
           // Prevent location change
           event.preventDefault();
 
@@ -135,13 +133,9 @@
       });
 
       // Media Page - same Height Element
-      if( $('.page-taxonomy-term .node-media-gallery.mg-gallery').length > 0) {
-        var size = $.map($('.page-taxonomy-term .node-media-gallery.mg-gallery'), function(e) { return $(e).height(); });
-
-        console.log(size);
-        var highest = Math.max(size);
-        console.log(highest);
-        $('.page-taxonomy-term .node-media-gallery.mg-gallery').height(highest);
+      if( $('.page-taxonomy-term .node-media-gallery.mg-gallery h2').length > 0) {
+        var sizes = $.map($('.page-taxonomy-term .node-media-gallery.mg-gallery h2'), function(e) { return $(e).height(); });
+        $('.page-taxonomy-term .node-media-gallery.mg-gallery h2').height(Math.max.apply(null, sizes)).addClass('same-height');
       }
 
 			$('.media-wysiwyg', context).each(function(){

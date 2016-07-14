@@ -316,11 +316,33 @@
 
 
 .node-type-event {
-	.gallery-more { 
+	.gallery-more {
 		margin-bottom: 40px;
 
 		a {
-			display: none; 
+			display: none;
+		}
+	}
+}
+pagination
+.node-media-gallery {
+	&.mg-gallery {
+		h2.same-height {
+			position: relative;
+
+			a {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+}
+
+.page-taxonomy-term {
+	.pagination {
+		:before {
+			content: '';
+			clear: both;
 		}
 	}
 }
