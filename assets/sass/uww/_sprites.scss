@@ -29,10 +29,10 @@
 header .icn-logo { @include icn(0,0,106px,146px); }
 
 body.olympic-rio:not(.other-championship):not(.continental-championship):not(.world-championship):not(.world-cup) {
-	header .icn-logo { 
-		@include icn(-768px,-384px,106px,146px);
-		img { display: none;}
-	}
+	// header .icn-logo { 
+	// 	@include icn(-768px,-384px,106px,146px);
+	// 	img { display: none;}
+	// }
 	.icn-logo-bw { @include icn(-768px,-576px,106px,146px); }
 }
 body.continental-championship {
@@ -203,11 +203,11 @@ body.world-cup {
 	/* Seperate icons to swap out */
 	header .icn-logo { @include icn(0,-192px,54px,75px); }
 
-	body.olympic-rio:not(.other-championship):not(.continental-championship):not(.world-championship):not(.world-cup) {
-		header .icn-logo { 
-			@include icn(-768px,-192px,64px,75px);
-		}
-	}
+	// body.olympic-rio:not(.other-championship):not(.continental-championship):not(.world-championship):not(.world-cup) {
+	// 	header .icn-logo { 
+	// 		@include icn(-768px,-192px,64px,75px);
+	// 	}
+	// }
 
 	body.continental-championship {
 		header .icn-logo { 

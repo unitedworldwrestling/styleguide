@@ -53,13 +53,23 @@ gulp.task('vendors', function() {
       'bower_components/packery/dist/packery.pkgd.min.js',
       'bower_components/swiper/dist/idangerous.swiper.min.js',
       'assets/js/vendors/idangerous.swiper.scrollbar.min.js',
-      'bower_components/owl.carousel/dist/owl.carousel.min.js'
+      'bower_components/owl.carousel/dist/owl.carousel.min.js',
+      'bower_components/jsrender/jsrender.min.js',
+      'bower_components/moment/min/moment.min.js',
+      'bower_components/moment/min/locales.min.js',
+      'bower_components/moment/min/moment-with-locales.min.js'
      ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
 
-
+  /**
+   * IMG
+   */
+  gulp.src([
+      'bower_components/uww-flags/flags/**/*'
+    ])
+    .pipe(gulp.dest('build/img/flags'));
 
   /**
    * FONTS SOURCES

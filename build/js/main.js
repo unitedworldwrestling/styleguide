@@ -166,17 +166,6 @@
         resistance: '100%',
         mode:'horizontal',
       });
-
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 1000,
-        autoplayHoverPause: true,
-        autoplaySpeed: 2000,
-        margin: 50,
-        merge: true,
-        autoWidth: true
-      });
     });
     }
   };
