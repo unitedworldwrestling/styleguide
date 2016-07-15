@@ -102,6 +102,12 @@ article {
 			}
 		} */
 
+		@media only screen and (max-width: 992px) {
+			.field-content {
+				padding-left: 15px;
+			}
+		}
+
 		img {
 			width: 100%;
 		}
