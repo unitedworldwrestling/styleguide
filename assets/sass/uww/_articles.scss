@@ -93,7 +93,7 @@ article {
 		margin-bottom: 40px;
 		font-size: $default_f;
 		line-height: 23px;
-		
+
 		/* .heading {
 			font-weight: 900;
 
@@ -118,7 +118,7 @@ article {
 	&.location {
 		height: 525px;
 		overflow: hidden;
-		.heading { 
+		.heading {
 			margin-bottom: 0 !important;
 			color: #fff;
 			font-weight: 700 !important;
@@ -140,7 +140,7 @@ article {
 	&.type-vert {
 		font-size: $default_f;
 		line-height: 24px;
-		
+
 		.heading {
 			font-size: $default_f;
 			line-height: $default_lh;
@@ -202,7 +202,7 @@ article {
 
 			margin-bottom: -29px;
 			-webkit-transition: margin-bottom .07s ease-in-out;
-			
+
 			&.heading {
 				font-weight: 600;
 			}
@@ -263,6 +263,23 @@ article {
 
 }
 
+.view-ranking-stories{
+	margin-bottom: 40px;
+
+	article.type-horz{
+		.views-field-field-image {
+			margin-left: -15px;
+		}
+
+		@media only screen and (max-width: 992px) {
+			.field-content {
+				padding-left: 15px;
+				display: block;
+			}
+		}
+	}
+}
+
 
 // StoryList articles
 .storyList ul {
@@ -277,7 +294,11 @@ article {
 		border-left: 1px solid #e7e7e7;
 		position: relative;
 
-		.padding{ padding: 0; display: block; }
+		.padding{
+			padding: 0;
+			display: block;
+			overflow: hidden;
+		}
 
 		&:last-child { border-bottom: 0; }
 
@@ -432,8 +453,7 @@ article {
 			width: 100%;
 			border-bottom: 1px solid #e7e7e7;
 			border-left: 0;
-
-			.padding { padding: 15px 20px; }
+			min-height: 0;
 		}
 		ul li:hover:after { content: none; }
 

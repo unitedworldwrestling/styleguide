@@ -3,6 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.37 / 2016-07-15
+ *  Login frontend
+ *  Fix horizontal article padding
+ *  Fix video size responsive on homepage
+
 * 0.1.36 / 2016-07-15
  * Quick fix - MMedia page mobile
 
