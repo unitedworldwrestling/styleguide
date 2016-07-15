@@ -93,7 +93,7 @@ article {
 		margin-bottom: 40px;
 		font-size: $default_f;
 		line-height: 23px;
-		
+
 		/* .heading {
 			font-weight: 900;
 
@@ -118,7 +118,7 @@ article {
 	&.location {
 		height: 525px;
 		overflow: hidden;
-		.heading { 
+		.heading {
 			margin-bottom: 0 !important;
 			color: #fff;
 			font-weight: 700 !important;
@@ -140,7 +140,7 @@ article {
 	&.type-vert {
 		font-size: $default_f;
 		line-height: 24px;
-		
+
 		.heading {
 			font-size: $default_f;
 			line-height: $default_lh;
@@ -202,7 +202,7 @@ article {
 
 			margin-bottom: -29px;
 			-webkit-transition: margin-bottom .07s ease-in-out;
-			
+
 			&.heading {
 				font-weight: 600;
 			}
@@ -277,7 +277,11 @@ article {
 		border-left: 1px solid #e7e7e7;
 		position: relative;
 
-		.padding{ padding: 0; display: block; }
+		.padding{
+			padding: 0;
+			display: block;
+			overflow: hidden;
+		}
 
 		&:last-child { border-bottom: 0; }
 
@@ -429,12 +433,12 @@ article {
 		ul li,
 		ul li.views-row-first {
 			float: none;
+			min-height: 0;
 			width: 100%;
 			border-bottom: 1px solid #e7e7e7;
 			border-left: 0;
-
-			.padding { padding: 15px 20px; }
 		}
+
 		ul li:hover:after { content: none; }
 
 		ul li article,
