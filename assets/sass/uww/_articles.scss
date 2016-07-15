@@ -93,7 +93,7 @@ article {
 		margin-bottom: 40px;
 		font-size: $default_f;
 		line-height: 23px;
-		
+
 		/* .heading {
 			font-weight: 900;
 
@@ -105,6 +105,7 @@ article {
 		@media only screen and (max-width: 992px) {
 			.field-content {
 				padding-left: 15px;
+				display: block;
 			}
 		}
 
@@ -124,7 +125,7 @@ article {
 	&.location {
 		height: 525px;
 		overflow: hidden;
-		.heading { 
+		.heading {
 			margin-bottom: 0 !important;
 			color: #fff;
 			font-weight: 700 !important;
@@ -146,7 +147,7 @@ article {
 	&.type-vert {
 		font-size: $default_f;
 		line-height: 24px;
-		
+
 		.heading {
 			font-size: $default_f;
 			line-height: $default_lh;
@@ -208,7 +209,7 @@ article {
 
 			margin-bottom: -29px;
 			-webkit-transition: margin-bottom .07s ease-in-out;
-			
+
 			&.heading {
 				font-weight: 600;
 			}
