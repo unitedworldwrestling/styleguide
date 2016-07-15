@@ -102,13 +102,6 @@ article {
 			}
 		} */
 
-		@media only screen and (max-width: 992px) {
-			.field-content {
-				padding-left: 15px;
-				display: block;
-			}
-		}
-
 		img {
 			width: 100%;
 		}
@@ -270,6 +263,23 @@ article {
 
 }
 
+.view-ranking-stories{
+	margin-bottom: 40px;
+
+	article.type-horz{
+		.views-field-field-image {
+			margin-left: -15px;
+		}
+
+		@media only screen and (max-width: 992px) {
+			.field-content {
+				padding-left: 15px;
+				display: block;
+			}
+		}
+	}
+}
+
 
 // StoryList articles
 .storyList ul {
@@ -284,7 +294,11 @@ article {
 		border-left: 1px solid #e7e7e7;
 		position: relative;
 
-		.padding{ padding: 0; display: block; }
+		.padding{
+			padding: 0;
+			display: block;
+			overflow: hidden;
+		}
 
 		&:last-child { border-bottom: 0; }
 
@@ -439,8 +453,7 @@ article {
 			width: 100%;
 			border-bottom: 1px solid #e7e7e7;
 			border-left: 0;
-
-			.padding { padding: 15px 20px; }
+			min-height: 0;
 		}
 		ul li:hover:after { content: none; }
 
