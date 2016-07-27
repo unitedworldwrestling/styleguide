@@ -24,13 +24,13 @@
 	}
 
 	&.event-olympic-rio {
-		background: url(../../img/bg-fancy-rio.png) no-repeat center center #55aa4d;
+		background: url(../../img/bg-fancy-rio.png) no-repeat center center $rioLightGreen;
 	
 		a {
-			color: #ffdd00 !important;
+			color: $rioYellow !important;
 
 			&:hover {
-				color: #55aa4d !important;
+				color: $rioLightGreen !important;
 			}
 
 			&.tag.orange {
@@ -40,8 +40,8 @@
 
 		.tags {
 			.tag {
-				&.primary { background-color: #ffdd00; }
-				&.secondary { background-color: #0e65ab; }
+				&.primary { background-color: $rioYellow; }
+				&.secondary { background-color: $rioBlue; }
 			}
 		}
 	}

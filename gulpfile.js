@@ -59,6 +59,10 @@ gulp.task('vendors', function() {
       'bower_components/owl.carousel/dist/owl.carousel.min.js',
       'bower_components/photoswipe/dist/photoswipe.js',
       'bower_components/photoswipe/dist/photoswipe-ui-default.js',
+      'bower_components/jsrender/jsrender.min.js',
+      'bower_components/moment/min/moment.min.js',
+      'bower_components/moment/min/locales.min.js',
+      'bower_components/moment/min/moment-with-locales.min.js'
      ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
@@ -71,6 +75,11 @@ gulp.task('vendors', function() {
         'bower_components/photoswipe/dist/default-skin/*.{png,gif,svg}'
       ])
       .pipe(gulp.dest('build/css'));
+
+  gulp.src([
+      'bower_components/uww-flags/flags/**/*'
+    ])
+    .pipe(gulp.dest('build/img/flags'));
 
   /**
    * FONTS SOURCES
