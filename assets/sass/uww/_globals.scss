@@ -110,10 +110,10 @@ body {
 body.olympic-rio:not(.other-championship):not(.continental-championship):not(.world-championship):not(.world-cup) {
 	
 	a {
-		color: #55aa4d;
+		color: $rioLightGreen;
 
 		&:hover {
-			color: #ffdd00;
+			color: $rioYellow;
 		}
 	}
 	
@@ -121,14 +121,14 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 		color: #111;
 
 		&:hover {
-			color: #ffdd00;
+			color: $rioYellow;
 		}
 	}
 
 
 	
 	.more-link a {
-		color: #ffdd00;
+		color: $rioYellow;
 
     &:after {
       background-position: -256px -192px;
@@ -136,25 +136,25 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 	}
 	
 	#mobSidebar {
-		background: url(../../img/bg-sidebar-rio.jpg) no-repeat top right #55aa4d;
+		background: url(../../img/bg-sidebar-rio.jpg) no-repeat top right $rioLightGreen;
 	}
 	#mainNav {
 		ul {
 			li {
 				&.active a {
-					color: #55aa4d;
-					&:hover { color: #55aa4d; }
+					color: $rioLightGreen;
+					&:hover { color: $rioLightGreen; }
 				}
 
 				a {
-					&:hover { color: #55aa4d; }
+					&:hover { color: $rioLightGreen; }
 				}
 			}
 		}
 	}
 	
 	.hero {
-		background-color: #55aa4d;
+		background-color: $rioLightGreen;
 	}
 
 	.featuredStory {
@@ -164,24 +164,24 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 	}
 
 	.fancyBG {
-		background: url(../../img/bg-fancy-rio.png) no-repeat right top #55aa4d;
+		background: url(../../img/bg-fancy-rio.png) no-repeat right top $rioLightGreen;
 	}
 	
 	.navbar {
 		&.navbar-event {
 			li {
 				a {
-					color: #0e65ab;
+					color: $rioBlue;
 
 					&:hover,
 					&.active {
-						background: #0e65ab;
+						background: $rioBlue;
 					}
 				}
 
 				&.active {
 					a {
-						background: #0e65ab;
+						background: $rioBlue;
 						color: #ffffff !important;
 					}
 				}
@@ -191,7 +191,7 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 	
 	.schedule {
 		.title {
-			background-color: #55aa4d;
+			background-color: $rioLightGreen;
 
 			a {
 				color: #fff;
@@ -202,7 +202,7 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 			li {
 				div > [class*='col-'] {
 					&:last-child {
-						strong { color: #55aa4d; }
+						strong { color: $rioLightGreen; }
 					}
 				}
 			}
@@ -211,18 +211,18 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 
 	article{
 		a {
-			&:hover { color: #ffdd00; }
+			&:hover { color: $rioYellow; }
 		}
 
 		.heading {
 			a {
-				&:hover { color: #ffdd00; }
+				&:hover { color: $rioYellow; }
 			}
 		}
 
 		&.location {
 			.textWrap {
-				background: url(../../img/bg-location-rio.png) no-repeat center center #55aa4d;
+				background: url(../../img/bg-location-rio.png) no-repeat center center $rioLightGreen;
 				@include cover();
 			}
 		}
@@ -231,7 +231,7 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 		&.type-img,
 		&.type-vid {
 			a {
-				color: #ffdd00 !important;
+				color: $rioYellow !important;
 				&:hover { color: #fff; }
 			}
 		}
@@ -239,28 +239,28 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 
 	.featuredPhoto {
 		.title {
-			background-color: #0e65ab;
+			background-color: $rioBlue;
 		}
 	}
 
 	.tags {
 		.tag {
 			&.primary { 
-				background-color: #55aa4d; 
+				background-color: $rioLightGreen; 
 
-				&.twitter-hashtag { background-color: #0e65ab; }
+				&.twitter-hashtag { background-color: $rioBlue; }
 			}
-			&.secondary { background-color: #0e65ab; }
+			&.secondary { background-color: $rioBlue; }
 
 			&.big {
-				&.primary { background-color: #0e65ab; }
-				&.secondary { background-color: #ffdd00; }
+				&.primary { background-color: $rioBlue; }
+				&.secondary { background-color: $rioYellow; }
 			}
 		}
 	}
 
 	.btn.orange {
-		background-color: #55aa4d;
+		background-color: $rioLightGreen;
 	}
 
 	footer{
@@ -274,9 +274,9 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 		// }
 
 		li a {
-			color: #55aa4d;
+			color: $rioLightGreen;
 			&:hover {
-				color: #55aa4d;
+				color: $rioLightGreen;
 			}
 		}
 
@@ -292,37 +292,37 @@ body.olympic-rio:not(.other-championship):not(.continental-championship):not(.wo
 	.arena-table {
 		div.tabled > [class*='col-'] { 
 			&.bg-primary {
-				background: #ffdd00;
+				background: $rioYellow;
 			}
 		}
 
 		.winner {
-			color: #ffdd00;
+			color: $rioYellow;
 		}
 	}
 	
 	.bracketTable .bracketRound {
 		.bracketRoundName { 
-			background: #0e65ab;
+			background: $rioBlue;
 		}
 
 		.bracketFight {
-			border-color: #0e65ab;
+			border-color: $rioBlue;
 			
 			.winner {
-				color: #ffdd00;
+				color: $rioYellow;
 			}
 
 			.fightNumber {
-				background: #0e65ab;
-				border-color: #0e65ab;
+				background: $rioBlue;
+				border-color: $rioBlue;
 			}
 		}
 	}
 
 	.breakingNews {
-		background-color: #55aa4d;
-		color: #ffdd00;
+		background-color: $rioLightGreen;
+		color: $rioYellow;
 	}
 }
 

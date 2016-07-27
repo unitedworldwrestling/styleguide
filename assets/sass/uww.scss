@@ -1,4 +1,5 @@
 // Globals
+@import 'uww-variables';
 @import "uww/open-sans";
 @import "uww/variables";
 @import "uww/mixins";
@@ -50,7 +51,6 @@
 
  // Init ------------------------------------
  @import 'uww-mixins';
- @import 'uww-variables';
  @import 'bootstrap';
 
 @import "../../bower_components/uww-flags/sass/flag-icon";

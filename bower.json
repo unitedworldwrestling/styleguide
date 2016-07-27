@@ -16,7 +16,7 @@
     "swiper": "~2.7.0",
     "moment": "^2.14.1",
     "jsrender": "^0.9.78",
-    "uww-flags": "^3.0.2",
-    "owl.carousel": "^2.1.6"
+    "owl.carousel": "^2.1.6",
+    "uww-flags": "^3.0.3"
   }
 }
