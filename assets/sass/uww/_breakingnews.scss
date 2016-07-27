@@ -189,17 +189,17 @@
 	}
 
 	&.event-olympic-rio {
-		background: #55aa4d;
+		background: $rioLightGreen;
 
 		.tags {
 			.tag {
-				&.primary { background-color: #0e65ab; }
-				&.secondary { background-color: #ffdd00; }
+				&.primary { background-color: $rioBlue; }
+				&.secondary { background-color: $rioYellow; }
 			}
 		}
 
 		&.score-ticker {
-			background: #0e65ab;
+			background: $rioBlue;
 		}
 	}
 
