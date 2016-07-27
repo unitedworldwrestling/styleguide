@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.38 / 2016-07-27
+ *  Live scoring
+
 * 0.1.37 / 2016-07-15
  *  Login frontend
  *  Fix horizontal article padding
