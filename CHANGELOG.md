@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.39 / 2016-08-10
+ *  Hotfix in Rio
+
 * 0.1.38 / 2016-07-27
  *  Live scoring
 
