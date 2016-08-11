@@ -308,4 +308,26 @@
       }
     }
   }
+
+  a.link-live {
+    // display: block; 
+    position: absolute; height: 65px !important;
+    top: 20px;
+
+    .icon-pl {
+      position: absolute; top: 50%; left: 50%;
+      margin-left: -25px; margin-top: -25px;
+      visibility: hidden;
+    }
+
+    &:hover {
+      background: #000;
+      opacity: 0.8;
+      z-index: 9;
+
+      .icon-pl {
+        visibility: visible;
+      }
+    }
+  }
 }

@@ -201,6 +201,14 @@
 		&.score-ticker {
 			background: $rioBlue;
 		}
+
+		&.mainEvent {
+			.title {
+				.date {
+					color: #fff;
+				}
+			}
+		}
 	}
 
 	&.event-continental-championship {
