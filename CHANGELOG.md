@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.40 / 2016-08-15
+ *  Hide Overflow-x
+
 * 0.1.39 / 2016-08-10
  *  Hotfix in Rio
 
