@@ -5,16 +5,16 @@
   // overflow: hidden;
   background: $rioLightGreen;
 
-  .swiper-wrapper { 
+  .slider-wrapper { 
     float: left;
   }
 
-  .swiper-container {
+  .slider-container {
     // z-index: 9999 !important;
     overflow: inherit !important;
   }
 
-  // .swiper-container {
+  // .slider-container {
   //   position: relative;
   //   width: 100% !important;
   //   height: 400px;
@@ -22,11 +22,11 @@
   //   overflow: normal !important;
   // }
 
-  // .swiper-slide {
+  // .slider-slide {
   //   width: 100%;
   //   position: relative;
   // }
-  // .swiper-slide .swiper-slide-overlay {
+  // .slider-slide .slider-slide-overlay {
   //   position: absolute;
   //   top: 0;
   //   left: 0;
