@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.40.1 / 2016-10-03
+ *  Upgrade version of uww-flag bower package
+
 * 0.1.40 / 2016-08-15
  *  Hide Overflow-x
 
