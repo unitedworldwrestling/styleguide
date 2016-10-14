@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.42 / 2016-10-14
+ *  Fix click on galleries
+
 * 0.1.41.1 / 2016-10-03
  *  Upgrade version of uww-flag bower package
 
