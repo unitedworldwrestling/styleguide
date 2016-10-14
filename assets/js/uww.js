@@ -114,7 +114,7 @@
 
           // Generate the tree
           var container = [];
-          $('.gallery [itemprop="associatedMedia"]').each(function(){
+          $(this).find('figure[itemprop="associatedMedia"]').each(function(){
             var $that = $(this);
             container.push({
               src: $that.find('a').attr('href'),
