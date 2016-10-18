@@ -3,6 +3,10 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 0.1.43 / 2016-10-18
+ *  Fix click on galleries
+ *  Country icon alignment
+
 * 0.1.42 / 2016-10-14
  *  Fix click on galleries
 
