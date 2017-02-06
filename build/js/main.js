@@ -35,7 +35,9 @@
 			});
 
 			// Schedule
-			$('.schedule li:first-child', context).addClass('active');
+      if ($('.schedule li.active').length == 0) {
+			 $('.schedule li:first-child', context).addClass('active');
+      }
 			$('.schedule .title', context).click(function(){
 				$('.schedule .title').closest('ul').find('.active').removeClass('active');
 				$(this).closest('li').addClass('active');
